@@ -1190,8 +1190,7 @@ function petalHost(n,once,cls){const host=document.createElement("div");host.cla
     p.style.cssText=`left:${rnd(-4,100)}%;--d:${d}s;--dl:${once?rnd(0,.7):-rnd(0,d)}s;--sx:${rnd(-70,70)}px;--sz:${once?rnd(15,26):rnd(13,20)}px;--r0:${rnd(0,360)}deg;--img:${ROSE[i%ROSE.length]}`;host.appendChild(p);}
   document.body.appendChild(host);return host;}
 window.petalShower=function(){if(reduce)return;const h=petalHost(innerWidth<600?34:52,true,"shower");let gone=false;const end=()=>{if(gone)return;gone=true;h.style.transition="opacity .5s";h.style.opacity="0";setTimeout(()=>h.remove(),600);removeEventListener("scroll",chk);};const chk=()=>{if(scrollY>innerHeight*.5)end();};addEventListener("scroll",chk,{passive:true});setTimeout(end,4600);};
-(function(){$("petals").style.display="none";if(reduce)return;const ft=document.querySelector("footer");if(!ft||!("IntersectionObserver" in window))return;
-  let h=null;new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){if(!h)h=petalHost(innerWidth<600?7:10,false,"foot");h.style.display="";}else if(h)h.style.display="none";}),{threshold:.25}).observe(ft);})();
+$("petals").style.display="none";
 
 /* ---------- text ---------- */
 $("sealDays").innerHTML=ph(INVITE.dates.days);$("sealMonth").innerHTML=ph(INVITE.dates.month).toUpperCase();
