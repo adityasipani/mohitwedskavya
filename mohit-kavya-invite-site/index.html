@@ -667,7 +667,7 @@ footer .credit a.cr:hover .cr-n{color:var(--rosegold)}
 .fe-seal .wax::before{content:"";position:absolute;inset:9px;border-radius:50%;border:1.5px solid rgba(255,233,222,.35);box-shadow:inset 0 2px 3px rgba(0,0,0,.12)}
 .fe-seal .wax svg{position:absolute;inset:14%;width:72%;height:72%}
 @keyframes sealpulse{0%,100%{transform:scale(1)}50%{transform:scale(1.04)}}
-.fe-tap{position:absolute;left:0;right:0;top:calc(50% + clamp(70px,18vw,90px));z-index:8;margin:0;text-align:center;transition:opacity .4s ease}
+.fe-tap{position:absolute;left:0;right:0;top:calc(50% + clamp(132px,36vw,176px));z-index:8;margin:0;text-align:center;transition:opacity .4s ease}
 .fe-tap span{font-family:"Cinzel",var(--f-label);font-weight:600;letter-spacing:.42em;padding-left:.42em;font-size:.7rem;color:#9C6A5C;text-transform:uppercase;animation:tapblink 2.6s ease-in-out infinite}
 @keyframes tapblink{0%,100%{opacity:.45}50%{opacity:1}}
 /* opening sequence */
@@ -680,6 +680,22 @@ footer .credit a.cr:hover .cr-n{color:var(--rosegold)}
 #intro.open .fl-b{transform:rotateX(-165deg);transition:transform 1.3s cubic-bezier(.55,0,.25,1) .46s,opacity .5s ease 1.15s}
 #intro.open .evc-in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.fe-seal .wax,.fe-tap span{animation:none}}
+/* seal ornament: gold filigree ring, tucked floral sprigs, twinkles, wax drips, gold monogram */
+.fe-orn{position:absolute;left:50%;top:50%;width:clamp(250px,70vw,340px);aspect-ratio:1;transform:translate(-50%,-50%);z-index:7;pointer-events:none;transition:opacity .45s ease,transform .7s ease}
+.fe-orn svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.fe-orn .fo-ring{animation:turn 70s linear infinite;transform-origin:50% 50%}
+.fe-orn .fo-dots{animation:turn 110s linear infinite reverse;transform-origin:50% 50%}
+.fe-orn .glow{position:absolute;inset:22%;border-radius:50%;background:radial-gradient(circle,rgba(255,244,226,.85),rgba(255,244,226,0) 70%);animation:sealglow 3.2s ease-in-out infinite}
+@keyframes sealglow{0%,100%{opacity:.55;transform:scale(.96)}50%{opacity:1;transform:scale(1.04)}}
+.fe-orn .tw{position:absolute;width:14px;height:14px;margin:-7px 0 0 -7px;opacity:0;animation:twk 3.4s ease-in-out infinite}
+.fe-orn .tw::before,.fe-orn .tw::after{content:"";position:absolute;left:50%;top:0;bottom:0;width:1.6px;margin-left:-.8px;background:linear-gradient(180deg,rgba(242,221,176,0),#FFF6E2 50%,rgba(242,221,176,0))}
+.fe-orn .tw::after{transform:rotate(90deg)}
+@keyframes twk{0%,100%{opacity:0;transform:scale(.3) rotate(0)}45%{opacity:1;transform:scale(1) rotate(45deg)}}
+.fe-seal .drip{position:absolute;inset:-9%;width:118%;height:118%;z-index:0;filter:drop-shadow(0 8px 14px rgba(110,42,62,.32))}
+.fe-seal .wax{z-index:1}
+#intro.open .fe-orn{opacity:0;transform:translate(-50%,-50%) scale(1.15)}
+@media (prefers-reduced-motion:reduce){.fe-orn .fo-ring,.fe-orn .fo-dots,.fe-orn .glow,.fe-orn .tw{animation:none}.fe-orn .tw{opacity:.7}}
+
 
 /* family lines: relation as a small gold label above the names */
 .fam{display:grid;justify-items:center;gap:2px;margin-top:10px}
@@ -784,6 +800,7 @@ footer .credit .cr-row{padding-top:16px}
   <div class="flap fl-b" aria-hidden="true"><div class="face"></div></div>
   <div class="flap fl-t" aria-hidden="true"><div class="face"></div></div>
   <svg class="ev-seams" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="seamG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#B98A4E"/><stop offset=".5" stop-color="#F2DDB0"/><stop offset="1" stop-color="#B98A4E"/></linearGradient></defs><path d="M0 0 L50 50 L100 0 M0 100 L50 50 L100 100" fill="none" stroke="url(#seamG)" stroke-width="1.2" vector-effect="non-scaling-stroke" opacity=".9"/><rect x="1.2" y="1.2" width="97.6" height="97.6" fill="none" stroke="url(#seamG)" stroke-width=".8" vector-effect="non-scaling-stroke" opacity=".55"/></svg>
+  <div class="fe-orn" id="envOrn" aria-hidden="true"></div>
   <button class="fe-seal" id="envBtn" type="button" aria-label="Tap the wax seal to open the invitation"><span class="wax" id="envSeal"></span></button>
   <p class="fe-tap"><span>Tap to open</span></p>
 </div>
@@ -1047,7 +1064,21 @@ setTimeout(hideVeil,1800);
 document.body.classList.add("sealed");
 $("envCrest").innerHTML=crestSVG("ec");$("envNames").textContent=`${INVITE.groom} & ${INVITE.bride}`;
 $("envCity").textContent=INVITE.venueLine.toUpperCase();
-$("envSeal").innerHTML=`<svg viewBox="0 0 100 100" aria-hidden="true"><path d="M38 22 l4 -9 5 6 3 -10 3 10 5 -6 4 9z" fill="#FFE9DE" opacity=".85"/><circle cx="50" cy="56" r="30" fill="none" stroke="#FFE9DE" stroke-opacity=".6" stroke-width="1.5"/><text x="50" y="66" text-anchor="middle" font-family="Parisienne, cursive" font-size="30" fill="#FFE9DE">${esc(INVITE.groom[0])}&amp;${esc(INVITE.bride[0])}</text></svg>`;
+$("envSeal").innerHTML=`<svg viewBox="0 0 100 100" aria-hidden="true"><defs><linearGradient id="sealGold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFF1D6"/><stop offset=".45" stop-color="#F2D29A"/><stop offset=".6" stop-color="#FFF8E8"/><stop offset="1" stop-color="#D9AE6E"/></linearGradient></defs><path d="M38 22 l4 -9 5 6 3 -10 3 10 5 -6 4 9z" fill="url(#sealGold)"/><circle cx="50" cy="56" r="31" fill="none" stroke="url(#sealGold)" stroke-opacity=".75" stroke-width="1.4"/><circle cx="50" cy="56" r="27.5" fill="none" stroke="url(#sealGold)" stroke-opacity=".35" stroke-width=".8" stroke-dasharray="1.5 2.5"/><text x="50" y="67" text-anchor="middle" font-family="Parisienne, cursive" font-size="30" fill="rgba(70,20,32,.35)" transform="translate(.6 1.1)">${esc(INVITE.groom[0])}&amp;${esc(INVITE.bride[0])}</text><text x="50" y="66" text-anchor="middle" font-family="Parisienne, cursive" font-size="30" fill="url(#sealGold)">${esc(INVITE.groom[0])}&amp;${esc(INVITE.bride[0])}</text></svg>`;
+(function(){const btn=$("envBtn");if(!btn)return;
+  // wax drips: an irregular puddle of the same wax peeking out from under the round seal
+  const lobes=[[0,1.0],[28,1.1],[55,.98],[83,1.14],[118,1.0],[150,1.08],[178,.97],[210,1.12],[240,1.0],[268,1.09],[300,.98],[330,1.12]];
+  const P=lobes.map(([a,k])=>{const r=40*k,t=a*Math.PI/180;return [50+r*Math.cos(t),50+r*Math.sin(t)];}),M=(p,q)=>[(p[0]+q[0])/2,(p[1]+q[1])/2],f=v=>v.toFixed(1);let m0=M(P[P.length-1],P[0]),d=`M${f(m0[0])} ${f(m0[1])}`;P.forEach((p,n)=>{const m=M(p,P[(n+1)%P.length]);d+=` Q${f(p[0])} ${f(p[1])} ${f(m[0])} ${f(m[1])}`;});
+  btn.insertAdjacentHTML("afterbegin",`<svg class="drip" viewBox="0 0 100 100" aria-hidden="true"><defs><radialGradient id="dripG" cx=".38" cy=".32" r=".75"><stop offset="0" stop-color="#C77583"/><stop offset=".6" stop-color="#A3505F"/><stop offset="1" stop-color="#7E3646"/></radialGradient></defs><path d="${d}Z" fill="url(#dripG)" /></svg>`);
+  // gold filigree ring + floral sprigs + twinkles
+  const G='url(#ornGold)';let ring="",ring2="";
+  for(let i=0;i<16;i++){const a=i*22.5;ring+=`<g transform="rotate(${a} 100 100)"><path d="M100 22 C106 31 106 39 100 45 C94 39 94 31 100 22Z" fill="none" stroke="${G}" stroke-width="1.1"/><circle cx="100" cy="17" r="1.6" fill="${G}"/></g><g transform="rotate(${a+11.25} 100 100)"><path d="M100 30 q3 6 0 10 q-3 -4 0 -10z" fill="${G}" opacity=".55"/></g>`;}
+  for(let i=0;i<48;i++)ring2+=`<circle cx="100" cy="10" r=".9" fill="${G}" transform="rotate(${i*7.5} 100 100)"/>`;
+  const rose=(x,y,k)=>`<g transform="translate(${x} ${y}) scale(${k})">${[0,72,144,216,288].map(t=>`<circle cx="${(4.2*Math.cos(t*Math.PI/180)).toFixed(2)}" cy="${(4.2*Math.sin(t*Math.PI/180)).toFixed(2)}" r="4.6" fill="#EDB7B8" stroke="#D9969D" stroke-width=".5"/>`).join("")}<circle r="4.4" fill="#E2A0A8"/><path d="M-1.6 .4 a1.6 1.6 0 1 1 1.8 1.6 a3.2 3.2 0 1 1 -3.4 -3.6 a4.2 4.2 0 0 1 5.2 1" fill="none" stroke="#B56877" stroke-width=".9" stroke-linecap="round"/></g>`;
+  const sprig=(rot,flip)=>`<g transform="rotate(${rot} 100 100) translate(100 100) scale(${flip} 1)"><path d="M18 -18 C34 -34 52 -44 74 -50" fill="none" stroke="#9AA98B" stroke-width="1.6" stroke-linecap="round"/>${[[30,-30,-35],[42,-38,-28],[54,-43,-40],[64,-47,-22]].map(([x,y,r])=>`<ellipse cx="${x}" cy="${y-6}" rx="3.2" ry="8" fill="#A9B99A" opacity=".9" transform="rotate(${r} ${x} ${y})"/><ellipse cx="${x+2}" cy="${y+6}" rx="3" ry="7.5" fill="#93A584" opacity=".85" transform="rotate(${r+70} ${x} ${y})"/>`).join("")}${rose(78,-51,1)}${rose(57,-59,.68)}${[[48,-30],[62,-36],[70,-60],[40,-46],[84,-42]].map(([x,y])=>`<circle cx="${x}" cy="${y}" r="1.8" fill="#FFF7EC" stroke="#E4CDB4" stroke-width=".5"/>`).join("")}<circle cx="36" cy="-24" r="1.5" fill="#D9B27A"/><circle cx="68" cy="-44" r="1.4" fill="#D9B27A"/></g>`;
+  const tw=[[16,30,0],[86,22,.9],[90,74,1.7],[12,78,2.4],[50,6,1.2],[50,95,2.9]].map(([x,y,dl])=>`<i class="tw" style="left:${x}%;top:${y}%;animation-delay:${dl}s"></i>`).join("");
+  $("envOrn").innerHTML=`<div class="glow"></div><svg viewBox="0 0 200 200"><defs><linearGradient id="ornGold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#B98A4E"/><stop offset=".5" stop-color="#F2DDB0"/><stop offset="1" stop-color="#B98A4E"/></linearGradient></defs><g class="fo-dots">${ring2}</g><g class="fo-ring"><circle cx="100" cy="100" r="58" fill="none" stroke="${G}" stroke-width=".7" opacity=".7"/><circle cx="100" cy="100" r="61" fill="none" stroke="${G}" stroke-width=".5" stroke-dasharray="2 3" opacity=".7"/>${ring}</g>${sprig(-8,1)}${sprig(172,1)}</svg>${tw}`;
+})();
 let envOpened=false;
 function openEnvelope(){
   if(envOpened)return;envOpened=true;
