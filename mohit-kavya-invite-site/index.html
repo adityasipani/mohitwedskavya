@@ -1179,7 +1179,7 @@ const PCOLS=["#F6C9D0","#F2B8C0","#FBE0D8","#EFA3AE","#F8D9B6"];
 function petalHost(n,once,cls){const host=document.createElement("div");host.className="petals "+(cls||"");host.setAttribute("aria-hidden","true");
   for(let i=0;i<n;i++){const p=document.createElement("i");const d=once?rnd(3.4,5.2):rnd(11,19);p.style.cssText=`left:${rnd(0,100)}%;--d:${d}s;--dl:${once?rnd(0,1.6):-rnd(0,d)}s;--sx:${rnd(-50,50)}px;--sz:${rnd(8,13)}px;--c:${PCOLS[i%5]}`+(once?";animation-iteration-count:1;animation-fill-mode:both":"");host.appendChild(p);}
   document.body.appendChild(host);return host;}
-window.petalShower=function(){if(reduce)return;const h=petalHost(innerWidth<600?22:32,true,"shower");setTimeout(()=>h.remove(),7500);};
+window.petalShower=function(){if(reduce)return;const h=petalHost(innerWidth<600?22:32,true,"shower");let gone=false;const end=()=>{if(gone)return;gone=true;h.style.transition="opacity .5s";h.style.opacity="0";setTimeout(()=>h.remove(),600);removeEventListener("scroll",chk);};const chk=()=>{if(scrollY>innerHeight*.5)end();};addEventListener("scroll",chk,{passive:true});setTimeout(end,7000);};
 (function(){$("petals").style.display="none";if(reduce)return;const ft=document.querySelector("footer");if(!ft||!("IntersectionObserver" in window))return;
   let h=null;new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){if(!h)h=petalHost(innerWidth<600?7:10,false,"foot");h.style.display="";}else if(h)h.style.display="none";}),{threshold:.25}).observe(ft);})();
 
@@ -1362,7 +1362,7 @@ $("eventScenes").innerHTML=INVITE.events.map((e,i)=>{const k=ART[e.scene]?e.scen
 
 /* run scene fx only while visible */
 document.querySelectorAll(".ev").forEach(sec=>{
-  if(reduce)return;if((sec.dataset.fx==="sangeet"&&sec.querySelector("video"))||sec.dataset.fx==="wedding")return; // the video has its own fireworks
+  if(reduce)return;if(((sec.dataset.fx==="sangeet"||sec.dataset.fx==="carnival")&&sec.querySelector("video"))||sec.dataset.fx==="wedding"||sec.dataset.fx==="mayra")return; // the video has its own fireworks
   const cv=sec.querySelector("canvas.fx"),c=cv.getContext("2d");let step,run=false,W,H;
   function size(){const r=cv.getBoundingClientRect(),d=devicePixelRatio||1;W=r.width;H=r.height;cv.width=W*d;cv.height=H*d;c.setTransform(d,0,0,d,0,0);step=FX[sec.dataset.fx](c,W,H);}
   size();addEventListener("resize",size);const im=sec.querySelector("img.pic");if(im)im.addEventListener("load",size);
