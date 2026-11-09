@@ -1108,6 +1108,7 @@ let envOpened=false;
 function openEnvelope(){
   if(envOpened)return;envOpened=true;
   $("intro").classList.add("open");
+  setTimeout(()=>window.petalShower&&window.petalShower(),reduce?0:2900);
   setTimeout(()=>{$("intro").classList.add("gone");document.body.classList.remove("sealed");scrollTo(0,0);if(window.repaintSeal)window.repaintSeal();},reduce?100:3300);
   try{if(!$("sound").classList.contains("on"))$("sound").click();}catch(e){}
 }
@@ -1173,11 +1174,14 @@ $("heroArt").alt=`${INVITE.groom} and ${INVITE.bride} hand in hand before a pink
 if(!reduce){const layers=[...document.querySelectorAll("[data-depth]")];let tk=false;
   addEventListener("scroll",()=>{if(tk)return;tk=true;requestAnimationFrame(()=>{const y=scrollY;if(y<1300)layers.forEach(l=>l.style.transform=`translateY(${y*l.dataset.depth}px)`);tk=false;});},{passive:true});}
 
-/* ---------- petals: a few CSS-animated petals (runs on the GPU, no per-frame drawing) ---------- */
-(function(){if(reduce)return;const host=document.createElement("div");host.className="petals";host.setAttribute("aria-hidden","true");
-  const cols=["#F6C9D0","#F2B8C0","#FBE0D8","#EFA3AE","#F8D9B6"],n=innerWidth<600?7:10;
-  for(let i=0;i<n;i++){const p=document.createElement("i");const d=rnd(11,19);p.style.cssText=`left:${rnd(0,100)}%;--d:${d}s;--dl:${-rnd(0,d)}s;--sx:${rnd(-40,40)}px;--sz:${rnd(7,12)}px;--c:${cols[i%5]}`;host.appendChild(p);}
-  document.body.appendChild(host);$("petals").style.display="none";})();
+/* ---------- petals as moments: a shower when the envelope opens, and a gentle fall only at the footer ---------- */
+const PCOLS=["#F6C9D0","#F2B8C0","#FBE0D8","#EFA3AE","#F8D9B6"];
+function petalHost(n,once,cls){const host=document.createElement("div");host.className="petals "+(cls||"");host.setAttribute("aria-hidden","true");
+  for(let i=0;i<n;i++){const p=document.createElement("i");const d=once?rnd(3.4,5.2):rnd(11,19);p.style.cssText=`left:${rnd(0,100)}%;--d:${d}s;--dl:${once?rnd(0,1.6):-rnd(0,d)}s;--sx:${rnd(-50,50)}px;--sz:${rnd(8,13)}px;--c:${PCOLS[i%5]}`+(once?";animation-iteration-count:1;animation-fill-mode:both":"");host.appendChild(p);}
+  document.body.appendChild(host);return host;}
+window.petalShower=function(){if(reduce)return;const h=petalHost(innerWidth<600?22:32,true,"shower");setTimeout(()=>h.remove(),7500);};
+(function(){$("petals").style.display="none";if(reduce)return;const ft=document.querySelector("footer");if(!ft||!("IntersectionObserver" in window))return;
+  let h=null;new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){if(!h)h=petalHost(innerWidth<600?7:10,false,"foot");h.style.display="";}else if(h)h.style.display="none";}),{threshold:.25}).observe(ft);})();
 
 /* ---------- text ---------- */
 $("sealDays").innerHTML=ph(INVITE.dates.days);$("sealMonth").innerHTML=ph(INVITE.dates.month).toUpperCase();
