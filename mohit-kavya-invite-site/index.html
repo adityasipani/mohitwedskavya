@@ -680,8 +680,14 @@ footer .credit a.cr:hover .cr-n{color:var(--rosegold)}
 #intro.open .fl-b{transform:rotateX(-165deg);transition:transform 1.3s cubic-bezier(.55,0,.25,1) .46s,opacity .5s ease 1.15s}
 #intro.open .evc-in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.fe-seal .wax,.fe-tap span{animation:none}}
+
+/* royal envelope foil work: double gold borders on every flap, toran on the top flap, kairi on the sides, lotus below */
+.fd{position:absolute;inset:0;pointer-events:none}
+.fd svg.ln{position:absolute;inset:0;width:100%;height:100%}
+.fd .mo{position:absolute;filter:drop-shadow(0 1px 0 rgba(255,255,255,.55))}
+.fd .toran{position:absolute;left:0;right:0;top:calc(3.6% + 8px);height:clamp(22px,6vw,30px);background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='34' height='30' viewBox='0 0 34 30'%3E%3Cg fill='none' stroke='%23C29A5B' stroke-width='1' stroke-opacity='.85'%3E%3Cpath d='M0 1 Q17 14 34 1'/%3E%3Cpath d='M17 8 C20 13 20 17 17 21 C14 17 14 13 17 8Z'/%3E%3C/g%3E%3Ccircle cx='17' cy='25' r='1.5' fill='%23C29A5B' fill-opacity='.8'/%3E%3Ccircle cx='0' cy='3' r='1.3' fill='%23C29A5B' fill-opacity='.8'/%3E%3Ccircle cx='34' cy='3' r='1.3' fill='%23C29A5B' fill-opacity='.8'/%3E%3C/svg%3E") center top/34px 30px repeat-x}
 /* seal ornament: gold filigree ring, tucked floral sprigs, twinkles, wax drips, gold monogram */
-.fe-orn{position:absolute;left:50%;top:50%;width:clamp(250px,70vw,340px);aspect-ratio:1;transform:translate(-50%,-50%);z-index:7;pointer-events:none;transition:opacity .45s ease,transform .7s ease}
+.fe-orn{position:absolute;left:50%;top:50%;width:clamp(240px,66vw,320px);aspect-ratio:1;transform:translate(-50%,-50%);z-index:7;pointer-events:none;transition:opacity .45s ease,transform .7s ease}
 .fe-orn svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
 .fe-orn .fo-ring{animation:turn 70s linear infinite;transform-origin:50% 50%}
 .fe-orn .fo-dots{animation:turn 110s linear infinite reverse;transform-origin:50% 50%}
@@ -795,10 +801,10 @@ footer .credit .cr-row{padding-top:16px}
 <div id="intro" role="dialog" aria-label="Wedding invitation envelope">
   <div class="ev-liner" aria-hidden="true"></div>
   <div class="env-letter" aria-hidden="true"><div class="evc-in"><img class="fe-logo" id="envLogo" src="logo-mk.webp" alt="" hidden><svg class="l-crest" id="envCrest" viewBox="0 -6 200 176"></svg><span class="l1">TOGETHER WITH THEIR FAMILIES</span><span class="l2" id="envNames"></span><span class="l1" id="envCity"></span></div></div>
-  <div class="flap fl-l" aria-hidden="true"><div class="face"></div></div>
-  <div class="flap fl-r" aria-hidden="true"><div class="face"></div></div>
-  <div class="flap fl-b" aria-hidden="true"><div class="face"></div></div>
-  <div class="flap fl-t" aria-hidden="true"><div class="face"></div></div>
+  <div class="flap fl-l" aria-hidden="true"><div class="face"><div class="fd" data-f="l"></div></div></div>
+  <div class="flap fl-r" aria-hidden="true"><div class="face"><div class="fd" data-f="r"></div></div></div>
+  <div class="flap fl-b" aria-hidden="true"><div class="face"><div class="fd" data-f="b"></div></div></div>
+  <div class="flap fl-t" aria-hidden="true"><div class="face"><div class="fd" data-f="t"></div></div></div>
   <svg class="ev-seams" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="seamG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#B98A4E"/><stop offset=".5" stop-color="#F2DDB0"/><stop offset="1" stop-color="#B98A4E"/></linearGradient></defs><path d="M0 0 L50 50 L100 0 M0 100 L50 50 L100 100" fill="none" stroke="url(#seamG)" stroke-width="1.2" vector-effect="non-scaling-stroke" opacity=".9"/><rect x="1.2" y="1.2" width="97.6" height="97.6" fill="none" stroke="url(#seamG)" stroke-width=".8" vector-effect="non-scaling-stroke" opacity=".55"/></svg>
   <div class="fe-orn" id="envOrn" aria-hidden="true"></div>
   <button class="fe-seal" id="envBtn" type="button" aria-label="Tap the wax seal to open the invitation"><span class="wax" id="envSeal"></span></button>
@@ -1065,19 +1071,34 @@ document.body.classList.add("sealed");
 $("envCrest").innerHTML=crestSVG("ec");$("envNames").textContent=`${INVITE.groom} & ${INVITE.bride}`;
 $("envCity").textContent=INVITE.venueLine.toUpperCase();
 $("envSeal").innerHTML=`<svg viewBox="0 0 100 100" aria-hidden="true"><defs><linearGradient id="sealGold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFF1D6"/><stop offset=".45" stop-color="#F2D29A"/><stop offset=".6" stop-color="#FFF8E8"/><stop offset="1" stop-color="#D9AE6E"/></linearGradient></defs><path d="M38 22 l4 -9 5 6 3 -10 3 10 5 -6 4 9z" fill="url(#sealGold)"/><circle cx="50" cy="56" r="31" fill="none" stroke="url(#sealGold)" stroke-opacity=".75" stroke-width="1.4"/><circle cx="50" cy="56" r="27.5" fill="none" stroke="url(#sealGold)" stroke-opacity=".35" stroke-width=".8" stroke-dasharray="1.5 2.5"/><text x="50" y="67" text-anchor="middle" font-family="Parisienne, cursive" font-size="30" fill="rgba(70,20,32,.35)" transform="translate(.6 1.1)">${esc(INVITE.groom[0])}&amp;${esc(INVITE.bride[0])}</text><text x="50" y="66" text-anchor="middle" font-family="Parisienne, cursive" font-size="30" fill="url(#sealGold)">${esc(INVITE.groom[0])}&amp;${esc(INVITE.bride[0])}</text></svg>`;
+(function(){const C="#C29A5B",ln=(pts,o)=>{const p=pts.split(" ").map(q=>q.split(",").map(Number)),[a,b,c]=p,cut=(u,v,t)=>[u[0]+(v[0]-u[0])*t,u[1]+(v[1]-u[1])*t],a2=cut(a,c,.62),b2=cut(b,c,.62);return `<polyline points="${a2} ${a} ${b} ${b2}" fill="none" stroke="${C}" stroke-opacity="${o}" stroke-width="1" vector-effect="non-scaling-stroke"/>`;};
+  const tri={t:["7,2.2 93,2.2 50,45.5","11,3.6 89,3.6 50,42.5"],b:["7,97.8 93,97.8 50,54.5","11,96.4 89,96.4 50,57.5"],l:["2.2,7 2.2,93 45.5,50","3.6,11 3.6,89 42.5,50"],r:["97.8,7 97.8,93 54.5,50","96.4,11 96.4,89 57.5,50"]};
+  const kairi=`<svg viewBox="0 0 60 100" fill="none" stroke="${C}" stroke-linecap="round"><path d="M30 96 C13 96 5 82 6 66 C7 48 22 40 32 30 C40 22 44 14 42 7 C41 3 37 2 35 5 C33 8 36 10 38 8 M42 7 C50 16 55 32 54 52 C53 78 44 96 30 96" stroke-width="1.4"/><path d="M30 88 C18 88 13 78 14 67 C15 55 25 49 33 41 C39 35 42 29 43 24 C47 33 48 44 47 56 C46 74 40 88 30 88Z" stroke-width=".9" opacity=".75"/><g fill="${C}" stroke="none">${[0,60,120,180,240,300].map(a=>`<ellipse cx="30" cy="62" rx="2.2" ry="5" transform="rotate(${a} 30 67)" opacity=".7"/>`).join("")}<circle cx="30" cy="67" r="2.6"/><circle cx="30" cy="38" r="1.3"/><circle cx="22" cy="47" r="1.1"/><circle cx="38" cy="47" r="1.1"/></g></svg>`;
+  const lotus=`<svg viewBox="0 0 120 72" fill="none" stroke="${C}" stroke-linecap="round" stroke-width="1.3"><path d="M60 6 C71 21 71 40 60 53 C49 40 49 21 60 6Z"/><path d="M60 15 C65 24 65 36 60 45 C55 36 55 24 60 15Z" fill="${C}" fill-opacity=".25" stroke-width=".8"/><path d="M60 53 C46 47 36 33 38 18 C49 24 57 36 60 53Z M60 53 C74 47 84 33 82 18 C71 24 63 36 60 53Z"/><path d="M60 55 C40 55 23 45 16 32 C33 31 50 40 60 55Z M60 55 C80 55 97 45 104 32 C87 31 70 40 60 55Z" opacity=".8"/><path d="M26 61 Q60 70 94 61" stroke-width="1"/><g fill="${C}" stroke="none"><circle cx="60" cy="68" r="1.6"/><circle cx="48" cy="67" r="1.1"/><circle cx="72" cy="67" r="1.1"/><circle cx="60" cy="2" r="1.4"/></g></svg>`;
+  document.querySelectorAll(".fd").forEach(el=>{const k=el.dataset.f;let h=`<svg class="ln" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">${ln(tri[k][0],.75)}${ln(tri[k][1],.45)}</svg>`;
+    if(k==="t")h+=`<div class="toran"></div>`;
+    if(k==="l")h+=`<div class="mo" style="left:7%;top:50%;width:clamp(34px,10vw,52px);transform:translateY(-50%) rotate(-8deg)">${kairi}</div>`;
+    if(k==="r")h+=`<div class="mo" style="right:7%;top:50%;width:clamp(34px,10vw,52px);transform:translateY(-50%) scaleX(-1) rotate(-8deg)">${kairi}</div>`;
+    if(k==="b")h+=`<div class="mo" style="left:50%;bottom:6.5%;width:clamp(92px,27vw,140px);transform:translateX(-50%)">${lotus}</div>`;
+    el.innerHTML=h;});
+})();
 (function(){const btn=$("envBtn");if(!btn)return;
   // wax drips: an irregular puddle of the same wax peeking out from under the round seal
   const lobes=[[0,1.0],[28,1.1],[55,.98],[83,1.14],[118,1.0],[150,1.08],[178,.97],[210,1.12],[240,1.0],[268,1.09],[300,.98],[330,1.12]];
   const P=lobes.map(([a,k])=>{const r=40*k,t=a*Math.PI/180;return [50+r*Math.cos(t),50+r*Math.sin(t)];}),M=(p,q)=>[(p[0]+q[0])/2,(p[1]+q[1])/2],f=v=>v.toFixed(1);let m0=M(P[P.length-1],P[0]),d=`M${f(m0[0])} ${f(m0[1])}`;P.forEach((p,n)=>{const m=M(p,P[(n+1)%P.length]);d+=` Q${f(p[0])} ${f(p[1])} ${f(m[0])} ${f(m[1])}`;});
   btn.insertAdjacentHTML("afterbegin",`<svg class="drip" viewBox="0 0 100 100" aria-hidden="true"><defs><radialGradient id="dripG" cx=".38" cy=".32" r=".75"><stop offset="0" stop-color="#C77583"/><stop offset=".6" stop-color="#A3505F"/><stop offset="1" stop-color="#7E3646"/></radialGradient></defs><path d="${d}Z" fill="url(#dripG)" /></svg>`);
   // gold filigree ring + floral sprigs + twinkles
-  const G='url(#ornGold)';let ring="",ring2="";
-  for(let i=0;i<16;i++){const a=i*22.5;ring+=`<g transform="rotate(${a} 100 100)"><path d="M100 22 C106 31 106 39 100 45 C94 39 94 31 100 22Z" fill="none" stroke="${G}" stroke-width="1.1"/><circle cx="100" cy="17" r="1.6" fill="${G}"/></g><g transform="rotate(${a+11.25} 100 100)"><path d="M100 30 q3 6 0 10 q-3 -4 0 -10z" fill="${G}" opacity=".55"/></g>`;}
-  for(let i=0;i<48;i++)ring2+=`<circle cx="100" cy="10" r=".9" fill="${G}" transform="rotate(${i*7.5} 100 100)"/>`;
-  const rose=(x,y,k)=>`<g transform="translate(${x} ${y}) scale(${k})">${[0,72,144,216,288].map(t=>`<circle cx="${(4.2*Math.cos(t*Math.PI/180)).toFixed(2)}" cy="${(4.2*Math.sin(t*Math.PI/180)).toFixed(2)}" r="4.6" fill="#EDB7B8" stroke="#D9969D" stroke-width=".5"/>`).join("")}<circle r="4.4" fill="#E2A0A8"/><path d="M-1.6 .4 a1.6 1.6 0 1 1 1.8 1.6 a3.2 3.2 0 1 1 -3.4 -3.6 a4.2 4.2 0 0 1 5.2 1" fill="none" stroke="#B56877" stroke-width=".9" stroke-linecap="round"/></g>`;
-  const sprig=(rot,flip)=>`<g transform="rotate(${rot} 100 100) translate(100 100) scale(${flip} 1)"><path d="M18 -18 C34 -34 52 -44 74 -50" fill="none" stroke="#9AA98B" stroke-width="1.6" stroke-linecap="round"/>${[[30,-30,-35],[42,-38,-28],[54,-43,-40],[64,-47,-22]].map(([x,y,r])=>`<ellipse cx="${x}" cy="${y-6}" rx="3.2" ry="8" fill="#A9B99A" opacity=".9" transform="rotate(${r} ${x} ${y})"/><ellipse cx="${x+2}" cy="${y+6}" rx="3" ry="7.5" fill="#93A584" opacity=".85" transform="rotate(${r+70} ${x} ${y})"/>`).join("")}${rose(78,-51,1)}${rose(57,-59,.68)}${[[48,-30],[62,-36],[70,-60],[40,-46],[84,-42]].map(([x,y])=>`<circle cx="${x}" cy="${y}" r="1.8" fill="#FFF7EC" stroke="#E4CDB4" stroke-width=".5"/>`).join("")}<circle cx="36" cy="-24" r="1.5" fill="#D9B27A"/><circle cx="68" cy="-44" r="1.4" fill="#D9B27A"/></g>`;
-  const tw=[[16,30,0],[86,22,.9],[90,74,1.7],[12,78,2.4],[50,6,1.2],[50,95,2.9]].map(([x,y,dl])=>`<i class="tw" style="left:${x}%;top:${y}%;animation-delay:${dl}s"></i>`).join("");
-  $("envOrn").innerHTML=`<div class="glow"></div><svg viewBox="0 0 200 200"><defs><linearGradient id="ornGold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#B98A4E"/><stop offset=".5" stop-color="#F2DDB0"/><stop offset="1" stop-color="#B98A4E"/></linearGradient></defs><g class="fo-dots">${ring2}</g><g class="fo-ring"><circle cx="100" cy="100" r="58" fill="none" stroke="${G}" stroke-width=".7" opacity=".7"/><circle cx="100" cy="100" r="61" fill="none" stroke="${G}" stroke-width=".5" stroke-dasharray="2 3" opacity=".7"/>${ring}</g>${sprig(-8,1)}${sprig(172,1)}</svg>${tw}`;
+  const G='url(#ornGold)',PR=(a,s)=>`<g transform="rotate(${a} 100 100)">${s}</g>`;
+  // royal lotus medallion: 8 outer lotus petals, 8 inner petals offset, jali scallops, pearl rings
+  let petals="",inner="",scal="",pearls="",dots="";
+  for(let i=0;i<8;i++){const a=i*45;
+    petals+=PR(a,`<path d="M100 26 C110 38 112 50 100 62 C88 50 90 38 100 26Z" fill="none" stroke="${G}" stroke-width="1.2"/><path d="M100 34 C105 41 106 48 100 55 C94 48 95 41 100 34Z" fill="${G}" opacity=".35"/><circle cx="100" cy="21" r="1.7" fill="${G}"/>`);
+    inner+=PR(a+22.5,`<path d="M100 40 C106 47 107 54 100 62 C93 54 94 47 100 40Z" fill="none" stroke="${G}" stroke-width=".9" opacity=".8"/>`);}
+  for(let i=0;i<24;i++)scal+=PR(i*15,`<path d="M95.5 15 Q100 9.5 104.5 15" fill="none" stroke="${G}" stroke-width=".8"/>`);
+  for(let i=0;i<24;i++)pearls+=PR(i*15+7.5,`<circle cx="100" cy="11.5" r="1.25" fill="#FFF8EC" stroke="${G}" stroke-width=".5"/>`);
+  for(let i=0;i<64;i++)dots+=PR(i*5.625,`<circle cx="100" cy="5" r=".7" fill="${G}"/>`);
+  const tw=[[18,24,0],[84,20,.9],[88,78,1.7],[14,80,2.4],[50,2,1.2],[50,99,2.9]].map(([x,y,dl])=>`<i class="tw" style="left:${x}%;top:${y}%;animation-delay:${dl}s"></i>`).join("");
+  $("envOrn").innerHTML=`<div class="glow"></div><svg viewBox="0 0 200 200"><defs><linearGradient id="ornGold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#B98A4E"/><stop offset=".5" stop-color="#F2DDB0"/><stop offset="1" stop-color="#B98A4E"/></linearGradient></defs><g class="fo-dots">${dots}</g><g class="fo-ring">${pearls}<circle cx="100" cy="100" r="66" fill="none" stroke="${G}" stroke-width=".6" opacity=".8"/><circle cx="100" cy="100" r="69" fill="none" stroke="${G}" stroke-width=".5" stroke-dasharray="1.5 2.5" opacity=".8"/>${petals}${inner}</g></svg>${tw}`;
 })();
 let envOpened=false;
 function openEnvelope(){
