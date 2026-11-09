@@ -798,6 +798,13 @@ footer .credit .cr-row{padding-top:16px}
 .petals{position:fixed;inset:0;pointer-events:none;z-index:30;overflow:hidden}
 .petals i{position:absolute;top:-24px;width:var(--sz);height:calc(var(--sz)*.7);border-radius:60% 0 60% 0;background:var(--c);opacity:.6;will-change:transform;animation:petalfall var(--d) linear var(--dl) infinite}
 @keyframes petalfall{0%{transform:translate3d(0,0,0) rotate(0)}50%{transform:translate3d(var(--sx),52vh,0) rotate(200deg)}100%{transform:translate3d(calc(var(--sx)*-.6),106vh,0) rotate(400deg)}}
+/* rose petals: real petal shapes (shaded SVG), tumbling in 3D */
+.petals.rose{perspective:600px}
+.petals.rose i{top:-40px;width:var(--sz);height:var(--sz);border-radius:0;background:var(--img) center/contain no-repeat;opacity:1;filter:drop-shadow(0 2px 2px rgba(120,40,60,.18));transform-style:preserve-3d}
+.petals.rose.shower i{animation:roseshower var(--d) cubic-bezier(.33,.05,.6,1) var(--dl) 1 both}
+.petals.rose.foot i{animation:rosedrift var(--d) linear var(--dl) infinite;opacity:.9}
+@keyframes roseshower{0%{transform:translate3d(0,0,0) rotate(var(--r0)) rotateX(0) rotateY(0);opacity:0}8%{opacity:1}85%{opacity:1}100%{transform:translate3d(var(--sx),112vh,0) rotate(calc(var(--r0) + 300deg)) rotateX(540deg) rotateY(180deg);opacity:0}}
+@keyframes rosedrift{0%{transform:translate3d(0,0,0) rotate(var(--r0)) rotateX(0)}50%{transform:translate3d(var(--sx),55vh,0) rotate(calc(var(--r0) + 160deg)) rotateX(220deg)}100%{transform:translate3d(calc(var(--sx)*-.5),112vh,0) rotate(calc(var(--r0) + 320deg)) rotateX(440deg)}}
 </style>
 
 </head>
@@ -1175,11 +1182,14 @@ if(!reduce){const layers=[...document.querySelectorAll("[data-depth]")];let tk=f
   addEventListener("scroll",()=>{if(tk)return;tk=true;requestAnimationFrame(()=>{const y=scrollY;if(y<1300)layers.forEach(l=>l.style.transform=`translateY(${y*l.dataset.depth}px)`);tk=false;});},{passive:true});}
 
 /* ---------- petals as moments: a shower when the envelope opens, and a gentle fall only at the footer ---------- */
-const PCOLS=["#F6C9D0","#F2B8C0","#FBE0D8","#EFA3AE","#F8D9B6"];
-function petalHost(n,once,cls){const host=document.createElement("div");host.className="petals "+(cls||"");host.setAttribute("aria-hidden","true");
-  for(let i=0;i<n;i++){const p=document.createElement("i");const d=once?rnd(3.4,5.2):rnd(11,19);p.style.cssText=`left:${rnd(0,100)}%;--d:${d}s;--dl:${once?rnd(0,1.6):-rnd(0,d)}s;--sx:${rnd(-50,50)}px;--sz:${rnd(8,13)}px;--c:${PCOLS[i%5]}`+(once?";animation-iteration-count:1;animation-fill-mode:both":"");host.appendChild(p);}
+const ROSE=[["#FCE3E6","#E8899A","#B8475E"],["#FDEBEC","#F0A9B5","#CC6A7D"],["#FBD6DC","#D9667A","#9E3249"],["#FFF1EC","#F6C3C3","#D98C95"],["#FCE0E4","#E27D90","#A93C55"]].map(([a,b,c],k)=>{
+  const g=`p${k}`,svg=`<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'><defs><radialGradient id='${g}' cx='.42' cy='.32' r='.75'><stop offset='0' stop-color='${a}'/><stop offset='.55' stop-color='${b}'/><stop offset='1' stop-color='${c}'/></radialGradient><linearGradient id='${g}b' x1='0' y1='0' x2='0' y2='1'><stop offset='.55' stop-color='${c}' stop-opacity='0'/><stop offset='1' stop-color='${c}' stop-opacity='.55'/></linearGradient></defs><path d='M20 38 C10 33 3 24 4 14 C5 6 12 2 17 5 C19 6 20 8 20 8 C20 8 21 6 23 5 C28 2 35 6 36 14 C37 24 30 33 20 38 Z' fill='url(%23${g})'/><path d='M20 38 C10 33 3 24 4 14 C5 6 12 2 17 5 C19 6 20 8 20 8 C20 8 21 6 23 5 C28 2 35 6 36 14 C37 24 30 33 20 38 Z' fill='url(%23${g}b)'/><path d='M6 13 C8 7 13 4 17 6' fill='none' stroke='${c}' stroke-opacity='.45' stroke-width='1.6' stroke-linecap='round'/><path d='M27 7 C31 7 34 10 34.5 14' fill='none' stroke='${c}' stroke-opacity='.35' stroke-width='1.3' stroke-linecap='round'/><ellipse cx='14' cy='15' rx='4.5' ry='2.2' fill='%23fff' fill-opacity='.45' transform='rotate(-35 14 15)'/><path d='M20 12 C20 20 20 28 20 35' stroke='${c}' stroke-opacity='.18' stroke-width='.8'/></svg>`;
+  return `url("data:image/svg+xml,${svg.replace(/#/g,"%23").replace(/</g,"%3C").replace(/>/g,"%3E")}")`;});
+function petalHost(n,once,cls){const host=document.createElement("div");host.className="petals rose "+(cls||"");host.setAttribute("aria-hidden","true");
+  for(let i=0;i<n;i++){const p=document.createElement("i");const d=once?rnd(2.4,3.4):rnd(12,19);
+    p.style.cssText=`left:${rnd(-4,100)}%;--d:${d}s;--dl:${once?rnd(0,.7):-rnd(0,d)}s;--sx:${rnd(-70,70)}px;--sz:${once?rnd(15,26):rnd(13,20)}px;--r0:${rnd(0,360)}deg;--img:${ROSE[i%ROSE.length]}`;host.appendChild(p);}
   document.body.appendChild(host);return host;}
-window.petalShower=function(){if(reduce)return;const h=petalHost(innerWidth<600?22:32,true,"shower");let gone=false;const end=()=>{if(gone)return;gone=true;h.style.transition="opacity .5s";h.style.opacity="0";setTimeout(()=>h.remove(),600);removeEventListener("scroll",chk);};const chk=()=>{if(scrollY>innerHeight*.5)end();};addEventListener("scroll",chk,{passive:true});setTimeout(end,7000);};
+window.petalShower=function(){if(reduce)return;const h=petalHost(innerWidth<600?34:52,true,"shower");let gone=false;const end=()=>{if(gone)return;gone=true;h.style.transition="opacity .5s";h.style.opacity="0";setTimeout(()=>h.remove(),600);removeEventListener("scroll",chk);};const chk=()=>{if(scrollY>innerHeight*.5)end();};addEventListener("scroll",chk,{passive:true});setTimeout(end,4600);};
 (function(){$("petals").style.display="none";if(reduce)return;const ft=document.querySelector("footer");if(!ft||!("IntersectionObserver" in window))return;
   let h=null;new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){if(!h)h=petalHost(innerWidth<600?7:10,false,"foot");h.style.display="";}else if(h)h.style.display="none";}),{threshold:.25}).observe(ft);})();
 
