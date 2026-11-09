@@ -23,3 +23,8 @@ To roll back: Netlify → **Deploys** → choose an earlier deploy → **Publish
 - One vote per question per device; changing an answer moves the vote.
 - To reset the tally, open Netlify → **Blobs** → store `quiz` and delete its entries.
 - The results only work on the deployed site, not when opening `index.html` from disk.
+
+## Deploying on Vercel instead
+1. Import the repo on vercel.com (Root Directory = the folder that holds index.html).
+2. Project → Storage → Create Database → Upstash for Redis (free) → connect it to the project.
+3. Redeploy. Quiz results run from `api/quiz.js`; `netlify.toml` and `netlify/` are ignored there.

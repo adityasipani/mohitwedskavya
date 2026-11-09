@@ -1,7 +1,8 @@
-// Quiz results for the Mohit & Kavya invite — Vercel version.
+// Quiz results for the Mohit & Kavya invite — Vercel version (same API as netlify/functions/quiz.mjs).
 // GET  /api/quiz                  -> { counts: { "0": {"Mohit":3,"Kavya":5,"Both":1}, ... } }
 // POST /api/quiz {voter, q, choice} -> updated counts
 // Votes are kept in a free Upstash Redis database connected through Vercel (Storage tab).
+// One vote per question per device; changing an answer moves the vote instead of adding a new one.
 
 const CHOICES = new Set(["Mohit", "Kavya", "Both"]);
 const QUESTIONS = 4;
