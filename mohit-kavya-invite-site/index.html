@@ -205,7 +205,7 @@ body.sealed{overflow:hidden}
 .seal.mirror .seal-face,.seal.mirror canvas{position:absolute;inset:auto;left:17.7%;top:15.3%;width:64.6%;height:73%;border-radius:50%/42%;background:radial-gradient(ellipse at 50% 40%,#FFFDF9,#FBEAE4)}
 .seal.mirror .seal-face .d{font-size:2.7rem;color:var(--rose)}
 .mirror-frame{position:absolute;inset:0;width:100%;height:100%;z-index:3;pointer-events:none;overflow:visible;filter:drop-shadow(0 12px 20px #9c546433)}
-.hint{font-style:italic;color:var(--ink-soft)}
+.hint{font-style:italic;color:#5A3A32}
 .sparkle{position:absolute;width:8px;height:8px;background:var(--gold);transform:rotate(45deg);pointer-events:none;animation:burst .9s ease-out forwards}
 @keyframes burst{to{transform:translate(var(--x),var(--y)) rotate(180deg) scale(.2);opacity:0}}
 
@@ -682,8 +682,8 @@ footer .credit a.cr:hover .cr-n{color:var(--rosegold)}
 .fe-seal .wax svg{position:absolute;inset:14%;width:72%;height:72%}
 @keyframes sealpulse{0%,100%{transform:scale(1)}50%{transform:scale(1.04)}}
 .fe-tap{position:absolute;left:0;right:0;top:calc(50% + clamp(132px,36vw,176px));z-index:8;margin:0;text-align:center;transition:opacity .4s ease}
-.fe-tap span{font-family:"Cinzel",var(--f-label);font-weight:600;letter-spacing:.42em;padding-left:.42em;font-size:.7rem;color:#9C6A5C;text-transform:uppercase;animation:tapblink 2.6s ease-in-out infinite}
-@keyframes tapblink{0%,100%{opacity:.45}50%{opacity:1}}
+.fe-tap span{font-family:"Cinzel",var(--f-label);font-weight:600;letter-spacing:.42em;padding-left:.42em;font-size:.7rem;color:#74402F;text-transform:uppercase;animation:tapblink 2.6s ease-in-out infinite}
+@keyframes tapblink{0%,100%{opacity:.72}50%{opacity:1}}
 /* opening sequence */
 #intro.open .fe-seal{transform:translate(-50%,-50%) scale(1.25);opacity:0}
 #intro.open .fe-tap,#intro.open .ev-seams{opacity:0}
@@ -765,8 +765,8 @@ footer .credit .cr-row{padding-top:16px}
 @keyframes nudgehint{0%,100%{transform:translateX(0)}20%{transform:translateX(-8px)}40%{transform:translateX(7px)}60%{transform:translateX(-5px)}80%{transform:translateX(3px)}}
 .seal.mirror.nudge{animation:mirrorglow 1s ease}
 @keyframes mirrorglow{0%,100%{filter:none}50%{filter:drop-shadow(0 0 22px rgba(232,190,120,.9))}}
-.gate-skip{display:block;margin:6px auto 0;background:none;border:0;font-family:var(--f-body);font-style:italic;font-size:.92rem;color:var(--rosegold);text-decoration:underline;text-underline-offset:3px;cursor:pointer}
-.gate-cue{display:grid;justify-items:center;gap:4px;margin:14px auto 0;color:var(--rosegold);text-decoration:none;font-family:"Cinzel",var(--f-label);font-weight:600;font-size:.66rem;letter-spacing:.36em;padding-left:.36em;text-transform:uppercase;animation:cuein .8s ease both}
+.gate-skip{display:block;margin:6px auto 0;background:none;border:0;font-family:var(--f-body);font-style:italic;font-size:.92rem;color:#844A31;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.gate-cue{display:grid;justify-items:center;gap:4px;margin:14px auto 0;color:#844A31;text-decoration:none;font-family:"Cinzel",var(--f-label);font-weight:600;font-size:.66rem;letter-spacing:.36em;padding-left:.36em;text-transform:uppercase;animation:cuein .8s ease both}
 .gate-cue svg{width:18px;animation:nudge 1.6s ease-in-out infinite}
 @keyframes cuein{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 
@@ -1661,8 +1661,8 @@ $("cdNote").innerHTML=`until the pheras on ${ph(INVITE.events[INVITE.events.leng
     let g=ctx.createLinearGradient(0,0,w,h);[[0,"#E9B7B9"],[.25,"#F6D9D6"],[.45,"#D99A9F"],[.62,"#F3CFCB"],[.8,"#C9838B"],[1,"#E8B2B3"]].forEach(([o,c])=>g.addColorStop(o,c));ctx.fillStyle=g;ctx.fillRect(0,0,w,h);
     for(let i=0;i<900;i++){ctx.fillStyle=`rgba(255,255,255,${Math.random()*.35})`;ctx.fillRect(Math.random()*w,Math.random()*h,1,1);}
     g=ctx.createLinearGradient(0,0,w,h*.6);g.addColorStop(.3,"rgba(255,255,255,0)");g.addColorStop(.5,"rgba(255,255,255,.35)");g.addColorStop(.7,"rgba(255,255,255,0)");ctx.fillStyle=g;ctx.fillRect(0,0,w,h);
-    ctx.fillStyle="#FFF6F2";ctx.textAlign="center";ctx.textBaseline="middle";ctx.font=`italic ${w*.12}px "Cormorant Garamond", Georgia, serif`;
-    ["Gently","scratch to","reveal"].forEach((t,i)=>ctx.fillText(t,w/2,h/2+(i-1)*w*.15));}
+    ctx.fillStyle="#7A3346";ctx.shadowColor="rgba(255,240,236,.7)";ctx.shadowOffsetY=1;ctx.textAlign="center";ctx.textBaseline="middle";ctx.font=`italic 600 ${w*.12}px "Cormorant Garamond", Georgia, serif`;
+    ["Gently","scratch to","reveal"].forEach((t,i)=>ctx.fillText(t,w/2,h/2+(i-1)*w*.15));ctx.shadowColor="transparent";ctx.shadowOffsetY=0;}
   paint();window.repaintSeal=paint;if(document.fonts&&document.fonts.ready)document.fonts.ready.then(paint);
   function reveal(){if(done)return;done=true;cv.classList.add("done");$("hint").textContent="See you in Bikaner";window.dispatchEvent(new Event("datesrevealed"));if(reduce)return;const host=$("sealWrap");for(let i=0;i<18;i++){const s=document.createElement("i");s.className="sparkle";s.style.left="50%";s.style.top="50%";const a=i/18*Math.PI*2;s.style.setProperty("--x",Math.cos(a)*rnd(110,160)+"px");s.style.setProperty("--y",Math.sin(a)*rnd(110,160)+"px");s.style.background=["#C9A066","#F6C9D0","#F2DDB0"][i%3];host.appendChild(s);setTimeout(()=>s.remove(),1000);}}
   function scr(e){if(!down||done)return;const r=cv.getBoundingClientRect();ctx.globalCompositeOperation="destination-out";ctx.beginPath();ctx.arc(e.clientX-r.left,e.clientY-r.top,24,0,Math.PI*2);ctx.fill();ctx.globalCompositeOperation="source-over";}
