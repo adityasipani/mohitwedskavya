@@ -1,0 +1,3 @@
+out/
+clients/*/photos/
+__pycache__/

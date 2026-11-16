@@ -1,0 +1,33 @@
+{
+  "groom": "Rahul",
+  "bride": "Riya",
+  "city": "Jaipur",
+  "venueLine": "Jaipur",
+  "domain": "",
+  "dates": { "days": "14 – 16", "month": "February 2027" },
+  "countdownTo": "2027-02-16T19:30:00+05:30",
+  "manuhar": ["We eagerly await your gracious presence", "The Agarwal & Mehta Families"],
+  "groomFamily": "Grandson of Smt. Kamla Devi Agarwal & Late Sh. Ramesh Chand Agarwal · Son of Mrs. Sunita Agarwal & Mr. Anil Agarwal",
+  "brideFamily": "Granddaughter of Smt. Usha Mehta & Sh. Prakash Mehta · Daughter of Mrs. Neha Mehta & Mr. Vikas Mehta",
+  "festivitiesLine": "Three days of colour in the Pink City",
+  "blessingsLine": "With love and good wishes from the Agarwal and Mehta families",
+  "footerLine": "From the Pink City, with love",
+  "events": [
+    { "name": "Haldi", "day": "DAY ONE", "tagline": "Turmeric, laughter and marigolds", "date": "14 Feb 2027", "time": "11:00 am onwards", "where": "Jai Mahal Palace, Jaipur", "map": "https://maps.google.com/?q=Jai+Mahal+Palace+Jaipur",
+      "men": "Yellow kurta with white pyjama", "women": "Yellow or mustard suit or lehenga", "palette": [["Haldi Yellow","#F2B705"],["Marigold","#F28C0F"],["White","#FFFFFF"]] },
+    { "name": "Mehendi", "day": "DAY ONE", "tagline": "Henna, songs and a little mischief", "date": "14 Feb 2027", "time": "4:00 pm onwards", "where": "Jai Mahal Palace, Jaipur",
+      "men": "Printed kurta in greens", "women": "Light lehenga or sharara in green or pink", "palette": [["Mehendi Green","#5B7F3A"],["Rani Pink","#D6336C"]] },
+    { "name": "Sangeet", "day": "DAY TWO", "tagline": "An evening of music and dance", "date": "15 Feb 2027", "time": "7:00 pm onwards", "where": "Rambagh Palace, Jaipur", "map": "https://maps.google.com/?q=Rambagh+Palace+Jaipur",
+      "men": "Indo-western or bandhgala", "women": "Sequinned lehenga or gown", "palette": [["Royal Blue","#2B4C9B"],["Silver","#C0C0C0"]] },
+    { "name": "Shubh Vivah", "day": "THE WEDDING DAY", "tagline": "Seven pheras around the sacred fire", "date": "16 Feb 2027", "time": "7:30 pm onwards", "where": "Rambagh Palace, Jaipur",
+      "men": "Sherwani or Jodhpuri with a safa", "women": "Bridal-tone lehenga or silk saree", "palette": [["Red","#A3122A"],["Gold","#C9A04A"]] }
+  ],
+  "blessings": [
+    { "title": "With blessings of", "style": "elders", "names": [["Smt. Kamla Devi Agarwal", "Smt. Usha Mehta"]] },
+    { "title": "Cousins", "style": "line", "names": ["Aarav, Kabir, Isha, Tanya & Vivaan"] }
+  ],
+  "contacts": [
+    { "name": "Anil Agarwal", "phone": "+91 98000 00001" },
+    { "name": "Vikas Mehta", "phone": "+91 98000 00002" }
+  ]
+}
