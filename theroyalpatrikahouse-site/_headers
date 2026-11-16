@@ -2,3 +2,6 @@
   Cache-Control: public, max-age=2592000
 /*.png
   Cache-Control: public, max-age=2592000
+
+/ig/*
+  X-Robots-Tag: noindex
