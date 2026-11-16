@@ -430,7 +430,7 @@ body.sealed{overflow:hidden}
 .elders{display:grid;gap:14px}
 .elders p{font-family:var(--f-body);font-weight:500;font-size:1.22rem;line-height:1.35;color:var(--ink)}
 .elders .amp{display:block;font-family:var(--f-script);font-size:1.5rem;color:var(--rosegold);line-height:1.2}
-.bline p{font-size:1.14rem;line-height:1.5;color:var(--ink);max-width:34em;margin-inline:auto}
+.bline p{font-size:1.14rem;line-height:1.5;color:var(--ink);max-width:34em;margin-inline:auto;text-wrap:balance;word-spacing:normal;letter-spacing:normal}
 .bline p+p{font-family:var(--f-script);font-size:1.6rem;color:var(--rose);margin-top:2px}
 .bless-line:last-child .bline p{font-family:var(--f-body);font-size:1.14rem;color:var(--ink);margin-top:0}
 .couples{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 28px;font-size:1.1rem}
@@ -724,15 +724,15 @@ footer .credit a.cr:hover .cr-n{color:var(--rosegold)}
 .fam .rel:first-child{margin-top:0}
 .fam .fnames{font-size:1.1rem;color:var(--ink-soft);line-height:1.45;max-width:30em;text-wrap:balance}
 /* shimmering foil names */
-.foilname{position:relative;display:inline-block;background:linear-gradient(100deg,#8E4A5A 0%,#B06A72 30%,#D9A47E 42%,#FFF8EC 50%,#D9A47E 58%,#B06A72 70%,#8E4A5A 100%);background-size:260% 100%;background-position:120% 0;-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;animation:shinesweep 3.4s cubic-bezier(.45,0,.25,1) infinite;padding-inline:.18em;filter:drop-shadow(0 0 10px rgba(255,214,170,.45))}
-.foilname.gold{background-image:linear-gradient(100deg,#9A6B22 0%,#C08A4A 30%,#EBD08F 42%,#FFF9E8 50%,#EBD08F 58%,#C08A4A 70%,#9A6B22 100%)}
+.foilname{position:relative;display:inline-block;background:linear-gradient(100deg,#8E4A5A 0%,#B06A72 30%,#C98A72 42%,#E7B48F 50%,#C98A72 58%,#B06A72 70%,#8E4A5A 100%);background-size:260% 100%;background-position:120% 0;-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;animation:shinesweep 3.4s cubic-bezier(.45,0,.25,1) infinite;padding-inline:.18em;-webkit-box-decoration-break:clone;box-decoration-break:clone;transform:translateZ(0)}
+.foilname.gold{background-image:linear-gradient(100deg,#9A6B22 0%,#C08A4A 30%,#C99A55 42%,#E2BC72 50%,#C99A55 58%,#C08A4A 70%,#9A6B22 100%)}
 .foilname::before,.foilname::after{content:"✦";position:absolute;-webkit-text-fill-color:#E9C877;color:#E9C877;font-family:serif;font-size:.26em;line-height:1;pointer-events:none;animation:twinkle 3.4s ease-in-out infinite;filter:none}
 .foilname::before{left:-.2em;top:.18em}
 .foilname::after{right:-.25em;bottom:.3em;animation-delay:1.7s;font-size:.2em}
 @keyframes twinkle{0%,100%{opacity:0;transform:scale(.4) rotate(0)}45%,55%{opacity:1;transform:scale(1) rotate(90deg)}}
 #invBride.foilname,#invBride.foilname::before{animation-delay:.6s}.manuhar .foilname{animation-delay:1.2s}
 @keyframes shinesweep{0%{background-position:120% 0}60%,100%{background-position:-20% 0}}
-@media (prefers-reduced-motion:reduce){.foilname,.foilname::before,.foilname::after{animation:none;background-position:50% 0}}
+@media (prefers-reduced-motion:reduce){.foilname,.foilname::before,.foilname::after{animation:none;background-position:0 0}}
 
 /* designer credit: bottom left, with Instagram and WhatsApp */
 footer .credit{text-align:left}
@@ -1055,7 +1055,7 @@ const INVITE = {
     { title:"With best compliments", style:"couples", names:[
       "Sanju – Vinod Jain","Anju – Mahendra Sipani","Sangeeta – Vijay Patwa","Veena – Manoj Bothra","Punam – Pawan Bothra",
       "Shipra – Ashish Mahnot","Mahak – Deepak Bothra","Mahak – Toshan Patil","Sneha – Vallabh Jain","Sweety – Nishant Bothra"] },
-    { title:"Cousins", style:"line", names:["Deepak, Jai, Yash, Gourav, Chirag, Aditya, Sahil, Sneha\u00a0&\u00a0Bhabya"] }
+    { title:"Cousins", style:"line", names:["Deepak, Jai, Yash, Gourav, Chirag, Aditya, Sahil, Sneha & Bhabya"] }
   ],
   gallery: ["gallery-7","gallery-9","gallery-8","gallery-4","gallery-6"],
   contacts: [
