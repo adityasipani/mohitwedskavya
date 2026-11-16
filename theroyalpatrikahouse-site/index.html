@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>The Royal Patrika House · Wedding invitation websites</title>
-<meta name="description" content="Royal wedding invitation websites for Indian weddings. A wax-sealed envelope that opens with rose petals, a scene for every function, maps, dress codes, countdown and a guest quiz, all on one link.">
+<meta name="description" content="Royal wedding invitation websites, made by hand for Indian families. A wax-sealed envelope, a scene for every function, maps, dress codes and a guest quiz, all on one link you send on WhatsApp.">
 <meta name="theme-color" content="#4A1825">
 <link rel="icon" type="image/png" href="/favicon.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -23,16 +23,16 @@
 <style>
 :root{
   --maroon:#5B1F2E;--maroon-d:#3E1420;--maroon-x:#2C0E16;
-  --ivory:#FBF6EE;--paper:#F4EBDD;--sand:#EADCC6;--line:rgba(185,138,62,.32);
+  --ivory:#FBF6EE;--cream:#FFFBF5;--paper:#F5EDE1;--line:rgba(185,138,62,.28);
   --gold:#B98A3E;--gold-l:#E2BC72;--gold-d:#8E6220;
-  --ink:#2B1A17;--muted:#6B5750;
+  --ink:#2B1A17;--muted:#6B5750;--green:#1F8F55;
   --serif:"Cormorant Garamond","Palatino Linotype",Palatino,Georgia,serif;
   --sans:Jost,"Segoe UI",system-ui,sans-serif;
   --foil:linear-gradient(100deg,#8E6220 0%,#C99A4B 28%,#F1D79A 50%,#C08D3C 72%,#8A5E1F 100%);
-  --wrap:1200px;--r:10px;
+  --wrap:1180px;--shadow:0 40px 70px -48px rgba(62,20,32,.55);
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:84px}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:96px}
 html,body{max-width:100%;overflow-x:hidden}
 @supports (overflow:clip){html,body{overflow-x:clip}}
 body{margin:0;background:var(--ivory);color:var(--ink);font:300 17px/1.7 var(--sans)}
@@ -42,126 +42,156 @@ a{color:inherit}
 button{font:inherit}
 .wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
 h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.08;margin:0;color:var(--maroon);text-wrap:balance}
-h2{font-size:clamp(36px,5vw,58px)}
-h3{font-size:clamp(24px,2.4vw,30px)}
+h2{font-size:clamp(36px,4.8vw,56px)}
+h3{font-size:clamp(23px,2.2vw,28px)}
 p{margin:0}
-.eyebrow{display:inline-flex;align-items:center;gap:12px;font:500 12px/1.3 var(--sans);letter-spacing:.3em;text-transform:uppercase;color:var(--gold-d)}
-.eyebrow::before{content:"";width:28px;height:1px;background:currentColor}
-.center .eyebrow::after{content:"";width:28px;height:1px;background:currentColor}
-.lede{font-size:clamp(17px,1.8vw,19px);color:var(--muted);text-wrap:pretty}
-.foil{background:var(--foil);-webkit-background-clip:text;background-clip:text;color:transparent}
-.head{max-width:740px;margin:0 0 56px}
-.head.center{text-align:center;margin-left:auto;margin-right:auto}
-.head h2{margin-top:16px}
-.head .lede{margin-top:18px}
-section{padding:110px 0}
-.orn{display:flex;align-items:center;gap:12px;justify-content:center;color:var(--gold);margin:22px auto 0;max-width:200px}
-.orn::before,.orn::after{content:"";flex:1;height:1px;background:currentColor;opacity:.6}
-.orn i{width:7px;height:7px;background:currentColor;transform:rotate(45deg)}
+em.sw{font-style:italic;font-weight:400;position:relative;white-space:nowrap}
+em.sw::after{content:"";position:absolute;left:2%;right:2%;bottom:-.04em;height:.16em;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 12' preserveAspectRatio='none'%3E%3Cpath d='M2 9C50 2 120 2 198 7' fill='none' stroke='%23C99A4B' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E") center/100% 100% no-repeat}
+.eyebrow{display:inline-block;font:500 12px/1.3 var(--sans);letter-spacing:.28em;text-transform:uppercase;color:var(--gold-d)}
+.lede{font-size:clamp(17px,1.7vw,19px);color:var(--muted);text-wrap:pretty}
+.head{max-width:700px;margin:0 auto 52px;text-align:center}
+.head h2{margin-top:14px}
+.head .lede{margin-top:16px}
+section{padding:104px 0}
+.alt{background:var(--paper)}
 
 /* buttons */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 28px;border-radius:999px;font:500 14px/1 var(--sans);letter-spacing:.08em;text-transform:uppercase;text-decoration:none;transition:transform .2s,box-shadow .2s,background .2s,color .2s;cursor:pointer;border:0;white-space:nowrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 30px;border-radius:999px;font:500 15px/1 var(--sans);letter-spacing:.03em;text-decoration:none;transition:transform .2s,box-shadow .2s,background .2s,color .2s,border-color .2s;cursor:pointer;border:0;white-space:nowrap}
 .btn:active{transform:scale(.98)}
-.btn:focus-visible,a:focus-visible,summary:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
-.btn-primary{background:var(--maroon);color:var(--ivory);box-shadow:0 12px 26px -14px rgba(91,31,46,.8)}
-.btn-primary:hover{background:var(--maroon-d)}
-.btn-line{border:1px solid var(--gold);color:var(--maroon);background:transparent}
-.btn-line:hover{background:var(--maroon);color:var(--ivory);border-color:var(--maroon)}
-.btn-gold{background:var(--foil);color:var(--maroon-x);box-shadow:0 12px 26px -14px rgba(0,0,0,.7)}
-.btn-gold:hover{filter:brightness(1.06)}
-.btn-ivory-line{border:1px solid rgba(226,188,114,.7);color:var(--ivory);background:transparent}
-.btn-ivory-line:hover{background:rgba(226,188,114,.12)}
-.btn svg{width:18px;height:18px;flex:none}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.btn-primary{background:var(--maroon);color:var(--ivory);box-shadow:0 14px 28px -16px rgba(91,31,46,.9)}
+.btn-primary:hover{background:var(--maroon-d);transform:translateY(-1px)}
+.btn-line{border:1px solid rgba(91,31,46,.35);color:var(--maroon);background:var(--cream)}
+.btn-line:hover{border-color:var(--maroon)}
+.btn-gold{background:var(--foil);color:var(--maroon-x);box-shadow:0 14px 28px -16px rgba(0,0,0,.7)}
+.btn-gold:hover{filter:brightness(1.06);transform:translateY(-1px)}
+.btn-wa{background:var(--green);color:#fff}
+.btn-wa:hover{background:#187a48}
+.btn svg{width:20px;height:20px;flex:none}
 .link{color:var(--maroon);font-weight:500;text-decoration:none;border-bottom:1px solid var(--gold);padding-bottom:2px}
 .link:hover{color:var(--gold-d)}
 
-/* announcement */
-.announce{background:var(--maroon-x);color:rgba(251,246,238,.86);text-align:center;font-size:13px;letter-spacing:.06em;padding:9px 16px}
+/* announcement + header */
+.announce{background:var(--maroon-x);color:rgba(251,246,238,.88);text-align:center;font-size:13px;letter-spacing:.04em;padding:9px 16px}
 .announce a{color:var(--gold-l);text-decoration:none;margin-left:6px;white-space:nowrap}
-.announce a:hover{text-decoration:underline}
-
-/* header */
-.nav{position:sticky;top:0;z-index:40;background:rgba(251,246,238,.92);backdrop-filter:saturate(1.2) blur(12px);-webkit-backdrop-filter:saturate(1.2) blur(12px);border-bottom:1px solid transparent;transition:border-color .3s,box-shadow .3s}
-.nav.scrolled{border-color:var(--line);box-shadow:0 10px 30px -24px rgba(62,20,32,.5)}
-.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:76px;gap:20px}
-.brand{display:flex;align-items:center;gap:12px;text-decoration:none;min-width:0}
-.brand img{width:46px}
-.brand .wm{display:flex;flex-direction:column;line-height:1}
-.brand b{font:500 17px/1 var(--serif);letter-spacing:.22em;text-transform:uppercase;color:var(--maroon);white-space:nowrap}
-.brand small{font:400 10px/1 var(--sans);letter-spacing:.32em;text-transform:uppercase;color:var(--gold-d);margin-top:6px}
-.menu{display:flex;gap:30px;align-items:center}
-.menu a:not(.btn){font-size:14px;letter-spacing:.08em;text-decoration:none;color:var(--ink);position:relative;padding:6px 0}
-.menu a:not(.btn)::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--gold);transform:scaleX(0);transition:transform .25s}
-.menu a:not(.btn):hover::after{transform:scaleX(1)}
-.menu .btn{min-height:44px;padding:0 22px;font-size:13px}
-.burger{display:none;width:46px;height:46px;border:1px solid var(--line);border-radius:50%;background:transparent;cursor:pointer;place-items:center;color:var(--maroon)}
+.nav{position:sticky;top:0;z-index:40;padding:12px 0;transition:padding .3s}
+.nav .bar{max-width:var(--wrap);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:20px;height:66px;padding:0 10px 0 18px;background:rgba(255,251,245,.86);backdrop-filter:saturate(1.3) blur(14px);-webkit-backdrop-filter:saturate(1.3) blur(14px);border:1px solid var(--line);border-radius:999px;box-shadow:0 18px 40px -30px rgba(62,20,32,.45)}
+.wrapnav{padding:0 16px}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;min-width:0}
+.brand img{width:42px}
+.brand b{font:500 16px/1 var(--serif);letter-spacing:.2em;text-transform:uppercase;color:var(--maroon);white-space:nowrap}
+.menu{display:flex;gap:28px;align-items:center}
+.menu a:not(.btn){font-size:15px;text-decoration:none;color:var(--ink);opacity:.85}
+.menu a:not(.btn):hover{opacity:1;color:var(--maroon)}
+.menu .btn{min-height:46px;padding:0 22px;font-size:14px}
+.burger{display:none;width:46px;height:46px;border:1px solid var(--line);border-radius:50%;background:var(--ivory);cursor:pointer;place-items:center;color:var(--maroon)}
 .burger svg{width:20px;height:20px}
-
-/* mobile drawer */
 .drawer{position:fixed;inset:0;z-index:60;background:var(--maroon-d);color:var(--ivory);display:flex;flex-direction:column;padding:22px 24px calc(28px + env(safe-area-inset-bottom));opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s;overflow-y:auto}
 .drawer.open{opacity:1;visibility:visible}
 .drawer .top{display:flex;justify-content:space-between;align-items:center}
-.drawer .top img{width:48px}
+.drawer .top img{width:46px}
 .drawer .x{width:46px;height:46px;border-radius:50%;border:1px solid rgba(226,188,114,.5);background:transparent;color:var(--ivory);font-size:20px;cursor:pointer}
-.drawer nav{display:flex;flex-direction:column;margin:36px 0 30px}
+.drawer nav{display:flex;flex-direction:column;margin:34px 0 30px}
 .drawer nav a{font:500 32px/1.1 var(--serif);color:var(--ivory);text-decoration:none;padding:14px 0;border-bottom:1px solid rgba(226,188,114,.18)}
 .drawer .foot{margin-top:auto;display:grid;gap:12px}
+.btn-ivory-line{border:1px solid rgba(226,188,114,.7);color:var(--ivory);background:transparent}
 
 /* hero */
-.hero{position:relative;padding:56px 0 96px;overflow:hidden;background:
-  radial-gradient(900px 520px at 90% 0%,rgba(226,188,114,.22),transparent 62%),
-  radial-gradient(700px 500px at -10% 100%,rgba(122,51,70,.09),transparent 60%),var(--ivory)}
-.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:center}
-.hero h1{font-size:clamp(46px,6.4vw,84px);letter-spacing:-.012em;margin-top:22px}
-.hero h1 em{font-style:italic;font-weight:400}
-.hero .lede{margin:26px 0 36px;max-width:540px}
-.cta-row{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
-.proof{display:grid;grid-template-columns:repeat(3,auto);justify-content:start;gap:12px 36px;margin-top:44px;padding-top:28px;border-top:1px solid var(--line)}
-.proof div b{display:block;font:500 30px/1 var(--serif);color:var(--maroon)}
-.proof div span{font-size:13px;letter-spacing:.06em;color:var(--muted)}
-.arch{position:relative;justify-self:center;width:min(440px,100%)}
-.arch .frame{position:relative;aspect-ratio:3/4.3;border-radius:999px 999px 14px 14px;overflow:hidden;box-shadow:0 50px 90px -50px rgba(62,20,32,.8);background:#e9d3c4}
+.hero{position:relative;padding:40px 0 90px;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:-120px 0 0;background:radial-gradient(800px 500px at 88% 10%,rgba(226,188,114,.25),transparent 62%),radial-gradient(600px 420px at 0% 90%,rgba(122,51,70,.08),transparent 60%);pointer-events:none}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.08fr .92fr;gap:60px;align-items:center}
+.pill{display:inline-flex;align-items:center;gap:10px;padding:8px 16px;border:1px solid var(--line);border-radius:999px;background:var(--cream);font-size:13px;letter-spacing:.06em;color:var(--maroon)}
+.pill i{width:7px;height:7px;border-radius:50%;background:var(--gold)}
+.hero h1{font-size:clamp(46px,6.2vw,82px);letter-spacing:-.012em;margin-top:24px}
+.hero .lede{margin:24px 0 34px;max-width:520px}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.assure{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:30px;font-size:14px;color:var(--muted)}
+.assure span{display:inline-flex;align-items:center;gap:8px}
+.assure svg{width:16px;height:16px;color:var(--gold-d)}
+.arch{position:relative;justify-self:center;width:min(430px,100%)}
+.arch .frame{position:relative;aspect-ratio:3/4.25;border-radius:999px 999px 16px 16px;overflow:hidden;box-shadow:0 50px 90px -50px rgba(62,20,32,.85);background:#e9d3c4}
 .arch .frame img,.arch .frame video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .arch .frame video{opacity:0;transition:opacity 1s}
 .arch .frame video.on{opacity:1}
-.arch::before{content:"";position:absolute;inset:-14px;border:1px solid var(--gold);border-radius:999px 999px 22px 22px;opacity:.7;pointer-events:none}
-.arch .mini{position:absolute;left:-58px;bottom:36px;width:150px;aspect-ratio:390/844;border-radius:24px;padding:6px;background:linear-gradient(145deg,#2a1216,#4a2228);box-shadow:0 30px 50px -24px rgba(62,20,32,.7),0 0 0 1px rgba(185,138,62,.5);z-index:2}
+.arch::before{content:"";position:absolute;inset:-13px;border:1px solid var(--gold);border-radius:999px 999px 24px 24px;opacity:.6;pointer-events:none}
+.arch .mini{position:absolute;left:-56px;bottom:40px;width:146px;aspect-ratio:390/844;border-radius:24px;padding:6px;background:linear-gradient(145deg,#2a1216,#4a2228);box-shadow:0 30px 50px -24px rgba(62,20,32,.7),0 0 0 1px rgba(185,138,62,.5);z-index:2}
 .arch .mini img{width:100%;height:100%;object-fit:cover;border-radius:19px}
-.arch .seal{position:absolute;right:-30px;top:30px;width:104px;z-index:2;filter:drop-shadow(0 12px 20px rgba(62,20,32,.35))}
+.arch .chip{position:absolute;right:-26px;top:64px;z-index:2;background:var(--cream);border:1px solid var(--line);border-radius:14px;padding:12px 16px;box-shadow:0 20px 40px -24px rgba(62,20,32,.6);font-size:13px;color:var(--muted);line-height:1.35}
+.arch .chip b{display:block;font:500 20px/1.1 var(--serif);color:var(--maroon)}
 
 /* marquee */
-.marquee{background:var(--maroon);color:var(--gold-l);overflow:hidden;white-space:nowrap;padding:18px 0;border-top:1px solid rgba(226,188,114,.3);border-bottom:1px solid rgba(226,188,114,.3)}
-.marquee .track{display:inline-flex;gap:40px;animation:mq 38s linear infinite;font:italic 400 24px/1 var(--serif);padding-left:40px}
-.marquee span::after{content:"✦";font-style:normal;font-size:12px;margin-left:40px;vertical-align:middle;color:var(--gold)}
+.marquee{background:var(--maroon);color:var(--gold-l);overflow:hidden;white-space:nowrap;padding:16px 0}
+.marquee .track{display:inline-flex;gap:34px;animation:mq 42s linear infinite;font:500 15px/1 var(--sans);letter-spacing:.28em;text-transform:uppercase;padding-left:34px}
+.marquee span::after{content:"✦";margin-left:34px;color:var(--gold);letter-spacing:0}
 @keyframes mq{to{transform:translateX(-50%)}}
 
-/* why */
-.why .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.why .item{padding:40px 32px;background:#fff9f1;border:1px solid var(--line);border-radius:var(--r);position:relative;transition:transform .3s,box-shadow .3s}
-.why .item:hover{transform:translateY(-4px);box-shadow:0 30px 50px -36px rgba(62,20,32,.5)}
-.ico{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--gold);color:var(--gold-d);margin-bottom:22px;background:var(--ivory);flex:none}
-.ico svg{width:24px;height:24px}
-.why h3{margin-bottom:12px}
-.why p{color:var(--muted);font-size:16px}
+/* designs */
+.designs .grid{display:grid;grid-template-columns:1.35fr 1fr;gap:24px}
+.design{background:var(--cream);border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}
+.design .cover{position:relative;aspect-ratio:16/10;overflow:hidden;background:#ead6c8}
+.design .cover img{width:100%;height:100%;object-fit:cover;transition:transform 1s}
+.design:hover .cover img{transform:scale(1.03)}
+.badge{position:absolute;top:16px;left:16px;background:rgba(255,251,245,.94);color:var(--maroon);font:500 11px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;padding:9px 13px;border-radius:999px;display:inline-flex;gap:8px;align-items:center}
+.badge i{width:7px;height:7px;border-radius:50%;background:#d0453a;box-shadow:0 0 0 4px rgba(208,69,58,.18);animation:pulse 1.8s infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 7px rgba(208,69,58,0)}}
+.design .body{padding:28px 30px 30px;display:flex;flex-direction:column;flex:1}
+.design .top{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
+.design h3{font-size:34px}
+.design .from{text-align:right;font-size:13px;color:var(--muted);white-space:nowrap}
+.design .from b{display:block;font:500 26px/1 var(--serif);color:var(--maroon)}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 18px}
+.tags span{font-size:13px;padding:5px 12px;border-radius:999px;background:var(--paper);color:var(--muted)}
+.design p{color:var(--muted);font-size:16px;margin-bottom:24px}
+.design .cta-row{margin-top:auto}
+.design.custom{background:var(--maroon-d);border-color:rgba(226,188,114,.4);color:rgba(251,246,238,.82)}
+.design.custom .cover{background:var(--maroon-x);display:grid;place-items:center}
+.design.custom .cover::before{content:"";position:absolute;inset:18px;border:1px solid rgba(226,188,114,.35);border-radius:999px 999px 12px 12px}
+.design.custom .cover img{width:42%;height:auto;object-fit:contain;filter:drop-shadow(0 10px 30px rgba(0,0,0,.5))}
+.design.custom h3{color:var(--ivory)}
+.design.custom p{color:rgba(251,246,238,.75)}
+.design.custom .tags span{background:rgba(226,188,114,.12);color:var(--gold-l)}
+.design.custom .from{color:rgba(251,246,238,.6)}
+.design.custom .from b{color:var(--gold-l)}
 
-/* feature rows */
-.features{background:var(--paper)}
+/* experience rows */
 .row{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
-.row+.row{margin-top:110px}
+.row+.row{margin-top:100px}
 .row.flip .media{order:2}
-.row .media{position:relative;display:flex;justify-content:center;align-items:center;min-height:520px}
-.row .media::before{content:"";position:absolute;width:78%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(226,188,114,.35),rgba(226,188,114,0) 70%)}
-.phone{position:relative;width:250px;aspect-ratio:390/844;border-radius:38px;padding:9px;background:linear-gradient(145deg,#2a1216,#4a2228);box-shadow:0 44px 70px -34px rgba(62,20,32,.7),0 0 0 1px rgba(185,138,62,.5)}
-.phone img{width:100%;height:100%;object-fit:cover;border-radius:30px}
-.phone.back{position:absolute;width:210px;transform:translate(-62%,6%) rotate(-7deg);opacity:.95}
-.phone.back+.phone{transform:translate(22%,-2%) rotate(3deg)}
-.row .num{font:italic 500 18px var(--serif);color:var(--gold-d);letter-spacing:.06em}
-.row h3{font-size:clamp(32px,3.6vw,46px);margin:12px 0 18px}
-.row .lede{margin-bottom:24px}
-.checks{list-style:none;padding:0;margin:0;display:grid;gap:12px}
-.checks li{padding-left:30px;position:relative}
-.checks li::before{content:"";position:absolute;left:2px;top:9px;width:9px;height:9px;border:1px solid var(--gold);transform:rotate(45deg)}
-.checks li::after{content:"";position:absolute;left:5px;top:12px;width:3px;height:3px;background:var(--gold);transform:rotate(45deg)}
+.media{position:relative;display:flex;justify-content:center;align-items:center;min-height:500px}
+.media::before{content:"";position:absolute;width:76%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(226,188,114,.32),rgba(226,188,114,0) 70%)}
+.phone{position:relative;width:240px;aspect-ratio:390/844;border-radius:36px;padding:9px;background:linear-gradient(145deg,#2a1216,#4a2228);box-shadow:0 44px 70px -34px rgba(62,20,32,.7),0 0 0 1px rgba(185,138,62,.5)}
+.phone img{width:100%;height:100%;object-fit:cover;border-radius:28px}
+.phone.back{position:absolute;width:200px;transform:translate(-60%,6%) rotate(-7deg)}
+.phone.back+.phone{transform:translate(24%,-2%) rotate(3deg)}
+.row .num{font:italic 500 19px var(--serif);color:var(--gold-d)}
+.row h3{font-size:clamp(32px,3.4vw,44px);margin:10px 0 16px}
+.row .lede{margin-bottom:22px}
+.checks{list-style:none;padding:0;margin:0;display:grid;gap:11px}
+.checks li{padding-left:32px;position:relative}
+.checks li::before{content:"";position:absolute;left:0;top:5px;width:20px;height:20px;border-radius:50%;background:var(--paper) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M6 10.5l2.6 2.5L14 7.5' fill='none' stroke='%238E6220' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/100% no-repeat;border:1px solid var(--line)}
+
+/* comparison */
+.vs{max-width:920px;margin:0 auto;background:var(--cream);border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:var(--shadow)}
+.vs table{width:100%;border-collapse:collapse;font-size:16px}
+.vs th,.vs td{padding:18px 20px;text-align:center;border-bottom:1px solid rgba(185,138,62,.16);vertical-align:middle}
+.vs tr:last-child td{border-bottom:0}
+.vs th:first-child,.vs td:first-child{text-align:left;font-weight:400;color:var(--ink)}
+.vs thead th{font:500 13px/1.3 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);background:var(--paper)}
+.vs thead th.us{background:var(--maroon);color:var(--gold-l)}
+.vs td.us{background:rgba(91,31,46,.05);color:var(--maroon);font-weight:500}
+.vs td.them{color:var(--muted)}
+.ok,.no{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;margin-right:8px;vertical-align:-5px;font-size:12px}
+.ok{background:var(--maroon);color:var(--gold-l)}
+.no{background:#efe5d8;color:#a8968a}
+
+/* benefits */
+.benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.ben{background:var(--cream);border:1px solid var(--line);border-radius:18px;padding:30px 28px;transition:transform .3s,box-shadow .3s}
+.ben:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.ico{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;background:var(--paper);color:var(--gold-d);margin-bottom:18px;border:1px solid var(--line)}
+.ico svg{width:24px;height:24px}
+.ben h3{font-size:25px;margin-bottom:8px}
+.ben p{color:var(--muted);font-size:15.5px}
 
 /* scenes */
 .scenes{background:var(--maroon-x);color:var(--ivory);position:relative;overflow:hidden}
@@ -169,222 +199,225 @@ section{padding:110px 0}
 .scenes h2{color:var(--ivory)}
 .scenes .eyebrow{color:var(--gold-l)}
 .scenes .lede{color:rgba(251,246,238,.74)}
-.rail{display:flex;gap:24px;overflow-x:auto;scroll-snap-type:x mandatory;padding:8px max(24px,calc((100vw - var(--wrap))/2 + 24px)) 30px;scroll-padding:0 max(24px,calc((100vw - var(--wrap))/2 + 24px));scrollbar-width:none;position:relative}
+.rail{display:flex;gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;padding:8px max(24px,calc((100vw - var(--wrap))/2 + 24px)) 28px;scroll-padding:0 max(24px,calc((100vw - var(--wrap))/2 + 24px));scrollbar-width:none;position:relative}
 .rail::-webkit-scrollbar{display:none}
-.rail figure{margin:0;flex:0 0 260px;scroll-snap-align:start}
-.rail .pic{aspect-ratio:3/4.6;border-radius:999px 999px 10px 10px;overflow:hidden;position:relative;box-shadow:0 0 0 1px rgba(226,188,114,.4),0 30px 50px -30px #000}
+.rail figure{margin:0;flex:0 0 250px;scroll-snap-align:start}
+.rail .pic{aspect-ratio:3/4.5;border-radius:999px 999px 12px 12px;overflow:hidden;box-shadow:0 0 0 1px rgba(226,188,114,.4),0 30px 50px -30px #000}
 .rail .pic img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
 .rail figure:hover .pic img{transform:scale(1.05)}
-.rail figcaption{text-align:center;margin-top:18px}
-.rail figcaption b{display:block;font:500 26px/1.1 var(--serif);color:var(--gold-l)}
-.rail figcaption span{font-size:14px;color:rgba(251,246,238,.66)}
-.rail-ctrl{display:flex;justify-content:center;gap:12px;margin-top:8px;position:relative}
-.rail-ctrl button{width:50px;height:50px;border-radius:50%;border:1px solid rgba(226,188,114,.55);background:transparent;color:var(--gold-l);cursor:pointer;font-size:20px;transition:background .2s}
+.rail figcaption{text-align:center;margin-top:16px}
+.rail figcaption b{display:block;font:500 25px/1.1 var(--serif);color:var(--gold-l)}
+.rail figcaption span{font-size:14px;color:rgba(251,246,238,.65)}
+.rail-ctrl{display:flex;justify-content:center;gap:12px;position:relative}
+.rail-ctrl button{width:50px;height:50px;border-radius:50%;border:1px solid rgba(226,188,114,.55);background:transparent;color:var(--gold-l);cursor:pointer;font-size:20px}
 .rail-ctrl button:hover{background:rgba(226,188,114,.14)}
 
-/* featured work */
-.work .card{display:grid;grid-template-columns:1.15fr .85fr;background:#fff9f1;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 50px 80px -60px rgba(62,20,32,.6)}
-.work .cover{position:relative;min-height:440px}
-.work .cover img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.work .cover::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(44,14,22,.55))}
-.work .cover .tag{position:absolute;left:24px;bottom:22px;z-index:1;color:var(--ivory);font-size:12px;letter-spacing:.24em;text-transform:uppercase}
-.work .info{padding:52px 48px;display:flex;flex-direction:column;justify-content:center}
-.work .info h3{font-size:clamp(36px,4vw,52px);margin:14px 0 14px}
-.work .meta{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:26px 0 30px;padding:20px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.work .meta b{display:block;font:500 26px/1.1 var(--serif);color:var(--maroon)}
-.work .meta span{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
-.next{margin-top:28px;text-align:center;color:var(--muted);font:italic 400 22px var(--serif)}
-
-/* process */
-.process{background:var(--paper)}
-.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:20px;counter-reset:s}
-.step{position:relative;text-align:center;padding:0 6px}
-.step::before{counter-increment:s;content:"0" counter(s);display:grid;place-items:center;width:64px;height:64px;margin:0 auto 22px;border-radius:50%;border:1px solid var(--gold);font:italic 500 24px var(--serif);color:var(--maroon);background:var(--paper);position:relative;z-index:1;box-shadow:0 0 0 7px var(--paper),0 0 0 8px rgba(185,138,62,.28)}
-.step:not(:last-child)::after{content:"";position:absolute;top:32px;left:calc(50% + 44px);right:calc(-50% + 44px);height:1px;background:linear-gradient(90deg,var(--gold),rgba(185,138,62,.15))}
-.step small{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-d)}
-.step h3{font-size:24px;margin:6px 0 8px}
-.step p{font-size:15px;color:var(--muted)}
+/* process + whatsapp mock */
+.how{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+.steps{list-style:none;padding:0;margin:34px 0 34px;display:grid;gap:8px;counter-reset:s}
+.steps li{display:grid;grid-template-columns:56px 1fr;gap:18px;padding:18px 0;border-bottom:1px solid var(--line);counter-increment:s}
+.steps li::before{content:counter(s);display:grid;place-items:center;width:52px;height:52px;border-radius:50%;border:1px solid var(--gold);font:italic 500 24px var(--serif);color:var(--maroon);background:var(--cream)}
+.steps b{display:block;font:500 25px/1.2 var(--serif);color:var(--maroon)}
+.steps small{display:block;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-d);margin-bottom:2px}
+.steps p{color:var(--muted);font-size:16px;margin-top:4px}
+.chat{width:min(400px,100%);justify-self:center;border-radius:28px;overflow:hidden;background:#efe7dd;box-shadow:0 50px 80px -46px rgba(62,20,32,.7),0 0 0 1px var(--line)}
+.chat .ch{display:flex;align-items:center;gap:12px;background:#075E54;color:#fff;padding:14px 18px}
+.chat .av{width:40px;height:40px;border-radius:50%;background:#f3d9c9;display:grid;place-items:center;font:500 18px var(--serif);color:var(--maroon)}
+.chat .ch b{display:block;font:500 16px/1.2 var(--sans)}
+.chat .ch span{font-size:12px;opacity:.8}
+.chat .cb{padding:22px 16px 26px;background:#efe7dd url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='1.2' fill='%23d8ccbd'/%3E%3C/svg%3E")}
+.day{display:block;width:max-content;margin:0 auto 16px;background:#fff8ef;color:#7b6b60;font-size:12px;padding:5px 12px;border-radius:8px}
+.bub{margin-left:auto;max-width:88%;background:#d9fdd3;border-radius:12px 4px 12px 12px;padding:5px;box-shadow:0 1px 1px rgba(0,0,0,.08);font-size:14.5px;line-height:1.45;color:#1f2a24}
+.bub .pv{background:#cdeec6;border-radius:8px;overflow:hidden}
+.bub .pv img{width:100%;aspect-ratio:1200/630;object-fit:cover}
+.bub .pv div{padding:8px 10px 10px}
+.bub .pv b{display:block;font-weight:500;font-size:14px}
+.bub .pv span{display:block;font-size:12.5px;color:#4c5b52}
+.bub .pv small{display:block;font-size:12px;color:#6c7a70;margin-top:2px}
+.bub p{padding:8px 8px 2px}
+.bub .lnk{color:#027eb5}
+.bub .meta{text-align:right;font-size:11px;color:#667781;padding:0 6px 3px}
+.bub .meta i{color:#53bdeb;font-style:normal;margin-left:3px}
+.chat .note{font-size:12.5px;color:#7b6b60;text-align:center;margin-top:16px}
 
 /* pricing */
-.tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:stretch}
-.tier{background:#fff9f1;border:1px solid var(--line);border-radius:14px;padding:40px 32px 34px;display:flex;flex-direction:column;position:relative}
+.tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:stretch}
+.tier{background:var(--cream);border:1px solid var(--line);border-radius:22px;padding:36px 30px 30px;display:flex;flex-direction:column;position:relative}
 .tier.star{background:var(--maroon);color:var(--ivory);border-color:var(--gold);box-shadow:0 50px 80px -46px rgba(62,20,32,.9)}
 .tier.star h3,.tier.star .price{color:var(--ivory)}
-.tier .tag{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--foil);color:var(--maroon-x);font:500 11px/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;padding:9px 16px;border-radius:999px;white-space:nowrap}
-.tier .for{font-size:15px;color:var(--muted);margin-top:8px;min-height:48px}
+.tier .tag{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--foil);color:var(--maroon-x);font:500 11px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;padding:9px 16px;border-radius:999px;white-space:nowrap}
+.tier .for{font-size:15px;color:var(--muted);margin-top:6px}
 .tier.star .for{color:rgba(251,246,238,.72)}
-.price{font:500 52px/1 var(--serif);color:var(--maroon);margin:24px 0 8px;display:flex;align-items:baseline;gap:8px}
-.price small{font:300 14px var(--sans);color:var(--muted);letter-spacing:.04em}
+.price{font:500 50px/1 var(--serif);color:var(--maroon);margin:22px 0 8px;display:flex;align-items:baseline;gap:8px}
+.price small{font:300 14px var(--sans);color:var(--muted)}
 .tier.star .price small{color:rgba(251,246,238,.7)}
-.days{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-d)}
-.tier.star .days{color:var(--gold-l)}
-.tier ul{list-style:none;padding:24px 0 0;margin:24px 0 30px;display:grid;gap:11px;font-size:15px;flex:1;border-top:1px solid var(--line);align-content:start}
+.days{display:inline-flex;align-self:flex-start;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-d);background:var(--paper);padding:6px 12px;border-radius:999px}
+.tier.star .days{background:rgba(226,188,114,.14);color:var(--gold-l)}
+.tier ul{list-style:none;padding:22px 0 0;margin:22px 0 28px;display:grid;gap:10px;font-size:15px;flex:1;border-top:1px solid var(--line);align-content:start}
 .tier.star ul{border-color:rgba(226,188,114,.3)}
 .tier li{padding-left:26px;position:relative}
 .tier li::before{content:"✓";position:absolute;left:0;color:var(--gold);font-weight:500}
 .tier.star li::before{color:var(--gold-l)}
 .tier .btn{width:100%}
-.compare{margin-top:48px;border:1px solid var(--line);border-radius:14px;background:#fff9f1;overflow:hidden}
-.compare summary{list-style:none;cursor:pointer;padding:22px 28px;display:flex;justify-content:space-between;align-items:center;gap:16px;font:500 24px var(--serif);color:var(--maroon)}
-.compare summary::-webkit-details-marker{display:none}
-.compare summary span{font:500 12px var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--gold-d);white-space:nowrap}
-.compare:not([open]) summary span::after{content:"Show +"}
-.compare[open] summary span::after{content:"Hide −"}
+.pay{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 26px;margin-top:30px;font-size:14px;color:var(--muted)}
+.pay span::before{content:"✦";color:var(--gold);margin-right:8px;font-size:10px;vertical-align:2px}
+.more{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:34px;align-items:start}
+details.panel{border:1px solid var(--line);border-radius:18px;background:var(--cream);overflow:hidden}
+details.panel summary{list-style:none;cursor:pointer;padding:22px 26px;display:flex;justify-content:space-between;align-items:center;gap:16px;font:500 23px var(--serif);color:var(--maroon)}
+details.panel summary::-webkit-details-marker{display:none}
+details.panel summary::after{content:"";width:10px;height:10px;border-right:1.5px solid var(--gold);border-bottom:1.5px solid var(--gold);transform:rotate(45deg);transition:transform .25s;flex:none;margin-top:-5px}
+details.panel[open] summary::after{transform:rotate(-135deg);margin-top:5px}
+details.panel.wide{grid-column:1/-1}
 .tbl{overflow-x:auto;border-top:1px solid var(--line)}
-.tbl table{width:100%;border-collapse:collapse;min-width:620px;font-size:15px}
-.tbl th,.tbl td{padding:14px 20px;text-align:center;border-bottom:1px solid rgba(185,138,62,.18)}
+.tbl table{width:100%;border-collapse:collapse;min-width:600px;font-size:15px}
+.tbl th,.tbl td{padding:13px 18px;text-align:center;border-bottom:1px solid rgba(185,138,62,.15)}
 .tbl th:first-child,.tbl td:first-child{text-align:left}
-.tbl thead th{font:500 20px var(--serif);color:var(--maroon);background:var(--paper)}
+.tbl thead th{font:500 19px var(--serif);color:var(--maroon);background:var(--paper)}
 .tbl thead th:nth-child(3){background:var(--maroon);color:var(--ivory)}
-.tbl td:nth-child(3){background:rgba(91,31,46,.05);font-weight:400}
+.tbl td:nth-child(3){background:rgba(91,31,46,.045)}
 .tbl td small{display:block;color:var(--muted);font-size:13px}
 .y{color:var(--gold-d);font-weight:500}.n{color:#bba99a}
-.extras{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:24px}
-.box{border:1px solid var(--line);border-radius:14px;padding:32px;background:#fff9f1}
-.box h3{font-size:28px;margin-bottom:14px}
-.box table{width:100%;border-collapse:collapse;font-size:15px}
-.box td{padding:10px 0;border-bottom:1px solid rgba(185,138,62,.2)}
-.box td:last-child{text-align:right;font:500 19px var(--serif);color:var(--maroon);white-space:nowrap;padding-left:12px}
-.box.offer{background:var(--maroon-d);color:rgba(251,246,238,.8);border-color:var(--gold);display:flex;flex-direction:column;justify-content:center;align-items:flex-start;position:relative;overflow:hidden}
-.box.offer::before{content:"";position:absolute;right:-70px;top:-70px;width:240px;height:240px;border-radius:50%;border:1px solid rgba(226,188,114,.25)}
-.box.offer::after{content:"";position:absolute;right:-40px;top:-40px;width:180px;height:180px;border-radius:50%;border:1px solid rgba(226,188,114,.18)}
-.box.offer .eyebrow{color:var(--gold-l)}
-.box.offer h3{color:var(--ivory);margin:14px 0 12px}
-.box.offer p{margin-bottom:26px}
+.addons{padding:4px 26px 18px;border-top:1px solid var(--line)}
+.addons table{width:100%;border-collapse:collapse;font-size:15px}
+.addons td{padding:11px 0;border-bottom:1px solid rgba(185,138,62,.16)}
+.addons tr:last-child td{border-bottom:0}
+.addons td:last-child{text-align:right;font:500 19px var(--serif);color:var(--maroon);white-space:nowrap;padding-left:12px}
+.offer{background:var(--maroon-d);border:1px solid var(--gold);border-radius:18px;padding:26px 28px;color:rgba(251,246,238,.8);display:flex;flex-direction:column;justify-content:center;gap:14px}
+.offer b{font:500 24px/1.2 var(--serif);color:var(--gold-l)}
+.offer .btn{align-self:flex-start;min-height:48px}
 
 /* faq */
-.faq{background:var(--paper)}
-.faq .cols{display:grid;grid-template-columns:.8fr 1.2fr;gap:80px;align-items:start}
-.faq .side{position:sticky;top:110px}
-.faq .side h2{margin-top:16px}
-.faq .side .lede{margin:18px 0 28px}
+.faq .cols{display:grid;grid-template-columns:.8fr 1.2fr;gap:72px;align-items:start}
+.faq .side{position:sticky;top:120px}
+.faq .side h2{margin-top:14px}
+.faq .side .lede{margin:16px 0 26px}
 details.q{border-bottom:1px solid var(--line)}
 details.q:first-child{border-top:1px solid var(--line)}
-details.q summary{list-style:none;cursor:pointer;padding:24px 44px 24px 0;font:500 23px/1.3 var(--serif);color:var(--maroon);position:relative}
+details.q summary{list-style:none;cursor:pointer;padding:22px 44px 22px 0;font:500 22px/1.3 var(--serif);color:var(--maroon);position:relative}
 details.q summary::-webkit-details-marker{display:none}
-details.q summary::after{content:"";position:absolute;right:8px;top:30px;width:11px;height:11px;border-right:1.5px solid var(--gold);border-bottom:1.5px solid var(--gold);transform:rotate(45deg);transition:transform .25s}
-details.q[open] summary::after{transform:rotate(-135deg);top:36px}
-details.q p{padding:0 0 24px;color:var(--muted);max-width:680px}
+details.q summary::after{content:"+";position:absolute;right:6px;top:18px;font:300 28px/1 var(--sans);color:var(--gold);transition:transform .25s}
+details.q[open] summary::after{transform:rotate(45deg)}
+details.q p{padding:0 0 22px;color:var(--muted);max-width:660px}
 
 /* enquiry */
 .enquire .cols{display:grid;grid-template-columns:.9fr 1.1fr;gap:72px;align-items:start}
-.enquire h2{margin-top:16px}
-.contact-list{list-style:none;padding:0;margin:34px 0 0;display:grid;gap:18px}
-.contact-list a{display:flex;gap:16px;align-items:center;text-decoration:none}
-.contact-list .ico{margin:0;width:50px;height:50px}
-.contact-list b{display:block;font:500 21px/1.2 var(--serif);color:var(--maroon)}
+.enquire h2{margin-top:14px}
+.contact-list{list-style:none;padding:0;margin:30px 0 0;display:grid;gap:14px}
+.contact-list a{display:flex;gap:16px;align-items:center;text-decoration:none;padding:14px 16px;border:1px solid var(--line);border-radius:16px;background:var(--cream);transition:border-color .2s}
+.contact-list a:hover{border-color:var(--gold)}
+.contact-list .ico{margin:0;width:46px;height:46px;border-radius:50%}
+.contact-list b{display:block;font:500 20px/1.2 var(--serif);color:var(--maroon)}
 .contact-list small{font-size:14px;color:var(--muted)}
-form.f{background:#fff9f1;border:1px solid var(--line);border-radius:16px;padding:40px;box-shadow:0 50px 80px -60px rgba(62,20,32,.6)}
-.f .grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+form.f{background:var(--cream);border:1px solid var(--line);border-radius:24px;padding:38px;box-shadow:var(--shadow)}
+.f h3{font-size:30px;margin-bottom:6px}
+.f .sub{color:var(--muted);font-size:15px;margin-bottom:24px}
+.f .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
 .f .full{grid-column:1/-1}
-.f label{display:block;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
-.f label i{color:var(--maroon);font-style:normal}
-.f input,.f select,.f textarea{width:100%;font:300 16px var(--sans);color:var(--ink);background:var(--ivory);border:1px solid rgba(185,138,62,.45);border-radius:8px;padding:13px 14px;min-height:52px;transition:border-color .2s,box-shadow .2s;-webkit-appearance:none;appearance:none}
+.f label{display:block;font-size:13px;font-weight:400;color:var(--ink);margin-bottom:7px}
+.f label i{color:#a8342c;font-style:normal}
+.f input,.f select,.f textarea{width:100%;font:300 16px var(--sans);color:var(--ink);background:#fff;border:1px solid rgba(185,138,62,.4);border-radius:12px;padding:13px 14px;min-height:52px;transition:border-color .2s,box-shadow .2s;-webkit-appearance:none;appearance:none}
 .f select{background-image:linear-gradient(45deg,transparent 50%,var(--gold) 50%),linear-gradient(135deg,var(--gold) 50%,transparent 50%);background-position:calc(100% - 20px) 50%,calc(100% - 14px) 50%;background-size:6px 6px;background-repeat:no-repeat;padding-right:40px}
-.f textarea{min-height:110px;resize:vertical}
+.f textarea{min-height:100px;resize:vertical}
 .f input:focus,.f select:focus,.f textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 4px rgba(226,188,114,.25)}
-.f .btn{width:100%;margin-top:26px}
-.f .small{font-size:13px;color:var(--muted);text-align:center;margin-top:14px}
+.f .btn{width:100%;margin-top:24px}
+.f .small{font-size:13px;color:var(--muted);text-align:center;margin-top:12px}
 .f .err{color:#9b2c2c;font-size:14px;margin-top:12px;text-align:center}
 .f .err:empty{display:none}
 
-/* insta band */
-.band{background:var(--maroon);color:var(--ivory);text-align:center;padding:96px 0;position:relative;overflow:hidden}
-.band::before{content:"";position:absolute;inset:0;background:url(/img/sc-reception.webp) center/cover;opacity:.16}
-.band::after{content:"";position:absolute;inset:0;background:radial-gradient(600px 300px at 50% 50%,rgba(226,188,114,.18),transparent 70%)}
-.band .wrap{position:relative;z-index:1}
-.band img{width:120px;margin:0 auto 22px}
-.band h2{color:var(--ivory)}
-.band .lede{color:rgba(251,246,238,.8);margin:16px auto 34px;max-width:560px}
-.band .cta-row{justify-content:center}
-
-/* footer */
-footer{background:var(--maroon-x);color:rgba(251,246,238,.66);padding:80px 0 0;font-size:15px}
-footer .cols{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:48px}
-footer img{width:200px;margin-bottom:20px}
-footer h4{font:500 12px/1 var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--gold-l);margin:8px 0 20px}
-footer ul{list-style:none;padding:0;margin:0;display:grid;gap:12px}
-footer a{color:rgba(251,246,238,.8);text-decoration:none;overflow-wrap:anywhere}
+/* final cta + footer */
+.final{background:var(--maroon);color:var(--ivory);text-align:center;padding:96px 0;position:relative;overflow:hidden}
+.final::before{content:"";position:absolute;inset:0;background:url(/img/sc-reception.webp) center/cover;opacity:.14}
+.final::after{content:"";position:absolute;inset:0;background:radial-gradient(600px 300px at 50% 50%,rgba(226,188,114,.2),transparent 70%)}
+.final .wrap{position:relative;z-index:1}
+.final img{width:110px;margin:0 auto 22px}
+.final h2{color:var(--ivory)}
+.final .lede{color:rgba(251,246,238,.8);margin:16px auto 32px;max-width:540px}
+.final .cta-row{justify-content:center}
+footer{background:var(--maroon-x);color:rgba(251,246,238,.66);padding:72px 0 0;font-size:15px}
+footer .cols{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:44px}
+footer img{width:190px;margin-bottom:18px}
+footer h4{font:500 12px/1 var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--gold-l);margin:8px 0 18px}
+footer ul{list-style:none;padding:0;margin:0;display:grid;gap:11px}
+footer a{color:rgba(251,246,238,.82);text-decoration:none;overflow-wrap:anywhere}
 footer a:hover{color:var(--gold-l)}
-footer .bar{margin-top:64px;border-top:1px solid rgba(226,188,114,.18);padding:24px 0 calc(28px + env(safe-area-inset-bottom));display:flex;justify-content:space-between;gap:8px 16px;flex-wrap:wrap;font-size:13px}
+footer .base{margin-top:56px;border-top:1px solid rgba(226,188,114,.18);padding:22px 0 calc(26px + env(safe-area-inset-bottom));display:flex;justify-content:space-between;gap:8px 16px;flex-wrap:wrap;font-size:13px}
 
-/* fab */
-.fab{position:fixed;right:20px;bottom:calc(20px + env(safe-area-inset-bottom));z-index:30;height:56px;border-radius:999px;background:#1F8F55;color:#fff;display:flex;align-items:center;gap:10px;padding:0 22px 0 16px;box-shadow:0 14px 30px -10px rgba(0,0,0,.45);text-decoration:none;font:500 14px var(--sans);letter-spacing:.04em;transition:transform .25s,opacity .25s}
-.fab:hover{transform:translateY(-2px)}
+/* floating whatsapp */
+.fab{position:fixed;right:20px;bottom:calc(20px + env(safe-area-inset-bottom));z-index:30;height:56px;border-radius:999px;background:var(--green);color:#fff;display:flex;align-items:center;gap:10px;padding:0 22px 0 16px;box-shadow:0 14px 30px -10px rgba(0,0,0,.45);text-decoration:none;font:500 15px var(--sans);transition:transform .25s,opacity .25s}
 .fab svg{width:26px;height:26px}
-.fab.hide{opacity:0;pointer-events:none;transform:translateY(10px)}
+.fab.hide{opacity:0;pointer-events:none;transform:translateY(12px)}
 
 /* demo modal */
-.modal{position:fixed;inset:0;z-index:70;background:rgba(30,10,15,.84);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);display:grid;place-items:center;padding:24px;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s}
+.modal{position:fixed;inset:0;z-index:70;background:rgba(30,10,15,.86);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);display:grid;place-items:center;padding:24px;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s}
 .modal.open{opacity:1;visibility:visible}
-.modal .dev{width:min(380px,90vw);height:min(800px,84vh);border-radius:44px;padding:10px;background:linear-gradient(145deg,#2a1216,#4a2228);box-shadow:0 0 0 1px rgba(226,188,114,.5),0 50px 100px -30px #000;position:relative}
+.modal .dev{width:min(380px,90vw);height:min(800px,82vh);border-radius:44px;padding:10px;background:linear-gradient(145deg,#2a1216,#4a2228);box-shadow:0 0 0 1px rgba(226,188,114,.5),0 50px 100px -30px #000;position:relative}
 .modal iframe{width:100%;height:100%;border:0;border-radius:34px;background:#F7E7E3;display:block}
 .modal .x{position:absolute;top:-14px;right:-14px;width:46px;height:46px;border-radius:50%;border:0;background:var(--ivory);color:var(--maroon);font-size:20px;cursor:pointer;box-shadow:0 8px 20px -6px rgba(0,0,0,.5);z-index:2}
+.modal .hint{position:absolute;left:0;right:0;bottom:-40px;text-align:center;color:rgba(251,246,238,.75);font-size:13px}
 
 /* reveal */
-.rv{opacity:0;transform:translateY(24px);transition:opacity .9s ease,transform .9s ease}
+.rv{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease}
 .rv.in{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.marquee .track{animation:none}}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.marquee .track,.badge i{animation:none}}
 
 /* responsive */
 @media (max-width:1060px){
   .menu{display:none}
   .burger{display:grid}
-  .hero .wrap,.row,.work .card,.faq .cols,.enquire .cols{grid-template-columns:1fr}
-  .hero .wrap{gap:72px}
-  .arch{width:min(380px,80%)}
-  .row{gap:36px}
-  .row+.row{margin-top:90px}
+  .hero .wrap,.row,.how,.faq .cols,.enquire .cols,.designs .grid{grid-template-columns:1fr}
+  .hero .wrap{gap:64px}
+  .arch{width:min(370px,78%)}
+  .row{gap:34px}
+  .row+.row{margin-top:84px}
   .row.flip .media{order:0}
-  .row .media{min-height:460px}
-  .why .grid{grid-template-columns:1fr;max-width:560px;margin:0 auto}
+  .media{min-height:450px}
+  .benefits{grid-template-columns:1fr 1fr}
   .tiers{grid-template-columns:1fr;max-width:520px;margin:0 auto}
-  .extras{grid-template-columns:1fr;max-width:520px;margin-left:auto;margin-right:auto}
-  .compare{max-width:820px;margin-left:auto;margin-right:auto}
-  .steps{grid-template-columns:1fr;gap:30px;max-width:460px;margin:0 auto}
-  .step{display:grid;grid-template-columns:64px 1fr;gap:0 20px;text-align:left;align-items:start}
-  .step::before{margin:0;grid-row:span 3}
-  .step:not(:last-child)::after{top:72px;bottom:-28px;left:32px;right:auto;width:1px;height:auto;background:linear-gradient(180deg,var(--gold),rgba(185,138,62,.15))}
+  .more{grid-template-columns:1fr;max-width:640px;margin-left:auto;margin-right:auto}
+  .designs .grid{max-width:640px;margin:0 auto}
+  .how{gap:48px}
   .faq .side{position:static}
-  .faq .cols,.enquire .cols{gap:44px}
-  .work .cover{min-height:300px}
+  .faq .cols,.enquire .cols{gap:40px}
   footer .cols{grid-template-columns:1fr 1fr}
   footer .cols>div:first-child{grid-column:1/-1}
 }
 @media (max-width:640px){
   body{font-size:16px}
-  section{padding:80px 0}
+  section{padding:76px 0}
   .wrap{padding:0 18px}
-  .announce{font-size:12px;letter-spacing:.03em}
-  .nav .wrap{height:66px}
-  .brand img{width:40px}
-  .brand b{font-size:13px;letter-spacing:.16em}
-  .brand small{font-size:8.5px;letter-spacing:.24em}
-  .hero{padding:36px 0 80px}
+  .announce{font-size:12px;letter-spacing:.02em}
+  .nav{padding:10px 0}
+  .wrapnav{padding:0 12px}
+  .nav .bar{height:60px;padding:0 7px 0 12px}
+  .brand img{width:36px}
+  .brand b{font-size:12.5px;letter-spacing:.14em}
+  .hero{padding:28px 0 76px}
+  .hero h1{margin-top:20px}
   .cta-row .btn{flex:1 1 100%}
-  .proof{grid-template-columns:repeat(3,1fr);gap:10px}
-  .proof div b{font-size:24px}
-  .proof div span{font-size:12px;display:block;line-height:1.35;margin-top:4px}
-  .arch .mini{width:110px;left:-26px;border-radius:18px;padding:5px}
-  .arch .mini img{border-radius:14px}
-  .arch .seal{width:78px;right:-20px}
-  .marquee .track{font-size:20px}
-  .head{margin-bottom:40px}
-  .phone{width:200px;border-radius:30px;padding:8px}
+  .assure{gap:8px 16px;font-size:13.5px}
+  .arch .mini{width:104px;left:-22px;bottom:30px;border-radius:17px;padding:5px}
+  .arch .mini img{border-radius:13px}
+  .arch .chip{right:-14px;top:40px;padding:9px 12px;font-size:12px}
+  .arch .chip b{font-size:17px}
+  .marquee .track{font-size:13px}
+  .head{margin-bottom:38px}
+  .design h3{font-size:30px}
+  .design .body{padding:22px 20px 24px}
+  .phone{width:196px;border-radius:30px;padding:8px}
   .phone img{border-radius:23px}
-  .phone.back{width:165px}
-  .row .media{min-height:400px}
-  .rail figure{flex-basis:220px}
-  .work .info{padding:32px 22px}
-  .work .meta b{font-size:22px}
-  .work .info .cta-row{gap:18px}
-  .tier{padding:36px 24px 28px}
-  .box{padding:26px 22px}
-  form.f{padding:28px 20px}
+  .phone.back{width:160px}
+  .media{min-height:390px}
+  .vs th,.vs td{padding:13px 10px;font-size:14px}
+  .vs thead th{font-size:11px;letter-spacing:.08em}
+  .ok,.no{display:none}
+  .benefits{grid-template-columns:1fr}
+  .rail figure{flex-basis:210px}
+  .tier{padding:34px 22px 26px}
+  form.f{padding:26px 18px}
   .f .grid{grid-template-columns:1fr}
   .fab span{display:none}
   .fab{padding:0;width:58px;justify-content:center}
-  footer .cols{grid-template-columns:1fr}
+  footer .cols{grid-template-columns:1fr 1fr}
 }
 </style>
 </head>
@@ -393,31 +426,33 @@ footer .bar{margin-top:64px;border-top:1px solid rgba(226,188,114,.18);padding:2
 <div class="announce">Now booking weddings for the 2026–27 season · Limited slots each month <a href="#enquire">Enquire →</a></div>
 
 <header class="nav" id="nav">
-  <div class="wrap">
-    <a class="brand" href="#top" aria-label="The Royal Patrika House, home">
-      <img src="/img/seal.webp" alt="" width="426" height="440">
-      <span class="wm"><b>The Royal Patrika</b><small>House · Invitation websites</small></span>
-    </a>
-    <nav class="menu" aria-label="Main">
-      <a href="#experience">Experience</a>
-      <a href="#work">Our work</a>
-      <a href="#process">Process</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#faq">FAQ</a>
-      <a class="btn btn-primary" href="#enquire">Enquire now</a>
-    </nav>
-    <button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="drawer">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
-    </button>
+  <div class="wrapnav">
+    <div class="bar">
+      <a class="brand" href="#top" aria-label="The Royal Patrika House, home">
+        <img src="/img/seal.webp" alt="" width="426" height="440">
+        <b>The Royal Patrika House</b>
+      </a>
+      <nav class="menu" aria-label="Main">
+        <a href="#designs">Designs</a>
+        <a href="#experience">Experience</a>
+        <a href="#how">How it works</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <a class="btn btn-primary" href="#enquire">Book a consultation</a>
+      </nav>
+      <button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="drawer">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+      </button>
+    </div>
   </div>
 </header>
 
 <div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Menu">
   <div class="top"><img src="/img/seal.webp" alt="" width="426" height="440"><button class="x" id="drawerX" type="button" aria-label="Close menu">✕</button></div>
   <nav>
+    <a href="#designs">Designs</a>
     <a href="#experience">Experience</a>
-    <a href="#work">Our work</a>
-    <a href="#process">Process</a>
+    <a href="#how">How it works</a>
     <a href="#pricing">Pricing</a>
     <a href="#faq">FAQ</a>
     <a href="#enquire">Enquire</a>
@@ -433,17 +468,17 @@ footer .bar{margin-top:64px;border-top:1px solid rgba(226,188,114,.18);padding:2
 <section class="hero">
   <div class="wrap">
     <div>
-      <span class="eyebrow">Wedding invitation websites</span>
-      <h1>The patrika your guests will <em class="foil">open again and again.</em></h1>
-      <p class="lede">We design royal invitation websites for Indian weddings. One link on WhatsApp opens a wax-sealed envelope, your names in gold, and every function with its own scene, venue map and dress code.</p>
+      <span class="pill"><i></i>Made by hand in India</span>
+      <h1>The patrika your guests will <em class="sw">open again</em> and again.</h1>
+      <p class="lede">Royal invitation websites for Indian weddings. One link on WhatsApp opens a wax-sealed envelope, your names in gold, and every function with its own scene, map and dress code.</p>
       <div class="cta-row">
-        <a class="btn btn-primary" href="#enquire">Plan your invitation</a>
-        <button class="btn btn-line" type="button" data-demo>View a live invitation</button>
+        <button class="btn btn-primary" type="button" data-demo>Open a live invitation</button>
+        <a class="btn btn-line" href="#pricing">See packages</a>
       </div>
-      <div class="proof">
-        <div><b>1 link</b><span>for every function</span></div>
-        <div><b>3–14 days</b><span>from brief to live</span></div>
-        <div><b>₹4,999</b><span>packages from</span></div>
+      <div class="assure">
+        <span><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 10.5l3 3L15 6.5" stroke-linecap="round" stroke-linejoin="round"/></svg>No app for guests</span>
+        <span><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 10.5l3 3L15 6.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Ready in 3–7 days</span>
+        <span><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 10.5l3 3L15 6.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Preview before you pay the rest</span>
       </div>
     </div>
     <div class="arch" aria-hidden="true">
@@ -452,51 +487,69 @@ footer .bar{margin-top:64px;border-top:1px solid rgba(226,188,114,.18);padding:2
         <video id="heroVid" muted loop playsinline preload="none"></video>
       </div>
       <div class="mini"><img src="/img/s-envelope.webp" alt="" width="585" height="1266"></div>
-      <img class="seal" src="/img/seal.webp" alt="" width="426" height="440">
+      <div class="chip"><b>from ₹4,999</b>one link, every function</div>
     </div>
   </div>
 </section>
 
 <div class="marquee" aria-hidden="true">
   <div class="track">
-    <span>Envelope opening</span><span>Rose-petal shower</span><span>Scratch to reveal</span><span>A scene for every function</span><span>Venue maps</span><span>Attire guide</span><span>Guest quiz</span><span>Live countdown</span><span>Your own domain</span>
-    <span>Envelope opening</span><span>Rose-petal shower</span><span>Scratch to reveal</span><span>A scene for every function</span><span>Venue maps</span><span>Attire guide</span><span>Guest quiz</span><span>Live countdown</span><span>Your own domain</span>
+    <span>Mayra</span><span>Haldi</span><span>Mehendi</span><span>Sangeet</span><span>Baraat</span><span>Pheras</span><span>Shubh Vivah</span><span>Reception</span><span>Nikah</span><span>Anand Karaj</span>
+    <span>Mayra</span><span>Haldi</span><span>Mehendi</span><span>Sangeet</span><span>Baraat</span><span>Pheras</span><span>Shubh Vivah</span><span>Reception</span><span>Nikah</span><span>Anand Karaj</span>
   </div>
 </div>
 
-<section class="why">
+<!-- DESIGNS -->
+<section class="designs" id="designs">
   <div class="wrap">
-    <div class="head center rv">
-      <span class="eyebrow">Not a PDF. Not a video.</span>
-      <h2>An invitation your guests can open, explore and keep.</h2>
-      <div class="orn"><i></i></div>
+    <div class="head rv">
+      <span class="eyebrow">Designs</span>
+      <h2>Start with a design. We make it yours.</h2>
+      <p class="lede">Open the live demo exactly as your guests will see it, then we tailor the colours, scenes and words to your family.</p>
     </div>
     <div class="grid">
-      <div class="item rv">
-        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="m3.5 6 8.5 7 8.5-7"/><circle cx="12" cy="13" r="2.2" fill="currentColor" stroke="none"/></svg></div>
-        <h3>Opens like a real patrika</h3>
-        <p>Guests tap a wax seal and the envelope opens to your names in gold foil, with rose petals falling in. It feels like a gift, not a forward.</p>
-      </div>
-      <div class="item rv">
-        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg></div>
-        <h3>Everything in one link</h3>
-        <p>Every function with its date, time, venue map and dress code, plus family names and RSVP contacts. No more "what time is the Sangeet?" calls.</p>
-      </div>
-      <div class="item rv">
-        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M20 12a8 8 0 1 1-2.3-5.6"/><path d="M20 4v4.5h-4.5"/></svg></div>
-        <h3>Change it anytime</h3>
-        <p>Venue or time changed? We update the same link and every guest sees the latest details. Nothing to resend, nothing to reprint.</p>
-      </div>
+      <article class="design rv">
+        <div class="cover">
+          <img src="/img/sc-pond.webp" alt="Couple at a pink palace with a lotus pond" loading="lazy" width="848" height="478">
+          <span class="badge"><i></i>Live demo</span>
+        </div>
+        <div class="body">
+          <div class="top">
+            <div><h3>Gulabi Mahal</h3></div>
+            <div class="from">from<b>₹4,999</b></div>
+          </div>
+          <div class="tags"><span>Royal Rajasthani</span><span>Rose-gold foil</span><span>Up to 6 functions</span></div>
+          <p>A pink-palace theme with a lotus-pond opening, illustrated scenes for every function, scratch-to-reveal dates and a guest quiz. Made first for Mohit &amp; Kavya's wedding in Bikaner.</p>
+          <div class="cta-row">
+            <button class="btn btn-primary" type="button" data-demo>Open live demo</button>
+            <a class="btn btn-line wa" data-msg="Namaste! I love the Gulabi Mahal design. Our wedding dates are: " href="https://wa.me/919079898481">Choose this design</a>
+          </div>
+        </div>
+      </article>
+      <article class="design custom rv">
+        <div class="cover"><img src="/img/seal.webp" alt="" loading="lazy" width="426" height="440"></div>
+        <div class="body">
+          <div class="top">
+            <div><h3>Your own theme</h3></div>
+            <div class="from">from<b>₹24,999</b></div>
+          </div>
+          <div class="tags"><span>Drawn from scratch</span><span>Your rituals</span><span>Your palette</span></div>
+          <p>For the idea no design has yet: your venue, your traditions, your outfits. We agree the look with you on WhatsApp and quote before you pay anything.</p>
+          <div class="cta-row">
+            <a class="btn btn-gold wa" data-msg="Namaste! We'd like a custom invitation theme. Our idea: " href="https://wa.me/919079898481">Ask for a custom design</a>
+          </div>
+        </div>
+      </article>
     </div>
   </div>
 </section>
 
-<section class="features" id="experience">
+<!-- EXPERIENCE -->
+<section class="alt" id="experience">
   <div class="wrap">
-    <div class="head center rv">
+    <div class="head rv">
       <span class="eyebrow">The experience</span>
       <h2>Every scroll, a small celebration.</h2>
-      <p class="lede">Here's what your guests see when they open your invitation, shown on a real one we made for a Bikaner wedding.</p>
     </div>
 
     <div class="row rv">
@@ -507,11 +560,11 @@ footer .bar{margin-top:64px;border-top:1px solid rgba(226,188,114,.18);padding:2
       <div>
         <span class="num">i. The opening</span>
         <h3>A grand entrance, the moment they tap.</h3>
-        <p class="lede">The invitation begins sealed. One tap breaks the seal, the envelope opens, rose petals fall and your names appear in gold over an animated scene.</p>
+        <p class="lede">The invitation arrives sealed. One tap breaks the wax seal, rose petals fall, and your names appear in gold over an animated scene.</p>
         <ul class="checks">
           <li>Monogram wax seal in your colours</li>
-          <li>Animated couple scene, a palace or a theme you choose</li>
-          <li>Your names and families in rose-gold or gold foil</li>
+          <li>Animated couple scene in a palace or a theme you choose</li>
+          <li>Names and families in rose-gold or gold foil</li>
         </ul>
       </div>
     </div>
@@ -524,11 +577,11 @@ footer .bar{margin-top:64px;border-top:1px solid rgba(226,188,114,.18);padding:2
       <div>
         <span class="num">ii. The functions</span>
         <h3>Every ceremony gets its own scene.</h3>
-        <p class="lede">Mayra, Haldi, Mehendi, Sangeet, Pheras, Reception: each function has its own illustrated scene with the date, time, venue and a "View on map" button.</p>
+        <p class="lede">Each function has its own illustrated scene with the date, time, venue and a "View on map" button, plus what to wear in your chosen colours.</p>
         <ul class="checks">
-          <li>Illustrated or animated scenes for each function</li>
+          <li>Illustrated or animated scene for each function</li>
           <li>One-tap Google Maps for every venue</li>
-          <li>Your rituals described in your own words</li>
+          <li>Attire guide with colour swatches</li>
         </ul>
       </div>
     </div>
@@ -541,40 +594,66 @@ footer .bar{margin-top:64px;border-top:1px solid rgba(226,188,114,.18);padding:2
       <div>
         <span class="num">iii. The delight</span>
         <h3>Little moments guests talk about.</h3>
-        <p class="lede">Guests scratch a mirror to reveal your dates, play a "who is more likely to" quiz with live results from everyone, and tap swinging lanterns on the countdown.</p>
+        <p class="lede">Guests scratch a mirror to reveal your dates, guess "who is more likely to" with live results from everyone, and swing the countdown lanterns.</p>
         <ul class="checks">
           <li>Scratch-to-reveal wedding dates</li>
           <li>Guest quiz with live results</li>
-          <li>Twirling couple and swinging countdown lanterns</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="row flip rv">
-      <div class="media">
-        <div class="phone back"><img src="/img/s-countdown.webp" alt="Countdown lanterns" loading="lazy" width="585" height="1266"></div>
-        <div class="phone"><img src="/img/s-attire.webp" alt="Attire guide with colour swatches for each function" loading="lazy" width="585" height="1266"></div>
-      </div>
-      <div>
-        <span class="num">iv. The details</span>
-        <h3>Everything a guest needs to know.</h3>
-        <p class="lede">What to wear to each function, a gallery of your photos, family and blessings, and call or WhatsApp buttons for RSVPs, all in one place.</p>
-        <ul class="checks">
-          <li>Attire guide with colours for every function</li>
-          <li>Photo gallery, music and family blessings</li>
-          <li>Beautiful preview image when shared on WhatsApp</li>
+          <li>Your song, your photos, your family's blessings</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
+<!-- COMPARISON -->
+<section>
+  <div class="wrap">
+    <div class="head rv">
+      <span class="eyebrow">The difference</span>
+      <h2>What a card or video can't do.</h2>
+      <p class="lede">A printed card is seen once. A video is watched once. An invitation website is opened again on every wedding day.</p>
+    </div>
+    <div class="vs rv">
+      <table>
+        <thead><tr><th></th><th class="us">Royal Patrika</th><th>Printed card</th><th>WhatsApp video</th></tr></thead>
+        <tbody>
+          <tr><td>Venue maps</td><td class="us">One tap</td><td class="them">Address only</td><td class="them">Address only</td></tr>
+          <tr><td>Change a time or venue</td><td class="us">Same link updates</td><td class="them">Reprint</td><td class="them">Re-send</td></tr>
+          <tr><td>Interactive</td><td class="us">Quiz, scratch, music</td><td class="them">Static</td><td class="them">View only</td></tr>
+          <tr><td>Dress code per function</td><td class="us">With colours</td><td class="them">Rarely</td><td class="them">Rarely</td></tr>
+          <tr><td>RSVP contacts</td><td class="us">Call &amp; WhatsApp</td><td class="them">Printed numbers</td><td class="them">—</td></tr>
+          <tr><td>Reaches everyone</td><td class="us">Instantly</td><td class="them">Days, by hand</td><td class="them">Instantly</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFITS -->
+<section class="alt">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="eyebrow">Why families choose us</span>
+      <h2>Made for the whole family.</h2>
+    </div>
+    <div class="benefits">
+      <div class="ben rv"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c.8-3.8 3.6-6 7-6s6.2 2.2 7 6"/></svg></div><h3>Easy for Dadi &amp; Nani</h3><p>If they can open WhatsApp, they can open it. Large, clear text and no app to install.</p></div>
+      <div class="ben rv"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 5h9M8.5 3v2M6 5c.5 3 2.5 5.5 6 7M11 5c-.6 3.5-3 6.5-7 8"/><path d="M13 21l4-10 4 10M14.5 17.5h5"/></svg></div><h3>In your language</h3><p>English, Hindi or your regional language, or two together. Names written the way your family writes them.</p></div>
+      <div class="ben rv"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12Z"/><circle cx="12" cy="12" r="3"/></svg></div><h3>Show family first</h3><p>You get a private preview to share with parents and elders before any guest sees it.</p></div>
+      <div class="ben rv"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 12a8 8 0 1 1-2.3-5.6"/><path d="M20 4v4.5h-4.5"/></svg></div><h3>Change it anytime</h3><p>Venue or time changed? We update the same link. Nothing to resend, nothing to reprint.</p></div>
+      <div class="ben rv"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3l2.4 5 5.6.6-4.2 3.8 1.2 5.5L12 15.2 7 17.9l1.2-5.5L4 8.6 9.6 8Z"/></svg></div><h3>Made by hand</h3><p>Every invitation is designed for your family by a person, never a generic template filled in.</p></div>
+      <div class="ben rv"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg></div><h3>Your own link</h3><p>A link with your names, like rahulwedsriya.in, and a beautiful preview image when shared.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SCENES -->
 <section class="scenes">
   <div class="wrap">
-    <div class="head center rv">
+    <div class="head rv">
       <span class="eyebrow">Scenes we create</span>
       <h2>Your celebrations, illustrated.</h2>
-      <p class="lede">Each function gets artwork in the style of your wedding. These scenes were made for one family's celebration in Bikaner.</p>
+      <p class="lede">Each function gets artwork in the style of your wedding. These were made for one family's celebration in Bikaner.</p>
     </div>
   </div>
   <div class="rail" id="rail" tabindex="0" aria-label="Illustrated scenes">
@@ -592,66 +671,52 @@ footer .bar{margin-top:64px;border-top:1px solid rgba(226,188,114,.18);padding:2
   </div>
 </section>
 
-<section class="work" id="work">
+<!-- HOW -->
+<section id="how">
+  <div class="wrap how">
+    <div class="rv">
+      <span class="eyebrow">How it works</span>
+      <h2 style="margin-top:14px">Ready in days, not weeks.</h2>
+      <ol class="steps">
+        <li><div><small>Day 0</small><b>Choose a design</b><p>Pick Gulabi Mahal or ask for your own theme, and pay 50% to book your dates.</p></div></li>
+        <li><div><small>Day 1</small><b>Send your details</b><p>Names, functions, venues and photos on WhatsApp, using our simple checklist.</p></div></li>
+        <li><div><small>Day 3–4</small><b>Preview with family</b><p>A private link to check on your phone. Tell us your changes; elders' names are checked twice.</p></div></li>
+        <li><div><small>Day 5–7</small><b>Send it to everyone</b><p>Pay the rest, and your link goes live with a ready-to-forward WhatsApp message.</p></div></li>
+      </ol>
+      <p class="lede" style="font-size:16px">Need it sooner? Rush delivery in 48 hours is available.</p>
+    </div>
+    <div class="chat rv" aria-label="Example of the invitation shared on WhatsApp">
+      <div class="ch"><span class="av">S</span><div><b>Sipani Family ❤️</b><span>Mummy, Papa, Dadi, Chacha +46</span></div></div>
+      <div class="cb">
+        <span class="day">Today</span>
+        <div class="bub">
+          <div class="pv">
+            <img src="/img/wa-preview.webp" alt="" loading="lazy" width="800" height="420">
+            <div><b>Mohit &amp; Kavya — Wedding Invitation</b><span>With love, Mohit &amp; Kavya invite you to celebrate their wedding.</span><small>mohitwedskavya.in</small></div>
+          </div>
+          <p>With the blessings of our elders, we warmly invite you to the wedding of Mohit &amp; Kavya 🙏<br><span class="lnk">mohitwedskavya.in</span></p>
+          <div class="meta">10:30 am<i>✓✓</i></div>
+        </div>
+        <p class="note">How your invitation looks when shared on WhatsApp</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="alt" id="pricing">
   <div class="wrap">
     <div class="head rv">
-      <span class="eyebrow">Our work</span>
-      <h2>A real invitation, ready to open.</h2>
-    </div>
-    <article class="card rv">
-      <div class="cover">
-        <img src="/img/sc-pond.webp" alt="Mohit and Kavya at a lotus-pond palace" loading="lazy" width="848" height="478">
-        <span class="tag">Featured · Royal Rajasthani</span>
-      </div>
-      <div class="info">
-        <span class="eyebrow">Bikaner · January 2027</span>
-        <h3>Mohit &amp; Kavya</h3>
-        <p class="lede">A wedding week in a pink palace theme: rose-gold foil, a lotus-pond opening, illustrated scenes for every function and a guest quiz the whole family played.</p>
-        <div class="meta">
-          <div><b>6</b><span>Functions</span></div>
-          <div><b>8</b><span>Interactive moments</span></div>
-          <div><b>1</b><span>Link for all</span></div>
-        </div>
-        <div class="cta-row">
-          <button class="btn btn-primary" type="button" data-demo>Open the invitation</button>
-          <a class="link" href="https://mohitwedskavya.in" target="_blank" rel="noopener">Visit mohitwedskavya.in ↗</a>
-        </div>
-      </div>
-    </article>
-    <p class="next rv">Your wedding could be featured here next.</p>
-  </div>
-</section>
-
-<section class="process" id="process">
-  <div class="wrap">
-    <div class="head center rv">
-      <span class="eyebrow">How it works</span>
-      <h2>From hello to "send" in a week.</h2>
-      <p class="lede">You share the details once. We handle the design, the writing and the technical bits.</p>
-    </div>
-    <div class="steps">
-      <div class="step rv"><small>Day 0</small><h3>Say hello</h3><p>Send us your dates and city on WhatsApp or through the form.</p></div>
-      <div class="step rv"><small>Day 1</small><h3>Book &amp; share</h3><p>Pay 50% and send your details using our simple checklist.</p></div>
-      <div class="step rv"><small>Day 3–4</small><h3>First preview</h3><p>You get a private link to see your invitation on your phone.</p></div>
-      <div class="step rv"><small>Day 4–6</small><h3>Perfect it</h3><p>Tell us your changes. We check elders' names twice.</p></div>
-      <div class="step rv"><small>Day 7</small><h3>Send it</h3><p>Your link goes live with a ready-to-forward WhatsApp message.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="pricing" id="pricing">
-  <div class="wrap">
-    <div class="head center rv">
       <span class="eyebrow">Packages</span>
-      <h2>Choose your patrika.</h2>
-      <p class="lede">Every invitation is designed by hand for your family. Pick a starting point and we'll tailor the rest.</p>
+      <h2>Simple, one-time pricing.</h2>
+      <p class="lede">No subscriptions and no hidden costs. Pay half to start and the rest only after you've approved your preview.</p>
     </div>
     <div class="tiers">
       <div class="tier rv">
         <h3>Essential</h3>
-        <p class="for">For intimate weddings with one to three functions.</p>
+        <p class="for">For intimate weddings with up to 3 functions.</p>
         <div class="price"><small>from</small>₹4,999</div>
-        <div class="days">Ready in 3 days</div>
+        <span class="days">Ready in 3 days</span>
         <ul>
           <li>Envelope opening with rose petals</li>
           <li>Names in gold foil, with family lines</li>
@@ -668,14 +733,14 @@ footer .bar{margin-top:64px;border-top:1px solid rgba(226,188,114,.18);padding:2
         <h3>Signature</h3>
         <p class="for">For most families and full wedding weeks.</p>
         <div class="price"><small>from</small>₹11,999</div>
-        <div class="days">Ready in 5–7 days</div>
+        <span class="days">Ready in 5–7 days</span>
         <ul>
           <li>Everything in Essential</li>
           <li>Up to 6 functions, each with its own scene</li>
           <li>Scratch-to-reveal date</li>
           <li>Attire guide for every function</li>
           <li>Guest quiz with live results</li>
-          <li>Twirling couple and countdown lanterns</li>
+          <li>Countdown lanterns and twirling couple</li>
           <li>Music and up to 12 photos</li>
           <li>Your own domain for 1 year</li>
           <li>3 rounds of changes, updates until the wedding</li>
@@ -686,10 +751,10 @@ footer .bar{margin-top:64px;border-top:1px solid rgba(226,188,114,.18);padding:2
         <h3>Royal</h3>
         <p class="for">For destination and grand weddings.</p>
         <div class="price"><small>from</small>₹24,999</div>
-        <div class="days">Ready in 10–14 days</div>
+        <span class="days">Ready in 10–14 days</span>
         <ul>
           <li>Everything in Signature</li>
-          <li>Custom couple illustration or animated opening</li>
+          <li>Your own theme, drawn from scratch</li>
           <li>Animated scenes for every function</li>
           <li>Unlimited functions and up to 20 photos</li>
           <li>Your own monogram</li>
@@ -699,95 +764,101 @@ footer .bar{margin-top:64px;border-top:1px solid rgba(226,188,114,.18);padding:2
         <a class="btn btn-line wa" data-msg="Namaste! I'm interested in the Royal package." href="https://wa.me/919079898481">Choose Royal</a>
       </div>
     </div>
+    <div class="pay rv"><span>50% to start, 50% after your preview</span><span>One-time payment</span><span>No hidden costs</span></div>
 
-    <details class="compare rv">
-      <summary>Compare all features <span></span></summary>
-      <div class="tbl">
-        <table>
-          <thead><tr><th>Feature</th><th>Essential</th><th>Signature</th><th>Royal</th></tr></thead>
-          <tbody>
-            <tr><td>Envelope opening with rose petals</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
-            <tr><td>Animated opening scene</td><td>Template</td><td>Template</td><td>Custom</td></tr>
-            <tr><td>Names in gold foil, family lines</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
-            <tr><td>Functions with venue maps</td><td>3</td><td>6</td><td>Unlimited</td></tr>
-            <tr><td>Illustrated scene for each function</td><td class="n">—</td><td class="y">✓</td><td>Animated</td></tr>
-            <tr><td>Scratch-to-reveal date</td><td class="n">—</td><td class="y">✓</td><td class="y">✓</td></tr>
-            <tr><td>Attire guide</td><td class="n">—</td><td class="y">✓</td><td class="y">✓</td></tr>
-            <tr><td>Guest quiz with live results</td><td class="n">—</td><td class="y">✓</td><td class="y">✓</td></tr>
-            <tr><td>Twirling couple and countdown lanterns</td><td class="n">—</td><td class="y">✓</td><td class="y">✓</td></tr>
-            <tr><td>Photo gallery</td><td>6</td><td>12</td><td>20</td></tr>
-            <tr><td>Background music</td><td class="n">—</td><td class="y">✓</td><td class="y">✓</td></tr>
-            <tr><td>Live countdown</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
-            <tr><td>Family, blessings and RSVP contacts</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
-            <tr><td>WhatsApp preview image</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
-            <tr><td>Your own domain<small>e.g. rahulwedsriya.in</small></td><td>Add-on</td><td>1 year</td><td>1 year</td></tr>
-            <tr><td>Languages</td><td>1</td><td>1</td><td>2</td></tr>
-            <tr><td>Monogram design</td><td class="n">—</td><td class="n">—</td><td class="y">✓</td></tr>
-            <tr><td>Rounds of changes</td><td>1</td><td>3</td><td>Unlimited</td></tr>
-            <tr><td>Updates after sending</td><td>Until delivery</td><td>Until the wedding</td><td>Until the wedding</td></tr>
-            <tr><td>Delivery</td><td>3 days</td><td>5–7 days</td><td>10–14 days</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </details>
-
-    <div class="extras">
-      <div class="box rv">
-        <h3>Add to any package</h3>
-        <table>
-          <tr><td>Extra function scene</td><td>₹1,500</td></tr>
-          <tr><td>Animated couple video for the opening</td><td>₹4,000</td></tr>
-          <tr><td>Your own domain (.in, 1 year)</td><td>₹999</td></tr>
-          <tr><td>Second language version</td><td>₹2,500</td></tr>
-          <tr><td>RSVP form with guest count sheet</td><td>₹1,500</td></tr>
-          <tr><td>Thank-you page with wedding photos</td><td>₹2,000</td></tr>
-          <tr><td>Rush delivery in 48 hours</td><td>+30%</td></tr>
-        </table>
-      </div>
-      <div class="box offer rv">
-        <span class="eyebrow">Founding families</span>
-        <h3>A special welcome for our first weddings.</h3>
-        <p>We're taking a limited number of weddings this season at launch pricing. Message us to check availability for your dates.</p>
+    <div class="more">
+      <details class="panel wide rv">
+        <summary>Compare all features</summary>
+        <div class="tbl">
+          <table>
+            <thead><tr><th>Feature</th><th>Essential</th><th>Signature</th><th>Royal</th></tr></thead>
+            <tbody>
+              <tr><td>Envelope opening with rose petals</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
+              <tr><td>Animated opening scene</td><td>Design</td><td>Design</td><td>Custom</td></tr>
+              <tr><td>Names in gold foil, family lines</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
+              <tr><td>Functions with venue maps</td><td>3</td><td>6</td><td>Unlimited</td></tr>
+              <tr><td>Illustrated scene for each function</td><td class="n">—</td><td class="y">✓</td><td>Animated</td></tr>
+              <tr><td>Scratch-to-reveal date</td><td class="n">—</td><td class="y">✓</td><td class="y">✓</td></tr>
+              <tr><td>Attire guide</td><td class="n">—</td><td class="y">✓</td><td class="y">✓</td></tr>
+              <tr><td>Guest quiz with live results</td><td class="n">—</td><td class="y">✓</td><td class="y">✓</td></tr>
+              <tr><td>Countdown lanterns and twirling couple</td><td class="n">—</td><td class="y">✓</td><td class="y">✓</td></tr>
+              <tr><td>Photo gallery</td><td>6</td><td>12</td><td>20</td></tr>
+              <tr><td>Background music</td><td class="n">—</td><td class="y">✓</td><td class="y">✓</td></tr>
+              <tr><td>Live countdown</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
+              <tr><td>Family, blessings and RSVP contacts</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
+              <tr><td>WhatsApp preview image</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
+              <tr><td>Your own domain<small>e.g. rahulwedsriya.in</small></td><td>Add-on</td><td>1 year</td><td>1 year</td></tr>
+              <tr><td>Languages</td><td>1</td><td>1</td><td>2</td></tr>
+              <tr><td>Monogram design</td><td class="n">—</td><td class="n">—</td><td class="y">✓</td></tr>
+              <tr><td>Rounds of changes</td><td>1</td><td>3</td><td>Unlimited</td></tr>
+              <tr><td>Updates after sending</td><td>Until delivery</td><td>Until the wedding</td><td>Until the wedding</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </details>
+      <details class="panel rv">
+        <summary>Add-ons</summary>
+        <div class="addons">
+          <table>
+            <tr><td>Extra function scene</td><td>₹1,500</td></tr>
+            <tr><td>Animated couple video for the opening</td><td>₹4,000</td></tr>
+            <tr><td>Your own domain (.in, 1 year)</td><td>₹999</td></tr>
+            <tr><td>Second language version</td><td>₹2,500</td></tr>
+            <tr><td>RSVP form with guest count sheet</td><td>₹1,500</td></tr>
+            <tr><td>Thank-you page with wedding photos</td><td>₹2,000</td></tr>
+            <tr><td>Rush delivery in 48 hours</td><td>+30%</td></tr>
+          </table>
+        </div>
+      </details>
+      <div class="offer rv">
+        <b>Founding families</b>
+        <p>We're welcoming a limited number of weddings this season at launch pricing.</p>
         <a class="btn btn-gold wa" data-msg="Namaste! I'd like to know about the founding-family launch pricing. Our wedding dates are: " href="https://wa.me/919079898481">Check availability</a>
       </div>
     </div>
   </div>
 </section>
 
+<!-- FAQ -->
 <section class="faq" id="faq">
   <div class="wrap cols">
     <div class="side rv">
       <span class="eyebrow">Questions</span>
       <h2>Good to know.</h2>
-      <p class="lede">Can't find your answer? Ask us anything on WhatsApp.</p>
+      <p class="lede">Can't find your answer? Ask us on WhatsApp.</p>
       <a class="btn btn-line wa" data-msg="Namaste! I have a question about the invitation website." href="https://wa.me/919079898481">Ask a question</a>
     </div>
     <div class="rv">
-      <details class="q"><summary>Will it work on every phone?</summary><p>Yes. It opens in any browser on Android or iPhone, straight from WhatsApp. Guests don't need to download anything.</p></details>
+      <details class="q"><summary>Do my guests need to install anything?</summary><p>No. The link opens in any browser on Android or iPhone, straight from WhatsApp. If they can use WhatsApp, they can open it.</p></details>
+      <details class="q"><summary>Do I need any design or technical skills?</summary><p>Not at all. You send us your details on WhatsApp and we do everything else, including the domain and the WhatsApp preview image.</p></details>
+      <details class="q"><summary>Can we book now and send our details later?</summary><p>Yes. Pay 50% to hold your dates and send your details whenever you're ready. Your delivery time starts from when we have them.</p></details>
       <details class="q"><summary>Can we change details after sending it?</summary><p>Yes. If a time or venue changes, we update the same link and every guest sees the new details. Signature and Royal include updates until the wedding.</p></details>
-      <details class="q"><summary>Can we have our own link, like rahulwedsriya.in?</summary><p>Yes. Signature and Royal include your own domain for one year. With Essential you get a free link, and you can add your own domain for ₹999.</p></details>
-      <details class="q"><summary>Can the invitation be in Hindi or another language?</summary><p>Yes. We make it in English, Hindi or your regional language. Royal includes two languages, and any package can add a second one.</p></details>
-      <details class="q"><summary>Can we choose our own colours and theme?</summary><p>Of course. Share your outfits, décor or a card you love, and we'll design the palette, foil and scenes to match.</p></details>
-      <details class="q"><summary>What do you need from us?</summary><p>The couple's and families' names as you want them printed, every function with its date, time and venue, your favourite photos, a song, and RSVP contact numbers. We send you a simple checklist.</p></details>
-      <details class="q"><summary>How do we pay?</summary><p>50% to book your dates, and the remaining 50% after you approve the preview, before the link goes live.</p></details>
+      <details class="q"><summary>Do we need to buy a domain?</summary><p>No, we arrange it. Signature and Royal include your own domain, like rahulwedsriya.in, for one year. Essential comes with a free link, and a domain can be added for ₹999.</p></details>
+      <details class="q"><summary>Can it be in Hindi or another language?</summary><p>Yes. English, Hindi or your regional language. Royal includes two languages, and any package can add a second one.</p></details>
+      <details class="q"><summary>Can it follow our family's traditions?</summary><p>Of course. Tell us your functions and rituals, such as Mayra, Haldi or Anand Karaj, and we name and describe them the way your family does.</p></details>
+      <details class="q"><summary>Can we add our song and photos?</summary><p>Yes. Signature and Royal include background music of your choice, and every package has a photo gallery.</p></details>
+      <details class="q"><summary>What happens after we pay?</summary><p>We send you a short checklist on WhatsApp. Once we have your details, you get a private preview within the promised days, make your changes, then pay the rest and send the link.</p></details>
       <details class="q"><summary>Can you make it faster?</summary><p>Yes, rush delivery in 48 hours is available for 30% extra, depending on our bookings.</p></details>
     </div>
   </div>
 </section>
 
-<section class="enquire" id="enquire">
+<!-- ENQUIRE -->
+<section class="enquire alt" id="enquire">
   <div class="wrap cols">
     <div class="rv">
       <span class="eyebrow">Enquire</span>
       <h2>Let's make your patrika.</h2>
-      <p class="lede" style="margin-top:18px">Tell us a little about your wedding. Your details open in WhatsApp, ready to send, and we'll reply with ideas and availability.</p>
+      <p class="lede" style="margin-top:16px">Tell us about your wedding and we'll reply on WhatsApp with ideas and availability.</p>
       <ul class="contact-list">
-        <li><a class="wa" data-msg="Namaste! I'd like to know more about a wedding invitation website." href="https://wa.me/919079898481"><span class="ico"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.2-.3-.2-.5-.3Z"/></svg></span><span><b>WhatsApp</b><small>Quickest way to reach us</small></span></a></li>
-        <li><a href="https://instagram.com/theroyalpatrikahouse" target="_blank" rel="noopener"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></span><span><b>@theroyalpatrikahouse</b><small>See our latest work</small></span></a></li>
+        <li><a class="wa" data-msg="Namaste! I'd like to know more about a wedding invitation website." href="https://wa.me/919079898481"><span class="ico" style="background:#e6f4ec;color:var(--green)"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.2-.3-.2-.5-.3Z"/></svg></span><span><b>Chat on WhatsApp</b><small>The quickest way to reach us</small></span></a></li>
+        <li><a href="https://instagram.com/theroyalpatrikahouse" target="_blank" rel="noopener"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></span><span><b>@theroyalpatrikahouse</b><small>See our latest work on Instagram</small></span></a></li>
         <li><a href="mailto:asipani969@gmail.com"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="m3.5 6 8.5 7 8.5-7"/></svg></span><span><b>Email</b><small>asipani969@gmail.com</small></span></a></li>
       </ul>
     </div>
     <form class="f rv" id="enqForm" novalidate>
+      <h3>Tell us about your wedding</h3>
+      <p class="sub">Takes a minute. Your message opens in WhatsApp, ready to send.</p>
       <div class="grid">
         <div><label for="fName">Your name <i>*</i></label><input id="fName" name="name" autocomplete="name" required placeholder="Priya Sharma"></div>
         <div><label for="fCouple">Couple's names</label><input id="fCouple" name="couple" placeholder="Rahul &amp; Riya"></div>
@@ -799,20 +870,21 @@ footer .bar{margin-top:64px;border-top:1px solid rgba(226,188,114,.18);padding:2
           <select id="fPkg" name="package"><option value="">Not sure yet</option><option>Essential</option><option>Signature</option><option>Royal</option></select></div>
         <div class="full"><label for="fMsg">Anything else?</label><textarea id="fMsg" name="msg" placeholder="Theme, colours, languages, a card you love…"></textarea></div>
       </div>
-      <button class="btn btn-primary" type="submit">Send on WhatsApp</button>
+      <button class="btn btn-wa" type="submit"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Z"/></svg>Send on WhatsApp</button>
       <p class="err" id="fErr" role="alert"></p>
-      <p class="small">We never share your details. This simply opens WhatsApp with your message.</p>
+      <p class="small">We never share your details.</p>
     </form>
   </div>
 </section>
 
-<section class="band">
+<section class="final">
   <div class="wrap">
     <img src="/img/seal.webp" alt="" width="426" height="440" loading="lazy">
-    <h2>Follow the House.</h2>
-    <p class="lede">New invitations, scenes and behind-the-scenes on Instagram.</p>
+    <h2>Your invitation, ready in days.</h2>
+    <p class="lede">Open the live demo, then tell us about your wedding. We'll take care of the rest.</p>
     <div class="cta-row">
-      <a class="btn btn-gold" href="https://instagram.com/theroyalpatrikahouse" target="_blank" rel="noopener">@theroyalpatrikahouse</a>
+      <button class="btn btn-gold" type="button" data-demo>Open a live invitation</button>
+      <a class="btn btn-ivory-line wa" data-msg="Namaste! I'd like to know more about a wedding invitation website." href="https://wa.me/919079898481">Talk to us on WhatsApp</a>
     </div>
   </div>
 </section>
@@ -824,11 +896,11 @@ footer .bar{margin-top:64px;border-top:1px solid rgba(226,188,114,.18);padding:2
     <div class="cols">
       <div>
         <img src="/img/logo-full.webp" alt="The Royal Patrika House" width="720" height="542" loading="lazy">
-        <p style="max-width:320px">Royal wedding invitation websites, designed by hand for Indian families.</p>
+        <p style="max-width:320px">Royal wedding invitation websites, made by hand for Indian families.</p>
       </div>
       <div>
         <h4>Explore</h4>
-        <ul><li><a href="#experience">Experience</a></li><li><a href="#work">Our work</a></li><li><a href="#process">Process</a></li><li><a href="#faq">FAQ</a></li></ul>
+        <ul><li><a href="#designs">Designs</a></li><li><a href="#experience">Experience</a></li><li><a href="#how">How it works</a></li><li><a href="#faq">FAQ</a></li></ul>
       </div>
       <div>
         <h4>Packages</h4>
@@ -840,21 +912,20 @@ footer .bar{margin-top:64px;border-top:1px solid rgba(226,188,114,.18);padding:2
           <li><a class="wa" data-msg="Namaste!" href="https://wa.me/919079898481">WhatsApp</a></li>
           <li><a href="https://instagram.com/theroyalpatrikahouse" target="_blank" rel="noopener">Instagram</a></li>
           <li><a href="mailto:asipani969@gmail.com">asipani969@gmail.com</a></li>
-          <li><a href="#enquire">Enquiry form</a></li>
         </ul>
       </div>
     </div>
-    <div class="bar"><span>© 2026 The Royal Patrika House</span><span>Handcrafted in India</span></div>
+    <div class="base"><span>© 2026 The Royal Patrika House</span><span>Made by hand in India</span></div>
   </div>
 </footer>
 
-<a class="fab wa" id="fab" data-msg="Namaste! I'd like to know more about a wedding invitation website." href="https://wa.me/919079898481" aria-label="Chat on WhatsApp">
+<a class="fab wa hide" id="fab" data-msg="Namaste! I'd like to know more about a wedding invitation website." href="https://wa.me/919079898481" aria-label="Chat on WhatsApp">
   <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.2-.3-.2-.5-.3Z"/></svg>
-  <span>Chat with us</span>
+  <span>Let's talk</span>
 </a>
 
 <div class="modal" id="demo" role="dialog" aria-modal="true" aria-label="Live sample invitation">
-  <div class="dev"><button class="x" id="demoX" type="button" aria-label="Close">✕</button><div id="demoSlot" style="height:100%"></div></div>
+  <div class="dev"><button class="x" id="demoX" type="button" aria-label="Close">✕</button><div id="demoSlot" style="height:100%"></div><p class="hint">Tap the seal to open · Gulabi Mahal design</p></div>
 </div>
 
 <script>
@@ -865,12 +936,9 @@ document.querySelectorAll("a.wa").forEach(a => { a.href = waLink(a.dataset.msg |
 
 const $ = id => document.getElementById(id);
 
-// Header shadow on scroll; hide the floating button once the enquiry form is on screen.
-const nav = $("nav"), fab = $("fab"), enq = $("enquire");
-const onScroll = () => {
-  nav.classList.toggle("scrolled", scrollY > 10);
-  fab.classList.toggle("hide", scrollY < 420 || enq.getBoundingClientRect().top < innerHeight * .8);
-};
+// Floating WhatsApp button: show after the hero, hide near the enquiry form.
+const fab = $("fab"), enq = $("enquire");
+const onScroll = () => fab.classList.toggle("hide", scrollY < 520 || enq.getBoundingClientRect().top < innerHeight * .85);
 addEventListener("scroll", onScroll, { passive: true }); onScroll();
 
 // Mobile menu.
@@ -894,7 +962,7 @@ addEventListener("keydown", e => { if (e.key === "Escape") { closeDemo(); setDra
 
 // Scenes rail arrows.
 const rail = $("rail");
-const step = () => (rail.querySelector("figure")?.offsetWidth || 260) + 24;
+const step = () => (rail.querySelector("figure")?.offsetWidth || 250) + 22;
 $("railPrev").addEventListener("click", () => rail.scrollBy({ left: -step() * 2, behavior: "smooth" }));
 $("railNext").addEventListener("click", () => rail.scrollBy({ left: step() * 2, behavior: "smooth" }));
 
