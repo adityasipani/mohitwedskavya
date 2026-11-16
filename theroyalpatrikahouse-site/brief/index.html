@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Your invitation details · The Royal Patrika House</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#4A1825">
+<meta property="og:title" content="Your invitation details · The Royal Patrika House">
+<meta property="og:description" content="Fill in your wedding details once, and we'll design your invitation website.">
+<meta property="og:image" content="https://theroyalpatrikahouse.pages.dev/og.jpg">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--maroon:#5B1F2E;--maroon-d:#3E1420;--ivory:#FBF6EE;--cream:#FFFBF5;--paper:#F5EDE1;--line:rgba(185,138,62,.3);--gold:#B98A3E;--gold-d:#8E6220;--ink:#2B1A17;--muted:#6B5750;--green:#1F8F55;
+  --serif:"Cormorant Garamond",Palatino,Georgia,serif;--sans:Jost,"Segoe UI",system-ui,sans-serif}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:300 16px/1.6 var(--sans)}
+header{background:var(--maroon-d);color:var(--ivory);text-align:center;padding:34px 20px 30px}
+header img{width:64px;margin:0 auto 12px;display:block}
+header h1{font:500 clamp(30px,6vw,42px)/1.1 var(--serif);margin:0}
+header p{margin:10px auto 0;max-width:560px;color:rgba(251,246,238,.78)}
+main{max-width:760px;margin:-18px auto 0;padding:0 16px 140px}
+.card{background:var(--cream);border:1px solid var(--line);border-radius:20px;padding:26px 22px;margin-top:18px;box-shadow:0 30px 50px -44px rgba(62,20,32,.6)}
+.card h2{font:500 26px/1.2 var(--serif);color:var(--maroon);margin:0 0 4px;display:flex;align-items:center;gap:12px}
+.card h2 span{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--maroon);color:#fff;font:500 14px var(--sans);flex:none}
+.card .hint{color:var(--muted);font-size:14px;margin:0 0 18px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.full{grid-column:1/-1}
+label{display:block;font-size:13px;font-weight:400;margin-bottom:6px}
+label small{color:var(--muted);font-weight:300}
+input,select,textarea{width:100%;font:300 16px var(--sans);color:var(--ink);background:#fff;border:1px solid rgba(185,138,62,.42);border-radius:10px;padding:12px 13px;min-height:48px;-webkit-appearance:none;appearance:none}
+textarea{min-height:84px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 4px rgba(226,188,114,.25)}
+.ev{border:1px solid var(--line);border-radius:14px;padding:16px;margin-top:14px;background:#fffdf9;position:relative}
+.ev h3{font:500 20px var(--serif);color:var(--maroon);margin:0 0 12px}
+.rm{position:absolute;top:12px;right:12px;border:0;background:none;color:#9b2c2c;font:400 13px var(--sans);cursor:pointer;padding:6px}
+.add{margin-top:14px;width:100%;min-height:48px;border:1px dashed var(--gold);border-radius:12px;background:transparent;color:var(--maroon);font:500 15px var(--sans);cursor:pointer}
+.add:hover{background:rgba(226,188,114,.1)}
+.bar{position:fixed;left:0;right:0;bottom:0;background:rgba(255,251,245,.96);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:12px 16px calc(12px + env(safe-area-inset-bottom));z-index:10}
+.bar .in{max-width:760px;margin:0 auto;display:flex;gap:10px;align-items:center}
+.bar small{flex:1;color:var(--muted);font-size:12.5px;line-height:1.35}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:0 22px;border-radius:999px;border:0;font:500 15px var(--sans);cursor:pointer;white-space:nowrap;text-decoration:none}
+.send{background:var(--green);color:#fff}
+.copy{background:transparent;border:1px solid var(--line);color:var(--maroon)}
+.err{color:#9b2c2c;font-size:14px;margin-top:10px}
+.err:empty{display:none}
+.note{background:#fff8e8;border:1px solid #ecd9a8;border-radius:12px;padding:12px 14px;font-size:14px;color:#6b5420;margin-top:14px}
+@media (max-width:560px){.grid{grid-template-columns:1fr}.bar small{display:none}.bar .btn{flex:1;padding:0 12px}}
+</style>
+</head>
+<body>
+<header>
+  <img src="/img/seal.webp" alt="" width="426" height="440">
+  <h1>Your invitation details</h1>
+  <p>Fill this in once, as you'd like it printed. It saves on your phone as you type, so you can finish later.</p>
+</header>
+<main>
+<form id="f" novalidate>
+
+<section class="card">
+  <h2><span>1</span>The couple</h2>
+  <p class="hint">Names exactly as you want them on the invitation.</p>
+  <div class="grid">
+    <div><label>Groom's name *</label><input name="groom" required placeholder="Rahul"></div>
+    <div><label>Bride's name *</label><input name="bride" required placeholder="Riya"></div>
+    <div class="full"><label>Groom's family lines <small>(grandparents, parents)</small></label><textarea name="groomFamily" placeholder="Grandson of Smt. Kamla Devi & Late Sh. Ramesh Chand Agarwal&#10;Son of Mrs. Sunita & Mr. Anil Agarwal"></textarea></div>
+    <div class="full"><label>Bride's family lines</label><textarea name="brideFamily" placeholder="Granddaughter of …&#10;Daughter of …"></textarea></div>
+    <div class="full"><label>Invitation is from <small>(the families' names)</small></label><input name="from" placeholder="The Agarwal & Mehta Families"></div>
+    <div class="full"><label>Blessing line at the top</label><input name="blessingLine" value="॥ श्री गणेशाय नमः ॥"></div>
+  </div>
+</section>
+
+<section class="card">
+  <h2><span>2</span>Where &amp; when</h2>
+  <div class="grid">
+    <div><label>City (or cities) *</label><input name="city" required placeholder="Jaipur"></div>
+    <div><label>Main wedding date *</label><input name="weddingDate" type="date" required></div>
+    <div><label>Muhurat / pheras time</label><input name="weddingTime" type="time"></div>
+    <div><label>Language</label><select name="language"><option>English</option><option>Hindi</option><option>English + Hindi</option><option>Other (tell us below)</option></select></div>
+  </div>
+</section>
+
+<section class="card">
+  <h2><span>3</span>Functions</h2>
+  <p class="hint">Add every function you want on the invitation, in order.</p>
+  <div id="events"></div>
+  <button class="add" type="button" id="addEv">+ Add a function</button>
+</section>
+
+<section class="card">
+  <h2><span>4</span>Family &amp; blessings</h2>
+  <div class="grid">
+    <div class="full"><label>With blessings of <small>(elders)</small></label><textarea name="elders" placeholder="Smt. Kamla Devi Agarwal, Sh. Prakash Mehta"></textarea></div>
+    <div class="full"><label>With warm regards</label><textarea name="regards" placeholder="Uncles and aunts, comma separated"></textarea></div>
+    <div class="full"><label>Cousins</label><textarea name="cousins" placeholder="Aarav, Kabir, Isha, Tanya & Vivaan"></textarea></div>
+  </div>
+</section>
+
+<section class="card">
+  <h2><span>5</span>RSVP contacts</h2>
+  <p class="hint">Family members guests can call or WhatsApp. One per line: Name – number.</p>
+  <textarea name="contacts" placeholder="Anil Agarwal – 98000 00001&#10;Vikas Mehta – 98000 00002"></textarea>
+</section>
+
+<section class="card">
+  <h2><span>6</span>The finishing touches</h2>
+  <div class="grid">
+    <div class="full"><label>Song for the background <small>(name and singer)</small></label><input name="song" placeholder="Tum Mile – piano version"></div>
+    <div class="full"><label>Colours or theme you love</label><input name="theme" placeholder="Pink and gold, palace feel"></div>
+    <div class="full"><label>Quiz questions <small>(leave empty for our 4 favourites)</small></label><textarea name="quiz" placeholder="Who will get emotional first?&#10;Who takes longer to get ready?"></textarea></div>
+    <div class="full"><label>Anything else?</label><textarea name="notes" placeholder="Spellings to be careful with, a card you love, the link name you want…"></textarea></div>
+  </div>
+  <div class="note">After sending, please share <b>8–20 photos</b> on the same WhatsApp chat (as documents for best quality).</div>
+</section>
+
+<p class="err" id="err" role="alert"></p>
+</form>
+</main>
+
+<div class="bar"><div class="in">
+  <small>Your details stay on your phone until you send them.</small>
+  <button class="btn copy" type="button" id="copyBtn">Copy</button>
+  <button class="btn send" type="button" id="sendBtn">Send on WhatsApp</button>
+</div></div>
+
+<template id="evT">
+  <div class="ev">
+    <button class="rm" type="button">Remove</button>
+    <h3>Function</h3>
+    <div class="grid">
+      <div><label>Name *</label><input data-k="name" list="fnList" placeholder="Haldi"></div>
+      <div><label>Date *</label><input data-k="date" type="date"></div>
+      <div><label>Time *</label><input data-k="time" placeholder="11:00 am onwards"></div>
+      <div><label>Venue *</label><input data-k="where" placeholder="Jai Mahal Palace, Jaipur"></div>
+      <div class="full"><label>Google Maps link</label><input data-k="map" inputmode="url" placeholder="https://maps.app.goo.gl/…"></div>
+      <div class="full"><label>One line about it <small>(optional)</small></label><input data-k="tagline" placeholder="Turmeric, laughter and marigolds"></div>
+      <div><label>Dress code – men</label><input data-k="men" placeholder="Yellow kurta"></div>
+      <div><label>Dress code – women</label><input data-k="women" placeholder="Yellow suit or lehenga"></div>
+      <div class="full"><label>Colours</label><input data-k="colours" placeholder="Yellow, marigold, white"></div>
+    </div>
+  </div>
+</template>
+<datalist id="fnList"><option>Haldi</option><option>Mehendi</option><option>Sangeet</option><option>Mayra</option><option>Tilak</option><option>Engagement</option><option>Cocktail</option><option>Baraat</option><option>Shubh Vivah</option><option>Pheras</option><option>Reception</option></datalist>
+
+<script>
+const WA_NUMBER = "919079898481";
+const f = document.getElementById("f"), evs = document.getElementById("events"), T = document.getElementById("evT");
+const KEY = "rph-brief";
+
+function addEvent(data = {}) {
+  const node = T.content.firstElementChild.cloneNode(true);
+  node.querySelectorAll("[data-k]").forEach(i => { if (data[i.dataset.k]) i.value = data[i.dataset.k]; });
+  node.querySelector(".rm").onclick = () => { node.remove(); renumber(); save(); };
+  evs.appendChild(node); renumber();
+}
+function renumber() { [...evs.children].forEach((n, i) => n.querySelector("h3").textContent = "Function " + (i + 1)); }
+document.getElementById("addEv").onclick = () => { addEvent(); evs.lastElementChild.querySelector("input").focus(); };
+
+function collect() {
+  const d = Object.fromEntries(new FormData(f));
+  d.events = [...evs.children].map(n => Object.fromEntries([...n.querySelectorAll("[data-k]")].map(i => [i.dataset.k, i.value.trim()])));
+  return d;
+}
+function save() { try { localStorage.setItem(KEY, JSON.stringify(collect())); } catch (e) {} }
+function restore() {
+  let d = null; try { d = JSON.parse(localStorage.getItem(KEY) || "null"); } catch (e) {}
+  if (!d) { ["Haldi", "Sangeet", "Shubh Vivah"].forEach(n => addEvent({ name: n })); return; }
+  Object.entries(d).forEach(([k, v]) => { if (k !== "events" && f.elements[k]) f.elements[k].value = v; });
+  (d.events && d.events.length ? d.events : [{}]).forEach(addEvent);
+}
+f.addEventListener("input", save);
+restore();
+
+const fmtDate = s => { if (!s) return ""; const d = new Date(s + "T00:00"); return isNaN(d) ? s : d.toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" }); };
+
+function message() {
+  const d = collect(), L = [], add = (k, v) => v && L.push(k + ": " + v);
+  L.push("✦ INVITATION DETAILS ✦", "");
+  add("Groom", d.groom); add("Bride", d.bride);
+  add("Groom's family", (d.groomFamily || "").replace(/\n+/g, " · "));
+  add("Bride's family", (d.brideFamily || "").replace(/\n+/g, " · "));
+  add("From", d.from); add("Blessing line", d.blessingLine);
+  add("City", d.city); add("Wedding date", fmtDate(d.weddingDate)); add("Muhurat", d.weddingTime); add("Language", d.language);
+  d.events.forEach((e, i) => {
+    if (!Object.values(e).some(Boolean)) return;
+    L.push("", `— Function ${i + 1}: ${e.name || "?"} —`);
+    add("Date", fmtDate(e.date)); add("Time", e.time); add("Venue", e.where); add("Map", e.map);
+    add("Line", e.tagline); add("Men wear", e.men); add("Women wear", e.women); add("Colours", e.colours);
+  });
+  L.push("");
+  add("Blessings of", d.elders); add("Warm regards", d.regards); add("Cousins", d.cousins);
+  if (d.contacts) L.push("RSVP contacts:", d.contacts.trim());
+  add("Song", d.song); add("Theme", d.theme);
+  if (d.quiz) L.push("Quiz:", d.quiz.trim());
+  add("Notes", d.notes);
+  L.push("", "(Photos coming next on this chat)");
+  return L.join("\n");
+}
+function check() {
+  const d = collect(), err = document.getElementById("err");
+  const miss = [];
+  if (!d.groom || !d.bride) miss.push("both names");
+  if (!d.city) miss.push("city");
+  if (!d.weddingDate) miss.push("wedding date");
+  if (!d.events.some(e => e.name && e.date && e.where)) miss.push("at least one function with its date and venue");
+  err.textContent = miss.length ? "Please add " + miss.join(", ") + "." : "";
+  if (miss.length) err.scrollIntoView({ behavior: "smooth", block: "center" });
+  return !miss.length;
+}
+document.getElementById("sendBtn").onclick = () => {
+  if (!check()) return;
+  location.href = "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(message());
+};
+document.getElementById("copyBtn").onclick = async e => {
+  if (!check()) return;
+  try { await navigator.clipboard.writeText(message()); e.target.textContent = "Copied ✓"; setTimeout(() => e.target.textContent = "Copy", 2000); }
+  catch (x) { alert(message()); }
+};
+</script>
+</body>
+</html>
