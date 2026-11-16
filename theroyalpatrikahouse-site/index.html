@@ -1,0 +1,523 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Royal Patrika House · Wedding invitation websites</title>
+<meta name="description" content="Royal wedding invitation websites for Indian weddings. A wax-sealed envelope that opens with rose petals, a scene for every function, maps, dress codes, countdown and a guest quiz, all on one link.">
+<meta name="theme-color" content="#4A1825">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Royal Patrika House">
+<meta property="og:title" content="The Royal Patrika House · Wedding invitation websites">
+<meta property="og:description" content="A patrika your guests will open again and again. Envelope opening, event scenes, maps, countdown and a guest quiz, on one link.">
+<meta property="og:image" content="https://theroyalpatrikahouse.pages.dev/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --maroon:#5B1F2E;--maroon-d:#3E1420;--maroon-l:#7A3346;
+  --ivory:#FBF6EE;--paper:#F4EBDD;--sand:#EADCC6;
+  --gold:#B98A3E;--gold-l:#E2BC72;--gold-d:#8E6220;
+  --ink:#2B1A17;--muted:#6E5A52;
+  --serif:"Cormorant Garamond","Palatino Linotype",Palatino,Georgia,serif;
+  --sans:Jost,"Segoe UI",system-ui,sans-serif;
+  --foil:linear-gradient(100deg,#8E6220 0%,#C99A4B 28%,#F1D79A 50%,#C08D3C 72%,#8A5E1F 100%);
+  --wrap:1160px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+html,body{max-width:100%;overflow-x:hidden}
+@supports (overflow:clip){html,body{overflow-x:clip}}
+body{margin:0;background:var(--ivory);color:var(--ink);font:300 17px/1.65 var(--sans)}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.08;margin:0;color:var(--maroon)}
+h2{font-size:clamp(34px,5.4vw,56px);text-wrap:balance}
+h3{font-size:26px}
+p{margin:0}
+.eyebrow{font:500 12px/1.3 var(--sans);letter-spacing:.28em;text-transform:uppercase;color:var(--gold-d)}
+.lede{font-size:clamp(17px,2vw,19px);color:var(--muted);text-wrap:pretty}
+.foil{background:var(--foil);-webkit-background-clip:text;background-clip:text;color:transparent}
+.rule{display:flex;align-items:center;gap:12px;justify-content:center;color:var(--gold);margin:18px auto 0;max-width:220px}
+.rule::before,.rule::after{content:"";flex:1;height:1px;background:currentColor;opacity:.7}
+.rule i{width:8px;height:8px;background:currentColor;transform:rotate(45deg)}
+.head{text-align:center;max-width:720px;margin:0 auto 48px}
+.head .lede{margin-top:16px}
+section{padding:96px 0}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border-radius:999px;font:500 15px/1 var(--sans);letter-spacing:.04em;text-decoration:none;transition:transform .2s,box-shadow .2s,background .2s;cursor:pointer;border:0}
+.btn:active{transform:scale(.98)}
+.btn-wa{background:var(--maroon);color:var(--ivory);box-shadow:0 10px 24px -12px rgba(91,31,46,.7)}
+.btn-wa:hover{background:var(--maroon-d)}
+.btn-ghost{border:1px solid var(--gold);color:var(--maroon);background:transparent}
+.btn-ghost:hover{background:rgba(185,138,62,.1)}
+.btn-gold{background:var(--foil);color:var(--maroon-d);box-shadow:0 10px 24px -12px rgba(0,0,0,.6)}
+.btn svg{width:20px;height:20px;flex:none}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:20;background:rgba(251,246,238,.9);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(185,138,62,.25)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;min-width:0}
+.brand img{width:44px;height:auto}
+.brand span{font:500 15px/1.15 var(--serif);letter-spacing:.2em;text-transform:uppercase;color:var(--maroon);white-space:nowrap}
+.nav-links{display:flex;gap:28px;align-items:center}
+.nav-links a{font-size:14px;letter-spacing:.06em;text-decoration:none;color:var(--muted)}
+.nav-links a:hover{color:var(--maroon)}
+.nav .btn{min-height:42px;padding:0 18px;font-size:14px}
+.nav-links a.btn,.nav-links a.btn:hover{color:var(--ivory)}
+
+/* hero */
+.hero{position:relative;padding:72px 0 88px;overflow:hidden;background:
+  radial-gradient(900px 500px at 85% 10%,rgba(226,188,114,.22),transparent 60%),
+  radial-gradient(700px 500px at 0% 100%,rgba(122,51,70,.10),transparent 60%),var(--ivory)}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(44px,6.6vw,78px);letter-spacing:-.01em}
+.hero h1 em{font-style:italic;font-weight:400}
+.hero .lede{margin:22px 0 32px;max-width:540px}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px}
+.ticks{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:28px;font-size:14px;color:var(--muted)}
+.ticks span::before{content:"✦";color:var(--gold);margin-right:8px;font-size:11px}
+.phones{position:relative;height:620px}
+.phone{position:absolute;width:270px;aspect-ratio:390/844;border-radius:40px;padding:9px;background:linear-gradient(145deg,#2a1216,#4a2228);box-shadow:0 40px 70px -30px rgba(62,20,32,.6),0 0 0 1px rgba(185,138,62,.45)}
+.phone img{width:100%;height:100%;object-fit:cover;border-radius:32px}
+.phone.p1{left:6%;top:30px;transform:rotate(-5deg);z-index:1}
+.phone.p2{right:4%;top:0;transform:rotate(4deg);z-index:2}
+.seal-badge{position:absolute;z-index:3;width:128px;left:44%;bottom:6px;filter:drop-shadow(0 12px 20px rgba(62,20,32,.35))}
+
+/* why */
+.why{background:var(--paper)}
+.cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:var(--ivory);border:1px solid rgba(185,138,62,.35);border-radius:6px;padding:34px 28px;position:relative}
+.card::after{content:"";position:absolute;inset:6px;border:1px solid rgba(185,138,62,.18);border-radius:3px;pointer-events:none}
+.card .num{font:italic 500 44px/1 var(--serif);color:var(--gold)}
+.card h3{margin:14px 0 10px}
+.card p{color:var(--muted);font-size:16px}
+
+/* showcase */
+.show{background:var(--maroon-d);color:var(--ivory);position:relative;overflow:hidden}
+.show::before{content:"";position:absolute;inset:0;background:radial-gradient(800px 400px at 50% 0%,rgba(226,188,114,.16),transparent 70%);pointer-events:none}
+.show h2{color:var(--ivory)}
+.show .eyebrow{color:var(--gold-l)}
+.show .lede{color:rgba(251,246,238,.75)}
+.strip{display:flex;gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 20px 26px;margin:0 auto;max-width:calc(var(--wrap) + 40px);scrollbar-width:thin;scrollbar-color:var(--gold) transparent;position:relative}
+.strip figure{margin:0;flex:0 0 220px;scroll-snap-align:center}
+.strip .shot{border-radius:28px;padding:7px;background:linear-gradient(145deg,#1d0a0e,#3b1a20);box-shadow:0 0 0 1px rgba(226,188,114,.35),0 24px 40px -24px #000}
+.strip .shot img{border-radius:22px;aspect-ratio:390/844;object-fit:cover;width:100%}
+.strip figcaption{margin-top:16px;text-align:center}
+.strip figcaption b{display:block;font:500 21px/1.2 var(--serif);color:var(--gold-l)}
+.strip figcaption span{font-size:14px;color:rgba(251,246,238,.7)}
+.swipe{text-align:center;font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:rgba(251,246,238,.55)}
+
+.more{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(226,188,114,.25);border:1px solid rgba(226,188,114,.25);border-radius:6px;overflow:hidden;margin-top:56px}
+.more div{background:var(--maroon-d);padding:24px 22px}
+.more b{display:block;font:500 20px/1.2 var(--serif);color:var(--ivory);margin-bottom:6px}
+.more span{font-size:14px;color:rgba(251,246,238,.68)}
+
+/* live sample */
+.live .wrap{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.live .lede{margin:18px 0 28px}
+.live ul{list-style:none;padding:0;margin:0 0 30px;display:grid;gap:12px}
+.live li{padding-left:28px;position:relative;color:var(--muted)}
+.live li::before{content:"";position:absolute;left:4px;top:10px;width:8px;height:8px;background:var(--gold);transform:rotate(45deg)}
+.device{width:min(340px,100%);margin:0 auto;aspect-ratio:390/800;border-radius:46px;padding:11px;background:linear-gradient(145deg,#2a1216,#4a2228);box-shadow:0 50px 80px -40px rgba(62,20,32,.65),0 0 0 1px rgba(185,138,62,.5);position:relative}
+.screen{position:relative;width:100%;height:100%;border-radius:36px;overflow:hidden;background:#F7E7E3}
+.screen img,.screen iframe{position:absolute;inset:0;width:100%;height:100%;border:0;object-fit:cover}
+.screen button{position:absolute;left:50%;bottom:34px;transform:translateX(-50%);white-space:nowrap}
+
+/* packages */
+.pk{background:var(--paper)}
+.tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:stretch}
+.tier{background:var(--ivory);border:1px solid rgba(185,138,62,.35);border-radius:8px;padding:36px 28px 30px;display:flex;flex-direction:column;position:relative}
+.tier.star{background:var(--maroon);color:var(--ivory);border-color:var(--gold);box-shadow:0 40px 70px -40px rgba(62,20,32,.8);transform:translateY(-10px)}
+.tier.star h3,.tier.star .price{color:var(--ivory)}
+.tier .tag{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--foil);color:var(--maroon-d);font:500 11px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;padding:8px 14px;border-radius:999px;white-space:nowrap}
+.tier .for{font-size:14px;color:var(--muted);margin-top:4px}
+.tier.star .for{color:rgba(251,246,238,.72)}
+.price{font:500 48px/1 var(--serif);color:var(--maroon);margin:22px 0 4px}
+.price small{font:300 14px var(--sans);color:var(--muted);margin-right:6px;letter-spacing:.04em}
+.tier.star .price small{color:rgba(251,246,238,.7)}
+.days{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-d)}
+.tier.star .days{color:var(--gold-l)}
+.tier ul{list-style:none;padding:0;margin:24px 0 28px;display:grid;gap:10px;font-size:15px;flex:1}
+.tier li{padding-left:24px;position:relative}
+.tier li::before{content:"✓";position:absolute;left:0;color:var(--gold);font-weight:500}
+.tier.star li::before{color:var(--gold-l)}
+.tier .btn{width:100%}
+.tier.star .btn-wa{background:var(--foil);color:var(--maroon-d)}
+.founding{margin:40px auto 0;max-width:760px;text-align:center;padding:22px 26px;border:1px dashed var(--gold);border-radius:8px;font-size:16px;color:var(--muted)}
+.founding b{font:500 21px var(--serif);color:var(--maroon);display:block;margin-bottom:4px}
+.addons{margin:56px auto 0;max-width:760px}
+.addons h3{text-align:center;margin-bottom:18px}
+.addons table{width:100%;border-collapse:collapse;font-size:16px}
+.addons td{padding:14px 4px;border-bottom:1px solid rgba(185,138,62,.3)}
+.addons td:last-child{text-align:right;font:500 20px var(--serif);color:var(--maroon);white-space:nowrap;padding-left:16px}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;counter-reset:s;position:relative}
+.step{text-align:center;padding:0 6px;position:relative}
+.step::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:58px;height:58px;margin:0 auto 18px;border-radius:50%;border:1px solid var(--gold);font:italic 500 26px var(--serif);color:var(--maroon);background:var(--ivory);position:relative;z-index:1;box-shadow:0 0 0 6px var(--ivory),0 0 0 7px rgba(185,138,62,.3)}
+.step:not(:last-child)::after{content:"";position:absolute;top:29px;left:calc(50% + 40px);right:calc(-50% + 40px);height:1px;background:linear-gradient(90deg,var(--gold),rgba(185,138,62,.2))}
+.step .eyebrow{font-size:11px}
+.step h3{font-size:22px;margin:6px 0 8px}
+.step p{font-size:15px;color:var(--muted)}
+
+/* faq */
+.faq{background:var(--paper)}
+.faq .list{max-width:820px;margin:0 auto}
+details{border-bottom:1px solid rgba(185,138,62,.35)}
+summary{list-style:none;cursor:pointer;padding:22px 40px 22px 0;font:500 22px/1.3 var(--serif);color:var(--maroon);position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:6px;top:18px;font:300 28px var(--sans);color:var(--gold);transition:transform .25s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{padding:0 0 22px;color:var(--muted);max-width:700px}
+
+/* final */
+.final{background:var(--maroon);color:var(--ivory);text-align:center;position:relative;overflow:hidden}
+.final::before{content:"";position:absolute;inset:0;background:radial-gradient(600px 360px at 50% 30%,rgba(226,188,114,.2),transparent 70%)}
+.final .wrap{position:relative}
+.final img{width:150px;margin:0 auto 26px;filter:drop-shadow(0 10px 24px rgba(0,0,0,.4))}
+.final h2{color:var(--ivory)}
+.final .lede{color:rgba(251,246,238,.78);margin:16px auto 34px;max-width:560px}
+.final .cta-row{justify-content:center}
+.final .btn-ghost{color:var(--ivory);border-color:var(--gold-l)}
+footer{background:var(--maroon-d);color:rgba(251,246,238,.6);text-align:center;padding:48px 20px 110px;font-size:14px}
+footer img{width:220px;margin:0 auto 18px;opacity:.95}
+footer a{color:var(--gold-l);text-decoration:none}
+
+/* floating whatsapp */
+.fab{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom));z-index:30;width:58px;height:58px;border-radius:50%;background:#1F8F55;color:#fff;display:grid;place-items:center;box-shadow:0 12px 26px -8px rgba(0,0,0,.45);transition:transform .2s}
+.fab:hover{transform:scale(1.06)}
+.fab svg{width:30px;height:30px}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+/* responsive */
+@media (max-width:980px){
+  .hero .wrap,.live .wrap{grid-template-columns:1fr;gap:40px}
+  .hero{padding-top:44px}
+  .phones{height:520px;max-width:520px;margin:0 auto;width:100%}
+  .phone{width:230px}
+  .more{grid-template-columns:repeat(2,1fr)}
+  .tiers{grid-template-columns:1fr;max-width:480px;margin:0 auto}
+  .tier.star{transform:none}
+  .steps{grid-template-columns:1fr;gap:28px;max-width:440px;margin:0 auto}
+  .step{display:grid;grid-template-columns:58px 1fr;gap:0 18px;text-align:left;align-items:start}
+  .step::before{margin:0;grid-row:span 3}
+  .step:not(:last-child)::after{top:66px;bottom:-26px;left:29px;right:auto;width:1px;height:auto;background:linear-gradient(180deg,var(--gold),rgba(185,138,62,.2))}
+  .live .copy{order:-1}
+  .nav-links a:not(.btn){display:none}
+}
+@media (max-width:720px){
+  body{font-size:16px}
+  section{padding:72px 0}
+  .wrap{padding:0 16px}
+  .cards3{grid-template-columns:1fr}
+  .head{margin-bottom:36px}
+  .brand span{font-size:12px;letter-spacing:.14em}
+  .brand img{width:38px}
+  .nav .btn{display:none}
+  .phones{height:430px}
+  .phone{width:190px;border-radius:30px;padding:7px}
+  .phone img{border-radius:24px}
+  .phone.p1{left:2%}.phone.p2{right:2%}
+  .seal-badge{width:96px;left:40%}
+  .cta-row .btn{flex:1 1 100%}
+  .strip{padding:6px 16px 22px}
+  .strip figure{flex-basis:200px}
+  .more{grid-template-columns:1fr}
+  .price{font-size:42px}
+}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="The Royal Patrika House, home">
+      <img src="/img/seal.webp" alt="" width="426" height="440">
+      <span>The Royal Patrika House</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#experience">Experience</a>
+      <a href="#sample">Live sample</a>
+      <a href="#packages">Packages</a>
+      <a href="#faq">FAQ</a>
+      <a class="btn btn-wa wa" data-msg="Namaste! I'd like to know more about a wedding invitation website." href="https://wa.me/919079898481">Book on WhatsApp</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="wrap">
+    <div class="copy">
+      <p class="eyebrow">Wedding invitation websites</p>
+      <h1>The patrika your guests will <em class="foil">open again and again.</em></h1>
+      <p class="lede">One link on WhatsApp. A wax-sealed envelope that opens with rose petals, a scene for every function, venue maps, dress codes, a live countdown and a guest quiz, all made for your family.</p>
+      <div class="cta-row">
+        <a class="btn btn-wa wa" data-msg="Namaste! I'd like to know more about a wedding invitation website." href="https://wa.me/919079898481">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.2-.3-.2-.5-.3Z"/></svg>
+          Book on WhatsApp
+        </a>
+        <a class="btn btn-ghost" href="#sample">See a live invite</a>
+      </div>
+      <div class="ticks"><span>Made for phones</span><span>Shared on WhatsApp</span><span>Updated anytime</span></div>
+    </div>
+    <div class="phones" aria-hidden="true">
+      <div class="phone p1"><img src="/img/s-envelope.webp" alt="" width="585" height="1266" fetchpriority="high"></div>
+      <div class="phone p2"><img src="/img/s-palace.webp" alt="" width="585" height="1266" fetchpriority="high"></div>
+      <img class="seal-badge" src="/img/seal.webp" alt="" width="426" height="440">
+    </div>
+  </div>
+</section>
+
+<section class="why">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="eyebrow">Not a PDF. Not a video.</p>
+      <h2>An invitation your guests can open, explore and keep.</h2>
+      <div class="rule"><i></i></div>
+    </div>
+    <div class="cards3">
+      <div class="card rv"><div class="num">i.</div><h3>Opens like a real patrika</h3><p>Guests tap a wax seal and the envelope opens to your names in gold foil, with rose petals falling in.</p></div>
+      <div class="card rv"><div class="num">ii.</div><h3>Everything in one link</h3><p>Every function with its date, time, venue map and dress code, plus family names and RSVP contacts. No more "what time is the Sangeet?" calls.</p></div>
+      <div class="card rv"><div class="num">iii.</div><h3>Change it anytime</h3><p>Venue or time changed? We update the same link. Everyone sees the latest details without you resending anything.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="show" id="experience">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="eyebrow">What your guests experience</p>
+      <h2>Every scroll, a small celebration.</h2>
+      <p class="lede">Screens from a real invitation we made for a Bikaner wedding.</p>
+    </div>
+  </div>
+  <div class="strip rv" tabindex="0" aria-label="Screens from a sample invitation">
+    <figure><div class="shot"><img src="/img/s-envelope.webp" alt="Sealed envelope with a monogram wax seal" loading="lazy" width="585" height="1266"></div><figcaption><b>The sealed envelope</b><span>Tap the seal to open</span></figcaption></figure>
+    <figure><div class="shot"><img src="/img/s-palace.webp" alt="Couple in a palace courtyard under the names" loading="lazy" width="585" height="1266"></div><figcaption><b>Animated opening scene</b><span>Your names over a palace</span></figcaption></figure>
+    <figure><div class="shot"><img src="/img/s-date.webp" alt="Mirror frame revealing the wedding dates" loading="lazy" width="585" height="1266"></div><figcaption><b>Scratch to reveal</b><span>Guests uncover the dates</span></figcaption></figure>
+    <figure><div class="shot"><img src="/img/s-sangeet.webp" alt="Sangeet event page with date, time and venue" loading="lazy" width="585" height="1266"></div><figcaption><b>A scene for every function</b><span>Date, time and venue map</span></figcaption></figure>
+    <figure><div class="shot"><img src="/img/s-mayra.webp" alt="Mayra event page" loading="lazy" width="585" height="1266"></div><figcaption><b>Your rituals, your words</b><span>Mayra, Haldi, Mehendi and more</span></figcaption></figure>
+    <figure><div class="shot"><img src="/img/s-attire.webp" alt="Attire guide with colour swatches" loading="lazy" width="585" height="1266"></div><figcaption><b>Attire guide</b><span>What to wear, with colours</span></figcaption></figure>
+    <figure><div class="shot"><img src="/img/s-quiz.webp" alt="Guest quiz card asking who will get emotional first" loading="lazy" width="585" height="1266"></div><figcaption><b>Guest quiz</b><span>Live results from every guest</span></figcaption></figure>
+    <figure><div class="shot"><img src="/img/s-countdown.webp" alt="Countdown lanterns showing days, hours, minutes and seconds" loading="lazy" width="585" height="1266"></div><figcaption><b>Swinging countdown</b><span>Lanterns guests can tap</span></figcaption></figure>
+  </div>
+  <p class="swipe">Swipe to see more →</p>
+  <div class="wrap">
+    <div class="more rv">
+      <div><b>Venue maps</b><span>"View on map" for every function</span></div>
+      <div><b>Photo gallery</b><span>Your favourite moments, framed</span></div>
+      <div><b>Your song</b><span>Background music of your choice</span></div>
+      <div><b>Family &amp; blessings</b><span>Elders, warm regards and cousins</span></div>
+      <div><b>RSVP contacts</b><span>Call and WhatsApp buttons</span></div>
+      <div><b>WhatsApp preview</b><span>A beautiful image when shared</span></div>
+      <div><b>Your own link</b><span>Like rahulwedsriya.in</span></div>
+      <div><b>Hindi or regional</b><span>In the language your family speaks</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="live" id="sample">
+  <div class="wrap">
+    <div class="copy rv">
+      <p class="eyebrow">Try it yourself</p>
+      <h2>Open a real invitation.</h2>
+      <p class="lede">This is the invitation for Mohit &amp; Kavya's wedding, exactly as their guests received it on WhatsApp.</p>
+      <ul>
+        <li>Tap the wax seal to open the envelope</li>
+        <li>Scratch the mirror to reveal the dates</li>
+        <li>Try the quiz and tap the countdown lanterns</li>
+      </ul>
+      <div class="cta-row">
+        <a class="btn btn-ghost" href="https://mohitwedskavya.in" target="_blank" rel="noopener">Open full screen ↗</a>
+      </div>
+    </div>
+    <div class="device rv">
+      <div class="screen" id="screen">
+        <img src="/img/s-envelope.webp" alt="Sample invitation, closed envelope" loading="lazy" width="585" height="1266">
+        <button class="btn btn-wa" id="loadLive" type="button">Tap to open the live invite</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pk" id="packages">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="eyebrow">Packages</p>
+      <h2>Choose your patrika.</h2>
+      <p class="lede">Every package is designed by hand for your family, with your names, functions and photos.</p>
+    </div>
+    <div class="tiers">
+      <div class="tier rv">
+        <h3>Essential</h3>
+        <p class="for">For intimate weddings with 1 to 3 functions</p>
+        <div class="price"><small>from</small>₹4,999</div>
+        <div class="days">Ready in 3 days</div>
+        <ul>
+          <li>Envelope opening with rose petals</li>
+          <li>Your names in gold foil, with family lines</li>
+          <li>Up to 3 functions with venue maps</li>
+          <li>Live countdown</li>
+          <li>Gallery of up to 6 photos</li>
+          <li>RSVP contacts and WhatsApp preview image</li>
+          <li>1 round of changes</li>
+        </ul>
+        <a class="btn btn-ghost wa" data-msg="Namaste! I'm interested in the Essential package." href="https://wa.me/919079898481">Ask about Essential</a>
+      </div>
+      <div class="tier star rv">
+        <span class="tag">Most chosen</span>
+        <h3>Signature</h3>
+        <p class="for">For most families and full wedding weeks</p>
+        <div class="price"><small>from</small>₹11,999</div>
+        <div class="days">Ready in 5 to 7 days</div>
+        <ul>
+          <li>Everything in Essential</li>
+          <li>Up to 6 functions, each with its own scene</li>
+          <li>Scratch-to-reveal date</li>
+          <li>Attire guide for every function</li>
+          <li>Guest quiz with live results</li>
+          <li>Twirling couple and countdown lanterns</li>
+          <li>Background music and 12 photos</li>
+          <li>Your own domain for 1 year</li>
+          <li>3 rounds of changes, updates until the wedding</li>
+        </ul>
+        <a class="btn btn-wa wa" data-msg="Namaste! I'm interested in the Signature package." href="https://wa.me/919079898481">Book Signature</a>
+      </div>
+      <div class="tier rv">
+        <h3>Royal</h3>
+        <p class="for">For destination and grand weddings</p>
+        <div class="price"><small>from</small>₹24,999</div>
+        <div class="days">Ready in 10 to 14 days</div>
+        <ul>
+          <li>Everything in Signature</li>
+          <li>Custom couple illustration or animated opening</li>
+          <li>Animated scenes for every function</li>
+          <li>Unlimited functions and 20 photos</li>
+          <li>Your own monogram</li>
+          <li>Two languages, such as English and Hindi</li>
+          <li>Priority WhatsApp support</li>
+          <li>Unlimited changes until the wedding</li>
+        </ul>
+        <a class="btn btn-ghost wa" data-msg="Namaste! I'm interested in the Royal package." href="https://wa.me/919079898481">Ask about Royal</a>
+      </div>
+    </div>
+    <div class="founding rv">
+      <b>Founding families</b>
+      We are welcoming a limited number of weddings this season at special launch pricing. Message us on WhatsApp to check availability for your dates.
+    </div>
+    <div class="addons rv">
+      <h3>Add to any package</h3>
+      <table>
+        <tr><td>Extra function scene</td><td>₹1,500</td></tr>
+        <tr><td>Animated couple video for the opening</td><td>₹4,000</td></tr>
+        <tr><td>Your own domain (.in, 1 year)</td><td>₹999</td></tr>
+        <tr><td>Second language version</td><td>₹2,500</td></tr>
+        <tr><td>RSVP form with guest count sheet</td><td>₹1,500</td></tr>
+        <tr><td>Thank-you page with wedding photos</td><td>₹2,000</td></tr>
+        <tr><td>Rush delivery in 48 hours</td><td>+30%</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="eyebrow">How it works</p>
+      <h2>From hello to "send" in a week.</h2>
+    </div>
+    <div class="steps">
+      <div class="step rv"><p class="eyebrow">Day 0</p><h3>Say hello</h3><p>Message us on WhatsApp with your dates and city.</p></div>
+      <div class="step rv"><p class="eyebrow">Day 1</p><h3>Book &amp; share</h3><p>Pay 50% and send your details from our simple checklist.</p></div>
+      <div class="step rv"><p class="eyebrow">Day 3–4</p><h3>First preview</h3><p>You get a private link to see your invitation.</p></div>
+      <div class="step rv"><p class="eyebrow">Day 4–6</p><h3>Perfect it</h3><p>Tell us your changes. Elders' names get checked twice.</p></div>
+      <div class="step rv"><p class="eyebrow">Day 7</p><h3>Send it</h3><p>Your link goes live with a ready-to-forward WhatsApp message.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="eyebrow">Questions</p>
+      <h2>Good to know.</h2>
+    </div>
+    <div class="list rv">
+      <details><summary>Will it work on every phone?</summary><p>Yes. It opens in any browser on Android or iPhone, straight from WhatsApp. Guests don't need to download anything.</p></details>
+      <details><summary>Can we change details after sending it?</summary><p>Yes. If a time or venue changes, we update the same link and every guest sees the new details. Signature and Royal include updates until the wedding.</p></details>
+      <details><summary>Can we have our own link, like rahulwedsriya.in?</summary><p>Yes. Signature and Royal include your own domain for one year. With Essential you get a free link, and you can add your own domain for ₹999.</p></details>
+      <details><summary>Can the invitation be in Hindi or another language?</summary><p>Yes. We make it in English, Hindi or your regional language. Royal includes two languages, and any package can add a second one.</p></details>
+      <details><summary>What do you need from us?</summary><p>The couple's and families' names as you want them printed, every function with its date, time and venue, your favourite photos, a song, and RSVP contact numbers. We send you a simple checklist.</p></details>
+      <details><summary>How do we pay?</summary><p>50% to book your dates, and the remaining 50% after you approve the preview, before the link goes live.</p></details>
+      <details><summary>Can you make it faster?</summary><p>Yes, rush delivery in 48 hours is available for 30% extra, depending on our bookings.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <img src="/img/seal.webp" alt="" width="426" height="440" loading="lazy">
+    <h2>Let's make your patrika.</h2>
+    <p class="lede">Tell us your wedding dates and city. We'll reply with a few ideas for your invitation.</p>
+    <div class="cta-row">
+      <a class="btn btn-gold wa" data-msg="Namaste! I'd like to make our wedding invitation website. Our wedding dates are: " href="https://wa.me/919079898481">Book on WhatsApp</a>
+      <a class="btn btn-ghost" href="https://instagram.com/theroyalpatrikahouse" target="_blank" rel="noopener">@theroyalpatrikahouse</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <img src="/img/logo-full.webp" alt="The Royal Patrika House" width="720" height="542" loading="lazy">
+  <p>Wedding invitation websites, handcrafted in India.</p>
+  <p style="margin-top:8px"><a href="https://instagram.com/theroyalpatrikahouse" target="_blank" rel="noopener">Instagram</a> · <a class="wa" data-msg="Namaste!" href="https://wa.me/919079898481">WhatsApp</a></p>
+  <p style="margin-top:18px">© 2026 The Royal Patrika House</p>
+</footer>
+
+<a class="fab wa" data-msg="Namaste! I'd like to know more about a wedding invitation website." href="https://wa.me/919079898481" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.2-.3-.2-.5-.3Z"/></svg>
+</a>
+
+<script>
+// One place to change the business WhatsApp number.
+const WA_NUMBER = "919079898481";
+document.querySelectorAll("a.wa").forEach(a => {
+  const msg = a.dataset.msg || "";
+  a.href = "https://wa.me/" + WA_NUMBER + (msg ? "?text=" + encodeURIComponent(msg) : "");
+  a.target = "_blank"; a.rel = "noopener";
+});
+
+// Live sample loads only when asked, so the page stays fast.
+document.getElementById("loadLive").addEventListener("click", () => {
+  const s = document.getElementById("screen");
+  const f = document.createElement("iframe");
+  f.src = "https://mohitwedskavya.in/";
+  f.title = "Live sample invitation";
+  f.allow = "autoplay";
+  s.innerHTML = ""; s.appendChild(f);
+});
+
+// Gentle reveal on scroll.
+const io = "IntersectionObserver" in window ? new IntersectionObserver(es => es.forEach(e => {
+  if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
+}), { rootMargin: "0px 0px -8% 0px" }) : null;
+document.querySelectorAll(".rv").forEach(el => io ? io.observe(el) : el.classList.add("in"));
+</script>
+</body>
+</html>
