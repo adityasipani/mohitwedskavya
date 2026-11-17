@@ -51,7 +51,7 @@ if left:
 # personal guest name on the envelope: add ?to=Sharma%20Family to the link
 sub('<p class="fe-tap"><span>Tap to open</span></p>', '<p class="fe-tap"><span>Tap to open</span></p><p class="fe-guest" id="feGuest" hidden></p>')
 sub('.fe-tap{', '.fe-guest{position:absolute;left:0;right:0;top:calc(50% + clamp(160px,43vw,210px));z-index:8;margin:0;text-align:center;font-family:"Cormorant Garamond",Georgia,serif;font-style:italic;font-size:1.05rem;color:#74402F;transition:opacity .4s ease}#intro.open .fe-guest{opacity:0}\n.fe-tap{')
-sub('$("envCity").textContent=INVITE.venueLine.toUpperCase();', '$("envCity").textContent=INVITE.venueLine.toUpperCase();(function(){try{const g=(new URLSearchParams(location.search).get("to")||"").replace(/[<>]/g,"").trim().slice(0,60);if(g){const el=$("feGuest");el.textContent="Specially for "+g;el.hidden=false;}}catch(e){}})();')
+sub('$("envCity").textContent=INVITE.venueLine.toUpperCase();', '$("envCity").textContent=INVITE.venueLine.toUpperCase();(function(){try{const seg=decodeURIComponent(location.pathname.replace(/[/]+$/,"").split("/").pop()||"").toLowerCase();const g=(new URLSearchParams(location.search).get("to")||(INVITE.guests||{})[seg]||"").replace(/[<>]/g,"").trim().slice(0,60);if(g){const el=$("feGuest");el.textContent="Specially for "+g;el.hidden=false;}}catch(e){}})();')
 
 # hidden logo slots: no file unless the client has a monogram logo
 s = s.replace(' src="logo-mk.webp"', '')

@@ -149,6 +149,37 @@ async def render_og(out, d):
     tmp.unlink()
 
 
+FILLER = {"family", "parivar", "pariwar", "and", "&", "ji", "sh", "shri", "smt", "mr", "mrs", "the", "ka", "ki"}
+
+
+def guest_slug(name, taken):
+    words = re.findall(r"[a-z0-9]+", name.lower())
+    core = [w for w in words if w not in FILLER] or words or ["guest"]
+    base = "-".join(core)[:40]
+    s, n = base, 2
+    while s in taken:
+        s, n = f"{base}-{n}", n + 1
+    return s
+
+
+def load_guests(folder, d):
+    """Guest list: details.json "guests" or guests.txt (one family per line, optional 'Name | slug')."""
+    lines = list(d.get("guests") or [])
+    if (folder / "guests.txt").exists():
+        lines += (folder / "guests.txt").read_text(encoding="utf-8").splitlines()
+    guests = {}
+    for line in lines:
+        line = line.strip()
+        if not line or line.startswith("#"):
+            continue
+        name, _, want = (x.strip() for x in line.partition("|"))
+        slug = guest_slug(want or name, guests) if not want else re.sub(r"[^a-z0-9-]", "", want.lower())
+        if slug in guests:
+            fail(f"guest link /{slug} is used twice; give one a different slug with 'Name | slug'")
+        guests[slug] = name
+    return guests
+
+
 def build(slug):
     folder, d = load(slug)
     resolve_events(d)
@@ -188,6 +219,8 @@ def build(slug):
     invite["venue"] = d["events"][0]["where"]
     invite["slug"] = slug
     invite["quizApi"] = QUIZ_API
+    guests = load_guests(folder, d)
+    invite["guests"] = guests
 
     title = f"{d['groom']} & {d['bride']} — Wedding Invitation"
     desc = d.get("shareText") or f"With love, {d['groom']} & {d['bride']} invite you to celebrate their wedding. {d['dates']['days']} {d['dates']['month']} · {d['venueLine']}."
@@ -210,6 +243,17 @@ def build(slug):
     if "@@" in page:
         fail("an @@placeholder@@ was left unfilled")
     (out / "index.html").write_text(page)
+    if guests:
+        rules = "".join(f"/{g}/ /{g} 301\n/{g} / 200\n" for g in guests)
+        (out / "_redirects").write_text(rules)
+        import csv
+        with open(folder / "guest-links.csv", "w", newline="", encoding="utf-8") as f:
+            w = csv.writer(f)
+            w.writerow(["Family", "Link", "WhatsApp message"])
+            for g, name in guests.items():
+                link = f"{url}/{g}"
+                w.writerow([name, link, f"Namaste {name} 🙏\n\nWith joy, {d['groom']} & {d['bride']} invite you to their wedding celebrations, {d['dates']['days']} {d['dates']['month']}.\n\nYour invitation: {link}"])
+        print(f"  {len(guests)} guest links → {folder / 'guest-links.csv'}")
     (out / "_headers").write_text("/*.webp\n  Cache-Control: public, max-age=2592000\n/*.mp4\n  Cache-Control: public, max-age=2592000\n")
 
     shutil.copy2(tdir / "assets" / "couple-hd-poster.webp", out / "couple-hd-poster.webp")

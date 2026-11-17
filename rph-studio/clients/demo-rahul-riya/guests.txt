@@ -1,0 +1,7 @@
+# One family per line. Optional custom link: Name | slug
+Sharma Family
+Gupta Ji and Family
+Bua Ji
+Agarwal Uncle
+Mehta Parivar
+Dr. Kapoor and Family | kapoor
