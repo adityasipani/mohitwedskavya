@@ -259,6 +259,15 @@ section{padding:104px 0}
 .tier li::before{content:"✓";position:absolute;left:0;color:var(--gold);font-weight:500}
 .tier.star li::before{color:var(--gold-l)}
 .tier .btn{width:100%}
+.tier.royal{background:linear-gradient(160deg,#2C0E16,#3E1420 60%,#4A1825);color:rgba(251,246,238,.9);border:1.5px solid var(--gold);box-shadow:0 50px 80px -46px rgba(0,0,0,.9),inset 0 0 0 6px #2C0E16,inset 0 0 0 7px rgba(226,188,114,.45)}
+.tier.royal h3,.tier.royal .price{color:var(--gold-l)}
+.tier.royal .for{color:rgba(251,246,238,.75)}
+.tier.royal .price small{color:rgba(251,246,238,.65)}
+.tier.royal .days{background:rgba(226,188,114,.14);color:var(--gold-l)}
+.tier.royal ul{border-color:rgba(226,188,114,.3)}
+.tier.royal li::before{content:"✦";color:var(--gold-l);font-size:12px;top:3px}
+.tier.royal .royal-sample{color:var(--gold-l);border-color:var(--gold-l);align-self:flex-start;margin:-10px 0 18px;font-size:14px}
+.tier li b{font-weight:500}
 .pay{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 26px;margin-top:30px;font-size:14px;color:var(--muted)}
 .pay span::before{content:"✦";color:var(--gold);margin-right:8px;font-size:10px;vertical-align:2px}
 .more{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:34px;align-items:start}
@@ -519,7 +528,7 @@ footer .base{margin-top:56px;border-top:1px solid rgba(226,188,114,.18);padding:
             <div class="from">from<b>₹2,999</b></div>
           </div>
           <div class="tags"><span>Royal Rajasthani</span><span>Rose-gold foil</span><span>Up to 6 functions</span></div>
-          <p>A pink-palace theme with a lotus-pond opening, illustrated scenes for every function, scratch-to-reveal dates and a guest quiz. Made first for Mohit &amp; Kavya's wedding in Bikaner.</p>
+          <p>A pink-palace theme with a lotus-pond opening, illustrated scenes for every function, scratch-to-reveal dates and a guest quiz. The live demo is Mohit &amp; Kavya's Royal invitation, with animated scenes and their own monogram.</p>
           <div class="cta-row">
             <button class="btn btn-primary" type="button" data-demo>Open live demo</button>
             <a class="btn btn-line wa" data-msg="Namaste! I love the Gulabi Mahal design. Our wedding dates are: " href="https://wa.me/919079898481">Choose this design</a>
@@ -718,12 +727,13 @@ footer .base{margin-top:56px;border-top:1px solid rgba(226,188,114,.18);padding:
         <div class="price"><small>from</small>₹2,999</div>
         <span class="days">Ready in 3 days</span>
         <ul>
-          <li>Envelope opening with rose petals</li>
+          <li>Wax-seal envelope opening with rose petals</li>
           <li>Names in gold foil, with family lines</li>
           <li>Up to 3 functions with venue maps</li>
           <li>Live countdown</li>
           <li>Gallery of up to 6 photos</li>
-          <li>RSVP contacts and WhatsApp preview</li>
+          <li>RSVP call &amp; WhatsApp buttons</li>
+          <li>WhatsApp preview image</li>
           <li>1 round of changes</li>
         </ul>
         <a class="btn btn-line wa" data-msg="Namaste! I'm interested in the Essential package." href="https://wa.me/919079898481">Choose Essential</a>
@@ -735,34 +745,46 @@ footer .base{margin-top:56px;border-top:1px solid rgba(226,188,114,.18);padding:
         <div class="price"><small>from</small>₹6,999</div>
         <span class="days">Ready in 5–7 days</span>
         <ul>
-          <li>Everything in Essential</li>
-          <li>Up to 6 functions, each with its own scene</li>
-          <li>Scratch-to-reveal date</li>
-          <li>Attire guide for every function</li>
+          <li><b>Everything in Essential, plus:</b></li>
+          <li>Up to 6 functions, each with its own illustrated scene</li>
+          <li>Scratch-to-reveal wedding dates</li>
+          <li>Attire guide with colours for every function</li>
           <li>Guest quiz with live results</li>
-          <li>Countdown lanterns and twirling couple</li>
-          <li>Music and up to 12 photos</li>
+          <li>Swinging countdown lanterns and twirling couple</li>
+          <li>Your song playing in the background</li>
+          <li>Gallery of up to 12 photos</li>
+          <li>Family blessings, warm regards and cousins</li>
           <li>RSVP form with guest count sheet</li>
+          <li>Private preview link to check with family</li>
           <li>Your own domain for 1 year</li>
           <li>3 rounds of changes, updates until the wedding</li>
         </ul>
         <a class="btn btn-gold wa" data-msg="Namaste! I'm interested in the Signature package." href="https://wa.me/919079898481">Choose Signature</a>
       </div>
-      <div class="tier rv">
+      <div class="tier royal rv">
+        <span class="tag">The full experience</span>
         <h3>Royal</h3>
-        <p class="for">For destination and grand weddings.</p>
+        <p class="for">For grand and destination weddings. The invitation that becomes the talk of the family.</p>
         <div class="price"><small>from</small>₹14,999</div>
         <span class="days">Ready in 10–14 days</span>
         <ul>
-          <li>Everything in Signature</li>
-          <li>Your own theme, drawn from scratch</li>
-          <li>Animated scenes for every function</li>
-          <li>Unlimited functions and up to 20 photos</li>
-          <li>Your own monogram</li>
-          <li>Two languages, such as English and Hindi</li>
+          <li><b>Everything in Signature, plus:</b></li>
+          <li>Your own theme, designed from scratch for your wedding</li>
+          <li>Animated opening: the couple comes alive in your palace or venue</li>
+          <li>Animated video scenes for every function</li>
+          <li>Unlimited functions and up to 30 photos</li>
+          <li>Your own monogram on the seal and invitation</li>
+          <li>Personal guest links: "Specially for the Sharma Family" on the envelope</li>
+          <li>English + Hindi (or a regional language)</li>
+          <li>Save-the-date page before the main invite</li>
+          <li>Invitation reel for WhatsApp Status &amp; Instagram</li>
+          <li>Thank-you page with your wedding photos</li>
+          <li>One-on-one design call</li>
+          <li>No designer branding on your invite</li>
           <li>Priority support, unlimited changes</li>
         </ul>
-        <a class="btn btn-line wa" data-msg="Namaste! I'm interested in the Royal package." href="https://wa.me/919079898481">Choose Royal</a>
+        <a class="link royal-sample" href="https://mohitwedskavya.in" target="_blank" rel="noopener">See a Royal invitation: mohitwedskavya.in ↗</a>
+        <a class="btn btn-gold wa" data-msg="Namaste! I'm interested in the Royal package." href="https://wa.me/919079898481">Choose Royal</a>
       </div>
     </div>
     <div class="pay rv"><span>50% to start, 50% after your preview</span><span>One-time payment</span><span>No hidden costs</span></div>
@@ -774,26 +796,35 @@ footer .base{margin-top:56px;border-top:1px solid rgba(226,188,114,.18);padding:
           <table>
             <thead><tr><th>Feature</th><th>Essential</th><th>Signature</th><th>Royal</th></tr></thead>
             <tbody>
-              <tr><td>Envelope opening with rose petals</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
-              <tr><td>Animated opening scene</td><td>Design</td><td>Design</td><td>Custom</td></tr>
+              <tr><td>Wax-seal envelope with rose petals</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
+              <tr><td>Opening scene</td><td>Design</td><td>Design</td><td>Animated, custom</td></tr>
               <tr><td>Names in gold foil, family lines</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
               <tr><td>Functions with venue maps</td><td>3</td><td>6</td><td>Unlimited</td></tr>
-              <tr><td>Illustrated scene for each function</td><td class="n">—</td><td class="y">✓</td><td>Animated</td></tr>
+              <tr><td>Scene for each function</td><td class="n">—</td><td>Illustrated</td><td>Animated video</td></tr>
               <tr><td>Scratch-to-reveal date</td><td class="n">—</td><td class="y">✓</td><td class="y">✓</td></tr>
-              <tr><td>Attire guide</td><td class="n">—</td><td class="y">✓</td><td class="y">✓</td></tr>
+              <tr><td>Attire guide with colours</td><td class="n">—</td><td class="y">✓</td><td class="y">✓</td></tr>
               <tr><td>Guest quiz with live results</td><td class="n">—</td><td class="y">✓</td><td class="y">✓</td></tr>
               <tr><td>Countdown lanterns and twirling couple</td><td class="n">—</td><td class="y">✓</td><td class="y">✓</td></tr>
-              <tr><td>Photo gallery</td><td>6</td><td>12</td><td>20</td></tr>
-              <tr><td>Background music</td><td class="n">—</td><td class="y">✓</td><td class="y">✓</td></tr>
               <tr><td>Live countdown</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
-              <tr><td>Family, blessings and RSVP contacts</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
+              <tr><td>Photo gallery</td><td>6</td><td>12</td><td>30</td></tr>
+              <tr><td>Background music</td><td class="n">—</td><td class="y">✓</td><td class="y">✓</td></tr>
+              <tr><td>Family blessings and cousins</td><td class="n">—</td><td class="y">✓</td><td class="y">✓</td></tr>
+              <tr><td>RSVP call &amp; WhatsApp buttons</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
               <tr><td>RSVP form with guest count sheet</td><td>Add-on</td><td class="y">✓</td><td class="y">✓</td></tr>
-              <tr><td>WhatsApp preview image</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
+              <tr><td>Private family preview link</td><td class="n">—</td><td class="y">✓</td><td class="y">✓</td></tr>
               <tr><td>Your own domain<small>e.g. rahulwedsriya.in</small></td><td>Add-on</td><td>1 year</td><td>1 year</td></tr>
+              <tr><td>Theme designed from scratch</td><td class="n">—</td><td class="n">—</td><td class="y">✓</td></tr>
+              <tr><td>Your own monogram</td><td class="n">—</td><td class="n">—</td><td class="y">✓</td></tr>
+              <tr><td>Personal guest links<small>"Specially for the Sharma Family"</small></td><td class="n">—</td><td class="n">—</td><td class="y">✓</td></tr>
               <tr><td>Languages</td><td>1</td><td>1</td><td>2</td></tr>
-              <tr><td>Monogram design</td><td class="n">—</td><td class="n">—</td><td class="y">✓</td></tr>
+              <tr><td>Save-the-date page</td><td class="n">—</td><td class="n">—</td><td class="y">✓</td></tr>
+              <tr><td>Invitation reel for Status &amp; Instagram</td><td class="n">—</td><td class="n">—</td><td class="y">✓</td></tr>
+              <tr><td>Thank-you page with wedding photos</td><td>Add-on</td><td>Add-on</td><td class="y">✓</td></tr>
+              <tr><td>One-on-one design call</td><td class="n">—</td><td class="n">—</td><td class="y">✓</td></tr>
+              <tr><td>No designer branding</td><td class="n">—</td><td class="n">—</td><td class="y">✓</td></tr>
               <tr><td>Rounds of changes</td><td>1</td><td>3</td><td>Unlimited</td></tr>
               <tr><td>Updates after sending</td><td>Until delivery</td><td>Until the wedding</td><td>Until the wedding</td></tr>
+              <tr><td>Delivery</td><td>3 days</td><td>5–7 days</td><td>10–14 days</td></tr>
             </tbody>
           </table>
         </div>
