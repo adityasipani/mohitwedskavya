@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Your Patrika Details · The Royal Patrika House</title>
+<meta name="description" content="Share your wedding details once and we'll craft your invitation website.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#4A1825">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --maroon:#5B1F2E;--maroon-d:#3E1420;--maroon-x:#2C0E16;
+  --ivory:#FBF6EE;--cream:#FFFBF5;--paper:#F5EDE1;--line:rgba(185,138,62,.32);
+  --gold:#B98A3E;--gold-l:#E2BC72;--gold-d:#8E6220;
+  --ink:#2B1A17;--muted:#6B5750;--green:#1F8F55;--err:#B3261E;
+  --serif:"Cormorant Garamond","Palatino Linotype",Palatino,Georgia,serif;
+  --sans:Jost,"Segoe UI",system-ui,sans-serif;
+  --foil:linear-gradient(100deg,#8E6220 0%,#C99A4B 28%,#F1D79A 50%,#C08D3C 72%,#8A5E1F 100%);
+}
+*{box-sizing:border-box}
+html,body{margin:0;max-width:100%;overflow-x:hidden}
+body{background:var(--ivory);color:var(--ink);font:300 17px/1.6 var(--sans)}
+a{color:var(--gold-d)}
+.hero{background:radial-gradient(circle at 50% 30%,#6a2233 0%,#4a1823 55%,#2c0e16 100%);color:var(--ivory);text-align:center;padding:56px 20px 64px}
+.brand{font:500 12px/1 var(--sans);letter-spacing:.32em;text-transform:uppercase;color:var(--gold-l);text-decoration:none}
+.hero h1{font:400 clamp(40px,8vw,64px)/1.05 var(--serif);margin:22px 0 14px}
+.hero h1 em{font-style:italic;color:var(--gold-l)}
+.hero p{max-width:540px;margin:0 auto;color:rgba(251,246,238,.82);font-size:16px}
+.steps{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:26px}
+.steps span{border:1px solid rgba(226,188,114,.4);border-radius:999px;padding:7px 16px;font-size:13px;color:var(--gold-l)}
+main{max-width:720px;margin:-34px auto 60px;padding:0 16px}
+.card{background:var(--cream);border:1px solid var(--line);border-radius:22px;padding:30px 26px;margin-bottom:18px;box-shadow:0 30px 60px -48px rgba(62,20,32,.55)}
+.card h2{font:500 30px/1.1 var(--serif);margin:0 0 4px;color:var(--maroon)}
+.card h2 small{display:block;font:400 12px/1 var(--sans);letter-spacing:.28em;text-transform:uppercase;color:var(--gold-d);margin-bottom:10px}
+.card .hint{color:var(--muted);font-size:14px;margin:0 0 18px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px 16px}
+.full{grid-column:1/-1}
+label{display:block;font-size:13px;letter-spacing:.04em;color:var(--muted);margin-bottom:6px}
+label b{color:var(--maroon);font-weight:500}
+input,select,textarea{width:100%;font:400 16px/1.4 var(--sans);color:var(--ink);background:#fff;border:1px solid rgba(185,138,62,.38);border-radius:12px;padding:12px 14px;outline:none;transition:border-color .2s,box-shadow .2s}
+textarea{min-height:92px;resize:vertical}
+input:focus,select:focus,textarea:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(226,188,114,.28)}
+.invalid{border-color:var(--err)!important}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip input{position:absolute;opacity:0;pointer-events:none}
+.chip span{display:inline-flex;flex-direction:column;border:1px solid rgba(185,138,62,.45);border-radius:14px;padding:12px 16px;cursor:pointer;background:#fff;min-width:140px;transition:all .2s}
+.chip span b{font:500 20px/1.1 var(--serif);color:var(--maroon)}
+.chip span i{font-style:normal;font-size:13px;color:var(--muted)}
+.chip input:checked+span{background:var(--maroon);border-color:var(--gold)}
+.chip input:checked+span b{color:var(--gold-l)}
+.chip input:checked+span i{color:rgba(251,246,238,.75)}
+.chip input:focus-visible+span{box-shadow:0 0 0 3px rgba(226,188,114,.45)}
+.fn{border:1px dashed rgba(185,138,62,.5);border-radius:16px;padding:18px 16px 16px;margin-bottom:14px;position:relative;background:#FFFDF9}
+.fn .no{font:500 12px/1 var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--gold-d);margin-bottom:12px}
+.fn .rm{position:absolute;top:12px;right:12px;border:0;background:none;color:var(--muted);font-size:13px;cursor:pointer;text-decoration:underline}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:0;border-radius:999px;padding:15px 28px;font:500 15px/1 var(--sans);letter-spacing:.06em;cursor:pointer;text-decoration:none}
+.btn-line{background:transparent;border:1px solid var(--gold);color:var(--gold-d)}
+.btn-gold{background:var(--foil);color:var(--maroon-x)}
+.btn-wa{background:var(--green);color:#fff}
+.send{text-align:center;padding:34px 22px}
+.send .row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.note{background:var(--paper);border-radius:14px;padding:14px 16px;font-size:14px;color:var(--muted);margin-top:16px;text-align:left}
+.msg{min-height:22px;font-size:14px;margin-top:12px}
+.msg.err{color:var(--err)} .msg.ok{color:var(--green)}
+.only{display:none}
+footer{text-align:center;color:var(--muted);font-size:13px;padding:0 16px 40px}
+@media (max-width:600px){
+  .grid{grid-template-columns:1fr}
+  .card{padding:24px 18px}
+  .chip span{min-width:0;flex:1}
+  .chips .chip{flex:1 1 45%}
+  .btn{width:100%}
+}
+</style>
+</head>
+<body>
+<header class="hero">
+  <a class="brand" href="/">The Royal Patrika House</a>
+  <h1>Your patrika <em>details</em></h1>
+  <p>Fill this in once. When you tap send, everything reaches us on WhatsApp and we start crafting your invitation.</p>
+  <div class="steps"><span>1 · Fill details</span><span>2 · Send on WhatsApp</span><span>3 · Share your photos</span></div>
+</header>
+
+<main>
+<form id="f" novalidate>
+
+  <section class="card">
+    <h2><small>Step 1</small>Package &amp; design</h2>
+    <p class="hint">Not sure yet? Pick what feels closest. We'll confirm with you before starting.</p>
+    <label><b>Package</b></label>
+    <div class="chips" id="pkg">
+      <label class="chip"><input type="radio" name="package" value="Classic"><span><b>Classic</b><i>from ₹1,499</i></span></label>
+      <label class="chip"><input type="radio" name="package" value="Signature"><span><b>Signature</b><i>from ₹4,999</i></span></label>
+      <label class="chip"><input type="radio" name="package" value="Royal"><span><b>Royal</b><i>from ₹14,999</i></span></label>
+    </div>
+    <div class="grid" style="margin-top:18px">
+      <div class="full"><label for="design"><b>Design</b></label>
+        <select id="design" name="design">
+          <option>No. 01 · Gulabi Mahal (pink palace)</option>
+          <option>Help me choose</option>
+          <option class="royal-only">A new theme designed for us (Royal)</option>
+        </select></div>
+      <div class="full"><label for="lang"><b>Language</b></label>
+        <select id="lang" name="language"><option>English</option><option>Hindi</option><option>English + Hindi (Royal, or add-on)</option></select></div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2><small>Step 2</small>The couple &amp; families</h2>
+    <p class="hint">Write names exactly as they should appear on the invitation.</p>
+    <div class="grid">
+      <div><label for="bride"><b>Bride's name *</b></label><input id="bride" name="bride" required placeholder="Riya"></div>
+      <div><label for="groom"><b>Groom's name *</b></label><input id="groom" name="groom" required placeholder="Rahul"></div>
+      <div><label for="brideP">Bride's parents</label><input id="brideP" name="bride_parents" placeholder="Mrs. Neha &amp; Mr. Vikas Mehta"></div>
+      <div><label for="groomP">Groom's parents</label><input id="groomP" name="groom_parents" placeholder="Mrs. Sunita &amp; Mr. Anil Agarwal"></div>
+      <div class="full"><label for="grand">Grandparents / blessings (optional)</label><textarea id="grand" name="blessings" placeholder="With the blessings of Smt. Kamla Devi Agarwal…"></textarea></div>
+      <div><label for="city"><b>Wedding city *</b></label><input id="city" name="city" required placeholder="Jaipur"></div>
+      <div><label for="phone"><b>Your WhatsApp number *</b></label><input id="phone" name="phone" required inputmode="tel" placeholder="98XXXXXXXX"></div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2><small>Step 3</small>Functions</h2>
+    <p class="hint">Classic includes up to 3 functions, Signature up to 6, Royal unlimited.</p>
+    <div id="fns"></div>
+    <button class="btn btn-line" type="button" id="addFn">+ Add another function</button>
+  </section>
+
+  <section class="card">
+    <h2><small>Step 4</small>RSVP contacts</h2>
+    <p class="hint">Guests can call or WhatsApp these people from the invitation.</p>
+    <div class="grid">
+      <div><label for="r1n">Contact 1 name</label><input id="r1n" name="rsvp1_name" placeholder="Anil Agarwal"></div>
+      <div><label for="r1p">Contact 1 phone</label><input id="r1p" name="rsvp1_phone" inputmode="tel" placeholder="98XXXXXXXX"></div>
+      <div><label for="r2n">Contact 2 name</label><input id="r2n" name="rsvp2_name"></div>
+      <div><label for="r2p">Contact 2 phone</label><input id="r2p" name="rsvp2_phone" inputmode="tel"></div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2><small>Step 5</small>Finishing touches</h2>
+    <div class="grid">
+      <div class="full sig"><label for="song">Song for the background (Signature &amp; Royal)</label><input id="song" name="song" placeholder="Song name, or a YouTube link"></div>
+      <div class="full royal"><label for="guests">Guest families for personal links (Royal)</label><textarea id="guests" name="guest_families" placeholder="One per line, e.g.&#10;The Sharma Family&#10;Bua ji &amp; Phupha ji"></textarea></div>
+      <div class="full"><label for="notes">Anything else we should know?</label><textarea id="notes" name="notes" placeholder="Family traditions, colours you love, words you'd like on the invitation…"></textarea></div>
+      <div><label for="sendBy">When do you want to send it to guests?</label><input id="sendBy" name="send_by" type="date"></div>
+    </div>
+  </section>
+
+  <section class="card send">
+    <h2>Ready to send</h2>
+    <p class="hint" style="margin:6px auto 0;max-width:440px">Tap the button and WhatsApp opens with all your details filled in. Just press send.</p>
+    <div class="row">
+      <button class="btn btn-wa" type="submit">Send on WhatsApp</button>
+      <button class="btn btn-line" type="button" id="copy">Copy details</button>
+    </div>
+    <div class="msg" id="msg" role="status" aria-live="polite"></div>
+    <div class="note"><b>Next:</b> in the same WhatsApp chat, send your photos (Classic up to 6, Signature 12, Royal 30). Your answers are saved on this phone, so you can come back and edit them anytime.</div>
+  </section>
+</form>
+</main>
+<footer>The Royal Patrika House · <a href="/">theroyalpatrikahouse.pages.dev</a></footer>
+
+<template id="fnTpl">
+  <div class="fn">
+    <div class="no">Function</div>
+    <button type="button" class="rm">Remove</button>
+    <div class="grid">
+      <div><label>Function *</label>
+        <select data-k="name"><option value="">Choose…</option><option>Haldi</option><option>Mehendi</option><option>Sangeet</option><option>Mayra</option><option>Tilak / Sagai</option><option>Reception</option><option>Shubh Vivah (Wedding)</option><option>Other</option></select></div>
+      <div class="other only"><label>Function name</label><input data-k="other" placeholder="e.g. Bhaat"></div>
+      <div><label>Date *</label><input type="date" data-k="date"></div>
+      <div><label>Time</label><input data-k="time" placeholder="7:00 pm onwards"></div>
+      <div class="full"><label>Venue *</label><input data-k="venue" placeholder="Jai Mahal Palace, Jaipur"></div>
+      <div class="full"><label>Google Maps link</label><input data-k="map" inputmode="url" placeholder="Paste the venue's Google Maps link"></div>
+      <div class="full sig"><label>Dress code (optional)</label><input data-k="dress" placeholder="Men: kurta pyjama · Women: lehenga"></div>
+    </div>
+  </div>
+</template>
+
+<script>
+(function(){
+  const WA="919079898481", KEY="rph-details-v1";
+  const f=document.getElementById('f'), fns=document.getElementById('fns'), tpl=document.getElementById('fnTpl'), msg=document.getElementById('msg');
+  const store={get(){try{return JSON.parse(localStorage.getItem(KEY)||"null")}catch(e){return null}},set(v){try{localStorage.setItem(KEY,JSON.stringify(v))}catch(e){}}};
+
+  function renumber(){[...fns.children].forEach((el,i)=>el.querySelector('.no').textContent='Function '+(i+1));}
+  function addFn(data){
+    const el=tpl.content.firstElementChild.cloneNode(true);
+    const sel=el.querySelector('[data-k=name]'), other=el.querySelector('.other');
+    sel.addEventListener('change',()=>{other.classList.toggle('only',sel.value!=='Other');save()});
+    el.querySelector('.rm').addEventListener('click',()=>{if(fns.children.length>1){el.remove();renumber();save()}});
+    if(data) el.querySelectorAll('[data-k]').forEach(i=>{if(data[i.dataset.k]!=null)i.value=data[i.dataset.k]});
+    other.classList.toggle('only',sel.value!=='Other');
+    fns.appendChild(el); renumber(); applyPkg();
+  }
+  function pkg(){const r=f.querySelector('input[name=package]:checked');return r?r.value:'';}
+  function applyPkg(){
+    const p=pkg();
+    document.querySelectorAll('.sig').forEach(e=>e.style.display=(p==='Classic')?'none':'');
+    document.querySelectorAll('.royal').forEach(e=>e.style.display=(p==='Royal')?'':'none');
+    document.querySelectorAll('.royal-only').forEach(o=>{o.hidden=(p!=='Royal')});
+  }
+  function collect(){
+    const d={}; new FormData(f).forEach((v,k)=>d[k]=String(v).trim());
+    d.functions=[...fns.children].map(el=>{const o={};el.querySelectorAll('[data-k]').forEach(i=>o[i.dataset.k]=i.value.trim());return o});
+    return d;
+  }
+  function save(){store.set(collect())}
+  function load(){
+    const d=store.get();
+    if(!d){addFn();addFn();return}
+    Object.entries(d).forEach(([k,v])=>{
+      if(k==='functions')return;
+      const r=f.querySelector(`input[type=radio][name="${k}"][value="${v}"]`); if(r){r.checked=true;return}
+      const el=f.elements[k]; if(el&&typeof v==='string')el.value=v;
+    });
+    (d.functions&&d.functions.length?d.functions:[{},{}]).forEach(addFn);
+  }
+  function fmtDate(s){if(!s)return'';const d=new Date(s+'T00:00');return isNaN(d)?s:d.toLocaleDateString('en-IN',{day:'numeric',month:'short',year:'numeric'})}
+  function text(d){
+    const L=[];
+    L.push('*New patrika details* 💌','');
+    L.push('*Package:* '+(d.package||'Not sure yet'));
+    L.push('*Design:* '+d.design);
+    L.push('*Language:* '+d.language,'');
+    L.push('*Couple:* '+d.bride+' & '+d.groom);
+    if(d.bride_parents)L.push("*Bride's parents:* "+d.bride_parents);
+    if(d.groom_parents)L.push("*Groom's parents:* "+d.groom_parents);
+    if(d.blessings)L.push('*Blessings:* '+d.blessings);
+    L.push('*City:* '+d.city,'*WhatsApp:* '+d.phone,'');
+    L.push('*Functions*');
+    d.functions.filter(x=>x.name||x.venue).forEach((x,i)=>{
+      L.push((i+1)+'. '+(x.name==='Other'?(x.other||'Other'):x.name)+' — '+fmtDate(x.date)+(x.time?', '+x.time:''));
+      if(x.venue)L.push('   Venue: '+x.venue);
+      if(x.map)L.push('   Map: '+x.map);
+      if(x.dress&&d.package!=='Classic')L.push('   Dress: '+x.dress);
+    });
+    L.push('');
+    const rs=[[d.rsvp1_name,d.rsvp1_phone],[d.rsvp2_name,d.rsvp2_phone]].filter(r=>r[0]||r[1]);
+    if(rs.length){L.push('*RSVP contacts*');rs.forEach(r=>L.push('• '+r[0]+' '+r[1]));L.push('')}
+    if(d.song&&d.package!=='Classic')L.push('*Song:* '+d.song);
+    if(d.guest_families&&d.package==='Royal')L.push('*Guest families:*\n'+d.guest_families);
+    if(d.notes)L.push('*Notes:* '+d.notes);
+    if(d.send_by)L.push('*Send to guests by:* '+fmtDate(d.send_by));
+    L.push('','I will share photos in this chat.');
+    return L.join('\n');
+  }
+  function validate(d){
+    let ok=true;
+    ['bride','groom','city','phone'].forEach(k=>{const el=f.elements[k];const bad=!d[k];el.classList.toggle('invalid',bad);if(bad)ok=false});
+    const first=[...fns.children][0];
+    if(first){['name','date','venue'].forEach(k=>{const el=first.querySelector(`[data-k=${k}]`);const bad=!el.value.trim();el.classList.toggle('invalid',bad);if(bad)ok=false})}
+    const n=d.functions.filter(x=>x.name).length, max={Classic:3,Signature:6}[d.package];
+    if(max&&n>max){msg.className='msg err';msg.textContent=`${d.package} includes up to ${max} functions. Remove some, or choose a bigger package.`;return false}
+    if(!ok){msg.className='msg err';msg.textContent='Please fill the fields marked in red.';const b=f.querySelector('.invalid');if(b)b.focus()}
+    return ok;
+  }
+
+  document.getElementById('addFn').addEventListener('click',()=>{addFn();save()});
+  f.addEventListener('input',e=>{e.target.classList&&e.target.classList.remove('invalid');save()});
+  f.addEventListener('change',()=>{applyPkg();save()});
+  f.addEventListener('submit',e=>{
+    e.preventDefault(); const d=collect(); if(!validate(d))return;
+    msg.className='msg ok'; msg.textContent='Opening WhatsApp…';
+    location.href='https://wa.me/'+WA+'?text='+encodeURIComponent(text(d));
+  });
+  document.getElementById('copy').addEventListener('click',async()=>{
+    const d=collect(); if(!validate(d))return;
+    try{await navigator.clipboard.writeText(text(d));msg.className='msg ok';msg.textContent='Copied. Paste it in our WhatsApp chat.'}
+    catch(e){msg.className='msg err';msg.textContent='Could not copy. Please use Send on WhatsApp.'}
+  });
+  load(); applyPkg();
+  const q=new URLSearchParams(location.search).get('package');
+  if(q){const r=f.querySelector(`input[name=package][value="${q}"]`);if(r){r.checked=true;applyPkg()}}
+})();
+</script>
+</body>
+</html>
